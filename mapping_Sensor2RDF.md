@@ -1,4 +1,4 @@
-Mapping of DEIMS-SDR sensor JSON onto Semantic Sensor Network Ontology (SSN) and Sensor, Observation, Sample, and Actuator ontology (SOSA)
+# Mapping of DEIMS-SDR sensor JSON onto Semantic Sensor Network Ontology (SSN) and Sensor, Observation, Sample, and Actuator ontology (SOSA)
 
 A first mapping of DEIMS-SDR is to SSN and SOSA. Only a few elements of DEIMS-SDR Sensor are mapping because the SSN and SOSA classes and properties don’t cover the complexity of the elements contained in DEIMS-SDR Sensor.
 
