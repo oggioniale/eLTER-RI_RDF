@@ -1,7 +1,8 @@
-# Mapping of DEIMS-SDR dataset JSON onto DCAT
+# Mapping of DEIMS-SDR dataset JSON onto DCAT[^1]
 
-consider <<http://www.w3.org/ns/adms>>, interesting profile of DCAT 
+[^1]: consider <<http://www.w3.org/ns/adms>>, interesting profile of DCAT
 
+Authors: Cristiano Fugazza, Alessandro Oggioni and Paolo Tagliolato
 
 |**jsonPath**|**JSON data item example**|**Translation into DCAT** (the subject of all the following triples is the dataset URI)|**Notes**|
 | :- | :- | :- | :- |
