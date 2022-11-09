@@ -1,11 +1,11 @@
 # eLTER-RI_RDF
 Here we archive the documentation to transform information about eLTER-RI entities from JSON (and a bit of HTML scraping) to RDF.
 
-"<entity>.json" files are copies of [DEIMS-SDR](https://deims.org) documents obtained through [API](https://deims.org/api).
+"\<entity\>.json" files are copies of [DEIMS-SDR](https://deims.org) documents obtained through [API](https://deims.org/api).
 
-"mapping_<entity>2RDF.md" contain tables with the mapping of JSON documents into RDF representation.
+"mapping_\<entity\>2RDF.md" contain tables with the mapping of JSON documents into RDF representation.
 
-"<entity>_RDF.ttl" contain the RDF representation of the trasformations.
+"\<entity\>_RDF.ttl" contain the RDF representation of the trasformations.
 
 To test jsonpath with functions try https://jsonpath.herokuapp.com/
 
