@@ -14,3 +14,5 @@ To test jsonpath with functions try https://jsonpath.herokuapp.com/
 # Acknowledgements
 
 This work has been partially funded from the European Union's Horizon 2020 research and innovation programme under the [H2020 eLTER-Plus Project](https://elter-ri.eu/elter-plus) grant agreement No 871128.
+
+.
