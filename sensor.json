@@ -1,0 +1,65 @@
+{
+  "title": "LTER Zöbelboden Austria precipitation WW",
+  "id": {
+    "prefix": "https://deims.org/sensors/",
+    "suffix": "fb583610-fe71-4793-b1a9-43097ed5c3e3"
+  },
+  "type": "sensor",
+  "created": "2017-02-14T21:40:40+0100",
+  "changed": "2019-11-29T11:33:23+0100",
+  "attributes": {
+    "general": {
+      "relatedSite": [
+        {
+          "type": "site",
+          "title": "LTER Zöbelboden - Austria",
+          "id": {
+            "prefix": "https://deims.org/",
+            "suffix": "8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6"
+          },
+          "changed": "2022-07-19T10:29:53+0200"
+        }
+      ],
+      "contact": [
+        {
+          "type": "organisation",
+          "name": "Environment Agency Austria (EAA)",
+          "url": "http://www.umweltbundesamt.at/"
+        },
+        {
+          "type": "person",
+          "name": "Thomas Dirnboeck",
+          "email": "thomas.dirnboeck@umweltbundesamt.at",
+          "orcid": "https://orcid.org/0000-0002-8294-0690"
+        }
+      ],
+      "abstract": "Precipitation measurement at LTER Zöbelboden Austria, Wildwiese (forest clearing area)",
+      "dateRange": {
+        "from": "1995-01-01",
+        "to": null
+      },
+      "keywords": [
+        {
+          "label": "precipitation",
+          "uri": null
+        }
+      ]
+    },
+    "geographic": {
+      "coordinates": "POINT (14.442 47.842)",
+      "trajectory": null,
+      "elevation": {
+        "value": 893,
+        "unit": "msl"
+      }
+    },
+    "observation": {
+      "sensorType": {
+        "label": "precipitation sensor",
+        "uri": null
+      },
+      "resultAcquisitionSource": "in-situ",
+      "observedProperty": null
+    }
+  }
+}
