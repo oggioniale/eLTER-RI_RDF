@@ -1,6 +1,7 @@
 # Mapping of DEIMS-SDR Sites JSON onto Environmental Monitoring Facility Vocabulary SmOD.
 
-Authors: Cristiano Fugazza, Alessandro Oggioni and Paolo Tagliolato
+Authors: Cristiano Fugazza, Alessandro Oggioni and Paolo Tagliolato. [^1]
+[^1]: {fugazza.c, oggioni.a, tagliolato.p}@irea.cnr.it
 
 ## Mapping based on the site <https://deims.org/f30007c4-8a6e-4f11-ab87-569db54638fe>
 
