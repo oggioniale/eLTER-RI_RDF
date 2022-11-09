@@ -1,6 +1,9 @@
 # Mapping of DEIMS-SDR Sites JSON onto Environmental Monitoring Facility Vocabulary SmOD.
 
+Authors: Cristiano Fugazza, Alessandro Oggioni and Paolo Tagliolato
+
 It also includes activities, datasets and sensors.
+
 ## Mapping based on the site <https://deims.org/f30007c4-8a6e-4f11-ab87-569db54638fe>
 
 ||**jsonPath**|**JSON data item example**|**Translation into SmOD** |**Notes**|
