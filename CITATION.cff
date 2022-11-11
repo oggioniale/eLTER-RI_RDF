@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: 'To cite "eLTER-RI2RDF" in publications use:'
+authors:
+- family-names: Cristiano
+  given-names: Fugazza
+  email: cristiano.fugazza@cnr.it
+  orcid: https://orcid.org/0000-0003-2679-4868
+- family-names: Tagliolato
+  given-names: Paolo
+  email: tagliolato.a@irea.cnr.it
+  orcid: https://orcid.org/0000-0002-0261-313X
+- family-names: Oggioni
+  given-names: Alessandro
+  email: alessandro.oggioni@cnr.it
+  orcid: https://orcid.org/0000-0002-7997-219X
+title: IREA-CNR-MI/eLTER-RI_RDF: eLTER-RI2RDF
+version: 1.0.0
+doi: 10.5281/zenodo.7313046
+date-released: 2022-11-11
+repository-code: https://github.com/IREA-CNR-MI/eLTER-RI_RDF
+url: https://github.com/IREA-CNR-MI/eLTER-RI_RDF
+contact:
+- family-names: Oggioni
+  given-names: Alessandro
+  email: alessandro.oggioni@cnr.it
+  orcid: https://orcid.org/0000-0002-7997-219X
+keywords:
+- RDF
+- JSON
+- ecology
+- elter
+- research-infrastructure
+- DEIMS-SDR
+- SSN ontology
+- SOSA ontology
+- vcard
+- DCAT
+- SmOD ontology
