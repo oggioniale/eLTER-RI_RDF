@@ -1,4 +1,4 @@
-[![](https://img.shields.io/badge/doi-10.5281/zenodo.xxxxxx-yellow.svg)](https://doi.org/10.5281/zenodo.xxxxxx)
+[![](https://img.shields.io/badge/doi-10.5281/zenodo.7313046-yellow.svg)](https://doi.org/10.5281/zenodo.7313046)
 
 # eLTER-RI_RDF
 Here we archive the documentation to transform information about eLTER-RI entities from JSON (and a bit of HTML scraping) to RDF.
