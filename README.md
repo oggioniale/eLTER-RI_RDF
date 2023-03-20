@@ -9,7 +9,7 @@ Here we archive the documentation to transform information about eLTER-RI entiti
 
 "\<entity\>_RDF.ttl" contain the RDF representation of the trasformations.
 
-To test jsonpath with functions try https://jsonpath.herokuapp.com/ or https://jsonpath.com
+To test jsonpath with functions try https://jsonpath.herokuapp.com/ or https://sumiya.page/jpath.html or https://jsonpath.com
 
 # Acknowledgements
 
