@@ -1,0 +1,154 @@
+[
+  {
+    "title": "LTER Estonia",
+    "id": {
+      "prefix": "https://deims.org/networks/",
+      "suffix": "2a93fa54-1bc8-4d3f-b66d-035bba03901f"
+    },
+    "changed": "2019-11-12T11:12:50+0100"
+  },
+  {
+    "title": "LTER Hungary",
+    "id": {
+      "prefix": "https://deims.org/networks/",
+      "suffix": "0615a89f-2883-47ab-8cd0-2508f413cab7"
+    },
+    "changed": "2020-03-09T13:34:01+0100"
+  },
+  {
+    "title": "LTER Israel",
+    "id": {
+      "prefix": "https://deims.org/networks/",
+      "suffix": "e0f680c2-22b1-4424-bf54-58aa9b7476a0"
+    },
+    "changed": "2020-03-09T13:34:16+0100"
+  },
+  {
+    "title": "LTER-D (Germany)",
+    "id": {
+      "prefix": "https://deims.org/networks/",
+      "suffix": "e904354a-f3a0-40ce-a9b5-61741f66c824"
+    },
+    "changed": "2020-03-09T13:33:35+0100"
+  },
+  {
+    "title": "JaLTER (Japan)",
+    "id": {
+      "prefix": "https://deims.org/networks/",
+      "suffix": "6a7c82f8-f472-40ad-ae28-3035e239f3b6"
+    },
+    "changed": "2020-04-24T11:13:38+0200"
+  },
+  {
+    "title": "KLTER (Korea)",
+    "id": {
+      "prefix": "https://deims.org/networks/",
+      "suffix": "639bbd69-dcf5-49de-98e2-35a1d0d1b97b"
+    },
+    "changed": "2023-03-10T12:40:44+0100"
+  },
+  {
+    "title": "LTER Venezuela (ecored)",
+    "id": {
+      "prefix": "https://deims.org/networks/",
+      "suffix": "896b67d5-af43-4d9d-8422-1a62936976b0"
+    },
+    "changed": "2019-11-12T11:28:01+0100"
+  },
+  {
+    "title": "Mex-LTER (Mexico)",
+    "id": {
+      "prefix": "https://deims.org/networks/",
+      "suffix": "dae20892-ab85-4994-9c7c-797582f1d9f9"
+    },
+    "changed": "2023-03-10T12:40:33+0100"
+  },
+  {
+    "title": "LTER Thailand",
+    "id": {
+      "prefix": "https://deims.org/networks/",
+      "suffix": "2e7519bc-f94c-428d-aff4-a9de7e9edf2c"
+    },
+    "changed": "2023-03-10T12:40:22+0100"
+  },
+  {
+    "title": "LTER Latvia",
+    "id": {
+      "prefix": "https://deims.org/networks/",
+      "suffix": "639d54fa-8f80-4090-919e-93fa7e9241f8"
+    },
+    "changed": "2020-03-09T13:34:54+0100"
+  },
+  {
+    "title": "LTER Slovakia",
+    "id": {
+      "prefix": "https://deims.org/networks/",
+      "suffix": "3d6a8d72-9f86-4082-ad56-a361b4cdc8a0"
+    },
+    "changed": "2020-03-09T13:36:46+0100"
+  },
+  {
+    "title": "SAEON",
+    "id": {
+      "prefix": "https://deims.org/networks/",
+      "suffix": "bce17afa-e548-4410-99d2-4eade740c9a9"
+    },
+    "changed": "2023-03-10T12:40:09+0100"
+  },
+  {
+    "title": "CERN (LTER China)",
+    "id": {
+      "prefix": "https://deims.org/networks/",
+      "suffix": "4dac034d-92d5-4c06-8e4e-aabafdbcedff"
+    },
+    "changed": "2023-03-10T12:39:43+0100"
+  },
+  {
+    "title": "LTER Poland",
+    "id": {
+      "prefix": "https://deims.org/networks/",
+      "suffix": "67763729-45a7-4248-a70d-622b1d0a3d41"
+    },
+    "changed": "2020-03-09T13:36:08+0100"
+  },
+  {
+    "title": "LTER Austria",
+    "id": {
+      "prefix": "https://deims.org/networks/",
+      "suffix": "d45c2690-dbef-4dbc-a742-26ea846edf28"
+    },
+    "changed": "2020-03-09T11:53:52+0100"
+  },
+  {
+    "title": "TERN (Taiwan)",
+    "id": {
+      "prefix": "https://deims.org/networks/",
+      "suffix": "0a4cceb1-2db0-47b0-b41b-5448720e201d"
+    },
+    "changed": "2023-03-10T12:39:29+0100"
+  },
+  {
+    "title": "LTER Lithuania",
+    "id": {
+      "prefix": "https://deims.org/networks/",
+      "suffix": "098f69df-3a84-4917-8590-377726f98cd8"
+    },
+    "changed": "2023-03-10T12:39:19+0100"
+  },
+  {
+    "title": "LTER Jordan",
+    "id": {
+      "prefix": "https://deims.org/networks/",
+      "suffix": "0ace86b8-9744-488e-b274-6221ef14ca7c"
+    },
+    "changed": "2019-11-12T13:25:40+0100"
+  },
+  {
+    "title": "LTER Italia (Italy)",
+    "id": {
+      "prefix": "https://deims.org/networks/",
+      "suffix": "7fef6b73-e5cb-4cd2-b438-ed32eb1504b3"
+    },
+    "changed": "2020-03-09T13:34:33+0100"
+  }
+]
