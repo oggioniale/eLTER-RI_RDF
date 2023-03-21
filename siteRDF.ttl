@@ -45,5 +45,4 @@
                                  rdfs:seeAlso    <https://orcid.org/0000-0002-8294-0690> , <https://deims.org/node/331> ;
                                  vcard:fn        "Thomas Dirnboeck" ;
                                  vcard:hasEmail  "thomas.dirnboeck@umweltbundesamt.at"
-                               ] ;
-        dcat:keyword           "forest ecology"@en , "mountains"@en , "eddy covariance"@en , "karst catchment"@en , "forests"@en , "biodiversity"@en , "epiphytic lichens"@en , "nitrogen cycling"@en , "catchment runoff chemistry"@en , "hydrology"@en , "bird diversity"@en , "Mixed conifer-deciduous forest"@en , "ground vegetation"@en , "beech forest"@en , "Broadleaved deciduous woodland"@en , "air pollution"@en , "Soil"@en .
+                               ] .
