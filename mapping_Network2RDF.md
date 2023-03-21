@@ -1,5 +1,9 @@
-Mapping of DEIMS-SDR Network JSON onto Environmental Monitoring Facility Vocabulary SmOD.
-# Mapping based on the network <https://deims.org/networks/7fef6b73-e5cb-4cd2-b438-ed32eb1504b3>
+# Mapping DEIMS-SDR network JSON onto Environmental Monitoring Facility Vocabulary SmOD.
+
+Authors: Cristiano Fugazza, Alessandro Oggioni and Paolo Tagliolato. [^1]
+[^1]: {fugazza.c, oggioni.a, tagliolato.p}@irea.cnr.it
+
+## Mapping based on the network <https://deims.org/networks/7fef6b73-e5cb-4cd2-b438-ed32eb1504b3>
 
 ||**jsonPath**|**JSON data item example**|**Translation into SmOD** |**Notes**|
 | :- | :- | :- | :- | :- |
