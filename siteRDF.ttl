@@ -13,6 +13,8 @@
 @prefix sf:        <http://www.opengis.net/ont/sf#> .
 @prefix vcard:     <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:       <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov:      <http://www.w3.org/ns/prov#> .
+@prefix foaf:      <http://xmlns.com/foaf/0.1/> .
 
 <https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6>
         a                      ef:EnvironmentalMonitoringFacility ;
@@ -36,13 +38,13 @@
         ef:mediaMonitored      "Fir and spruce woodland (G3.1)"@en , "Beech woodland (G1.6)"@en , "Broadleaved deciduous woodland (G1)"@en , "Coniferous woodland (G3)"@en , "Woodland, forest and other wooded land (G)"@en ;
         ef:name                "LTER Zöbelboden - Austria"@en ;
         ef:specialisedEMFType  "site"@en ;
-        dcat:contactPoint      [ a               vcard:Individual ;
+        dcat:contactPoint      [ a               foaf:Person, prov:Person ;
                                  rdfs:seeAlso    <https://deims.org/node/11885> ;
-                                 vcard:fn        "Gisela Proell" ;
-                                 vcard:hasEmail  "gisela.proell@umweltbundesamt.at"
+                                 foaf:fullName   "Gisela Proell" ;
+                                 foaf:hasEmail  "gisela.proell@umweltbundesamt.at"
                                ] ;
-        dcat:contactPoint      [ a               vcard:Individual ;
+        dcat:contactPoint      [ a               foaf:Person, prov:Person ;
                                  rdfs:seeAlso    <https://orcid.org/0000-0002-8294-0690> , <https://deims.org/node/331> ;
-                                 vcard:fn        "Thomas Dirnboeck" ;
-                                 vcard:hasEmail  "thomas.dirnboeck@umweltbundesamt.at"
+                                 foaf:fullName   "Thomas Dirnboeck" ;
+                                 foaf:hasEmail  "thomas.dirnboeck@umweltbundesamt.at"
                                ] .
