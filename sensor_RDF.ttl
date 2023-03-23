@@ -12,7 +12,7 @@
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 
 <https://deims.org/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3>
-        a                      sosa:Sensor ;
+        a                      sosa:Sensor, prov:Entity ;
         rdfs:comment           "Precipitation measurement at LTER Zöbelboden Austria, Wildwiese (forest clearing area)"@en ;
         rdfs:label             "LTER Zöbelboden Austria precipitation WW"@en ;
         geosparql:hasGeometry  [ a                sf:Point ;
