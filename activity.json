@@ -1,12 +1,12 @@
 {
-  "title": "LTER Zöbelboden Austria land cover and habitats",
+  "title": "LTER Zöbelboden Austria aerial data",
   "id": {
     "prefix": "https://deims.org/activity/",
-    "suffix": "bc7ad5e9-d3cf-46e6-8559-c0bc970b4397"
+    "suffix": "8689b125-ee46-4d09-9e46-640f9c5c6eab"
   },
   "type": "activity",
-  "created": "2016-09-19T16:31:06+0200",
-  "changed": "2018-07-11T09:46:13+0200",
+  "created": "2016-09-19T16:38:53+0200",
+  "changed": "2019-11-29T11:31:18+0100",
   "attributes": {
     "general": {
       "relatedSite": [
@@ -17,13 +17,17 @@
             "prefix": "https://deims.org/",
             "suffix": "8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6"
           },
-          "changed": "2022-07-19T10:29:53+0200"
+          "changed": "2023-05-15T08:17:31+0200"
         }
       ],
-      "abstract": "Land cover and habitats map for the LTER Zöbelboden catchment",
+      "abstract": "Aerial photographs and LiDAR data of the LTER Zöbelboden catchment",
       "keywords": [
         {
-          "label": "Habitat mapping",
+          "label": "LiDAR data",
+          "uri": null
+        },
+        {
+          "label": "aerial imagery",
           "uri": null
         }
       ],
@@ -68,8 +72,8 @@
     "availability": {
       "digitally": true,
       "forEcopotential": true,
-      "openData": true,
-      "notes": "will be uploaded on DEIMS soon",
+      "openData": false,
+      "notes": "will be uploaded to DEIMS soon",
       "source": {
         "url": null
       }
@@ -77,12 +81,12 @@
     "observation": {
       "parameters": [
         {
-          "label": "ecosystem parameter",
-          "uri": "http://vocabs.lter-europe.net/EnvThes/20939"
-        },
-        {
           "label": "land cover",
           "uri": "http://vocabs.lter-europe.net/EnvThes/22142"
+        },
+        {
+          "label": "land use",
+          "uri": "http://vocabs.lter-europe.net/EnvThes/22143"
         },
         {
           "label": "landscape parameter",
