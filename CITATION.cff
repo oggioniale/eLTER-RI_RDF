@@ -1,12 +1,16 @@
 cff-version: 1.2.0
 message: 'To cite "eLTER-RI2RDF" in publications use:'
 type: software
-license: CC BY-SA 4.0
+license: cc-by-nc-4.0
 title: 'IREA-CNR-MI/eLTER-RI_RDF: eLTER-RI2RDF'
-version: 1.0.0
+version: 2.1.0
 doi: 10.5281/zenodo.7313046
-date-released: 2022-11-11
+date-released: 2023-06-30
 authors:
+- family-names: Oggioni
+  given-names: Alessandro
+  email: alessandro.oggioni@cnr.it
+  orcid: https://orcid.org/0000-0002-7997-219X
 - family-names: Fugazza
   given-names: Cristiano
   email: cristiano.fugazza@cnr.it
@@ -15,10 +19,6 @@ authors:
   given-names: Paolo
   email: tagliolato.a@irea.cnr.it
   orcid: https://orcid.org/0000-0002-0261-313X
-- family-names: Oggioni
-  given-names: Alessandro
-  email: alessandro.oggioni@cnr.it
-  orcid: https://orcid.org/0000-0002-7997-219X
 repository-code: https://github.com/IREA-CNR-MI/eLTER-RI_RDF
 url: https://github.com/IREA-CNR-MI/eLTER-RI_RDF
 contact:
