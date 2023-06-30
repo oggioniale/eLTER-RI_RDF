@@ -1,20 +1,23 @@
 @base          <http://example.org/> .
-@prefix dcat:      <http://www.w3.org/ns/dcat#> .
-@prefix foaf:      <http://xmlns.com/foaf/0.1/> .
-@prefix fun:       <http://w3id.org/sparql-generate/fn/> .
-@prefix geo:       <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
-@prefix ite:       <http://w3id.org/sparql-generate/iter/> .
-@prefix owl:       <http://www.w3.org/2002/07/owl#> .
-@prefix prov:      <http://www.w3.org/ns/prov#> .
-@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sf:        <http://www.opengis.net/ont/sf#> .
-@prefix sosa:      <http://www.w3.org/ns/sosa/> .
-@prefix vcard:     <http://www.w3.org/2006/vcard/ns#> .
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX fun: <http://w3id.org/sparql-generate/fn/>
+PREFIX ite: <http://w3id.org/sparql-generate/iter/>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX sf: <http://www.opengis.net/ont/sf#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ssn: <http://www.w3.org/ns/ssn/>
 
 <https://deims.org/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3>
-        rdf:type               sosa:Sensor , prov:Entity ;
+        rdf:type               sosa:Sensor , ssn:System , prov:Entity ;
         rdfs:comment           "Precipitation measurement at LTER Zöbelboden Austria, Wildwiese (forest clearing area)"@en ;
         rdfs:label             "LTER Zöbelboden Austria precipitation WW"@en ;
         geosparql:hasGeometry  [ rdf:type         sf:Point ;
@@ -25,12 +28,13 @@
         geo:lat                "47.842" ;
         geo:lon                "14.442" ;
         dcat:contactPoint      [ rdf:type       prov:Person , foaf:Person ;
-                                 rdfs:seeAlso   <http://www.umweltbundesamt.at/> ;
-                                 foaf:fullName  "Environment Agency Austria (EAA)"
-                               ] ;
-        dcat:contactPoint      [ rdf:type       prov:Person , foaf:Person ;
-                                 rdfs:seeAlso   <https://orcid.org/0000-0002-8294-0690> ;
+                                 rdfs:seeAlso   "https://orcid.org/0000-0002-8294-0690" ;
                                  foaf:fullName  "Thomas Dirnboeck" ;
                                  foaf:hasEmail  "thomas.dirnboeck@umweltbundesamt.at"
                                ] ;
-        sosa:isHostedBy        <https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6> .
+        dcat:contactPoint      [ rdf:type       prov:Person , foaf:Person ;
+                                 rdfs:seeAlso   "http://www.umweltbundesamt.at/" ;
+                                 foaf:fullName  "Environment Agency Austria (EAA)"
+                               ] ;
+        sosa:isHostedBy        <https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6> ;
+        sosa:observes          "precipitation sensor" .
