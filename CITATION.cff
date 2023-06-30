@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: 'To cite "eLTER-RI2RDF" in publications use:'
 type: software
 license: cc-by-nc-4.0
-title: 'IREA-CNR-MI/eLTER-RI_RDF: eLTER-RI2RDF'
-version: 2.1.0
+title: 'DEIMS-SDR RDF mapping v2.2'
+version: 2.2
 doi: 10.5281/zenodo.7313046
 date-released: 2023-06-30
 authors:
