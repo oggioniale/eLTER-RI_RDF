@@ -1,16 +1,11 @@
-[![](https://img.shields.io/badge/doi-10.5281/zenodo.7313046-yellow.svg)](https://doi.org/10.5281/zenodo.7313046)
+The content of this repository was inspired by and originated from the work carried out in [![](https://img.shields.io/badge/doi-10.5281/zenodo.7313046-yellow.svg)](https://doi.org/10.5281/zenodo.7313046)
 
-# eLTER-RI_RDF
-Here we archive the documentation to transform information about eLTER-RI entities from JSON (and a bit of HTML scraping) to RDF.
+# Aim of the work
+...
 
-"\<entity\>.json" files are copies of [DEIMS-SDR](https://deims.org) documents obtained through [API](https://deims.org/api).
-
-"mapping_\<entity\>2RDF.md" contain tables with the mapping of JSON documents into RDF representation.
-
-"\<entity\>_RDF.ttl" contain the RDF representation of the trasformations.
-
-To test jsonpath with functions try https://jsonpath.herokuapp.com/ or https://sumiya.page/jpath.html or https://jsonpath.com
+# Approach
+...
 
 # Acknowledgements
 
-This work has been partially funded from the European Union's Horizon 2020 research and innovation programme under the [H2020 eLTER-Plus Project](https://elter-ri.eu/elter-plus) grant agreement No 871128.
+This work has been partially funded from the European Union's Horizon 2020 and Horizon Europe research and innovation programmes under the [H2020 eLTER-Plus Project](https://elter-ri.eu/elter-plus) grant agreement Nr. 871128 and [eLTER EnRich Project](https://elter-ri.eu/elter-enrich) grant agreement Nr. 101131751
