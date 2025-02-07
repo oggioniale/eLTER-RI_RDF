@@ -8,7 +8,7 @@ Authors: Alessandro Oggioni [^1]
 | **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
 | --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |
 | 1	| title	| \$.title	| `"LTER Zöbelboden - Austria"`	| `ef:name "LTER Zöbelboden - Austria"@en` | 
-| 2	| id	| concat($.id.prefix, $.id.suffix) | `"https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6"` | `<https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6> rdf:type ef:EnvironmentalMonitoringFacility , prov:Entity` |
+| 2	| id	| concat( \$.id.prefix, \$.id.suffix) | `"https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6"` | `<https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6> rdf:type ef:EnvironmentalMonitoringFacility , prov:Entity` |
 | 3	| type | $.type	| `"site"` | `ef:specialisedEMFType ‘site’@en` |
 | 4	| created	| $.created	| `"2012-12-25T18:53:54+0100"` | `dcterms:issued "2012-12-25T18:53:54+0100"^^xsd:dateTime` |
 | 5	| changed	| $.changed	| `"2025-01-07T11:14:56+0100"` | `dct:modified "2025-01-07T11:14:56+0100"^^xsd:dateTime` |
@@ -77,7 +77,7 @@ Authors: Alessandro Oggioni [^1]
 | **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
 | --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |
 | 1	| title	| $.title	| "LTER Zöbelboden Austria deposition" | `ef:name "LTER Zöbelboden Austria deposition"@en` | | | 
-| 2	| id | concat( $.id.prefix, $.id.suffix) | `"https://deims.org/activity/4efaa2f2-6f4a-4f75-b95c-c3ffb13594a5"` | `<https://deims.org/activity/4efaa2f2-6f4a-4f75-b95c-c3ffb13594a5> rdf:type prov:Activity , ef:EnvironmentalMonitoringActivity` | | | 
+| 2	| id | concat( \$.id.prefix, \$.id.suffix) | `"https://deims.org/activity/4efaa2f2-6f4a-4f75-b95c-c3ffb13594a5"` | `<https://deims.org/activity/4efaa2f2-6f4a-4f75-b95c-c3ffb13594a5> rdf:type prov:Activity , ef:EnvironmentalMonitoringActivity` | | | 
 | 3	| type | $.type | `"activity"` | `ef:specialisedEMFType ‘activity’@en` | | | 
 | 4	| created	| $.created	| `"2016-09-12T18:45:29+0200"` | `dcterms:issued "2016-09-12T18:45:29+0200"^^xsd:dateTime`	| | | 
 | 5	| changed	| $.changed	| `"2019-08-20T13:13:04+0200"` | `dcterms:modified "2019-08-20T13:13:04+0200"^^xsd:dateTime` | | | 
@@ -100,7 +100,7 @@ Authors: Alessandro Oggioni [^1]
 | **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
 | --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |
 | 1	| title | $.title | `"LTER Zöbelboden Austria precipitation WW"` | `ef:name "LTER Zöbelboden Austria precipitation WW"@en` | | 
-| 2 | id | concat( $.id.prefix, $.id.suffix) | `"https://deims.org/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3"` | `<https://deims.org/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3> rdf:type prov:Entity , sosa:Sensor , ssn:System` | | |	
+| 2 | id | concat( \$.id.prefix, \$.id.suffix) | `"https://deims.org/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3"` | `<https://deims.org/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3> rdf:type prov:Entity , sosa:Sensor , ssn:System` | | |	
 | 3	| type | $.type | `"sensor"` | - | not included | 
 | 4	| created	| $.created	| `"2017-02-14T21:40:40+0100"` | `dcterms:issued "2017-02-14T21:40:40+0100"^^xsd:dateTime` | | | 
 | 5	| changed	| $.changed	| `"2019-11-29T11:33:23+0100"` | `dcterms:modified "2019-11-29T11:33:23+0100"^^xsd:dateTime` | | | 
@@ -121,7 +121,7 @@ Authors: Alessandro Oggioni [^1]
 
 | **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
 | --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |
-| 2	| id | concat( $.id.prefix, $.id.suffix) | `https://deims.org/dataset/cd1fb6f8-5e57-11e3-aa73-005056ab003f` | `<https://deims.org/dataset/cd1fb6f8-5e57-11e3-aa73-005056ab003f> rdf:type dcat:Dataset`	| Only the ID is used, as the RDF correspondence of the dataset is provided by DAR or B2Share |
+| 2	| id | concat( \$.id.prefix, \$.id.suffix) | `https://deims.org/dataset/cd1fb6f8-5e57-11e3-aa73-005056ab003f` | `<https://deims.org/dataset/cd1fb6f8-5e57-11e3-aa73-005056ab003f> rdf:type dcat:Dataset`	| Only the ID is used, as the RDF correspondence of the dataset is provided by DAR or B2Share |
 
 
 ## Location metadata elements mapping, based on LTER Zöbelboden, Austria, Project area (DEIMS.ID - https://deims.org/locations/12b38f3f-7e72-425a-80c7-7cad35ce4c7b)
@@ -131,7 +131,7 @@ Authors: Alessandro Oggioni [^1]
 | 1	| type | $.type | `"Feature"`	| -	| not included | 
 | 2	| geometry	| $.geometry	| `{ "type": "Polygon", "coordinates": [[[ 14.435456610495, 47.839857143486 ], [ 14.435472337877, … ], … ]] }`	| -	| not yet included because the JSON result is not a WKT | 
 | 3.1	| properties.title | $.properties.title	| `"LTER Zöbelboden, Austria, Project area"` | `ef:name "LTER Zöbelboden, Austria, Project area"@en` | | 
-| 3.2	| properties.id	| concat( $.properties.id.prefix, $.properties.id.suffix) | `"https://deims.org/locations/12b38f3f-7e72-425a-80c7-7cad35ce4c7b"`	| `<https://deims.org/locations/12b38f3f-7e72-425a-80c7-7cad35ce4c7b> rdf:type prov:Entity , ef:EnvironmentalMonitoringFacility` | | 
+| 3.2	| properties.id	| concat( \$.properties.id.prefix, \$.properties.id.suffix) | `"https://deims.org/locations/12b38f3f-7e72-425a-80c7-7cad35ce4c7b"`	| `<https://deims.org/locations/12b38f3f-7e72-425a-80c7-7cad35ce4c7b> rdf:type prov:Entity , ef:EnvironmentalMonitoringFacility` | | 
 | 3.3	| properties.created | $.properties.created	| `"2017-04-06T09:36:06+0200"` | `dcterms:issued "2017-04-06T09:36:06+0200"^^xsd:dateTime` | | 
 | 3.4	| properties.changed | $.properties.changed	| `"2024-05-07T14:22:05+0200"` | `dcterms:modified "2024-05-07T14:22:05+0200"^^xsd:dateTime` | | 
 | 3.4	| properties.locationType	| $.properties.locationType	| `{ "label": "Sampling Location", "uri": "http://vocabs.lter-europe.net/elter_cl/10494" }`	| `ef:specialisedEMFType <http://vocabs.lter-europe.net/elter_cl/10494>`	| | 
