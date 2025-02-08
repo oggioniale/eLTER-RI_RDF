@@ -4,7 +4,7 @@ Authors: Alessandro Oggioni [^1]
 [^1]: alessandro.oggioni@cnr.it
 
 
-# Sensor metadata elements mapping, based on “LTER Zöbelboden Austria precipitation WW” sensor (DEIMS.ID - https://deims.org/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3)
+# Sensor metadata elements mapping, based on “LTER Zöbelboden Austria precipitation WW” sensor (DEIMS.ID - https://deims.org/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3). See also [JSON file for this sensor](sensor.json)
 
 | **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
 | --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |

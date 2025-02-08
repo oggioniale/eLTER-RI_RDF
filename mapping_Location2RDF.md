@@ -4,7 +4,7 @@ Authors: Alessandro Oggioni [^1]
 [^1]: alessandro.oggioni@cnr.it
 
 
-## Location metadata elements mapping, based on LTER Zöbelboden, Austria, Project area (DEIMS.ID - https://deims.org/locations/12b38f3f-7e72-425a-80c7-7cad35ce4c7b)
+## Location metadata elements mapping, based on LTER Zöbelboden, Austria, Project area (DEIMS.ID - https://deims.org/locations/12b38f3f-7e72-425a-80c7-7cad35ce4c7b). See also [JSON file for this location](location.json)
 
 | **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
 | --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |

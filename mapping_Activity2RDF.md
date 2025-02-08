@@ -4,7 +4,7 @@ Authors: Alessandro Oggioni [^1]
 [^1]: alessandro.oggioni@cnr.it
 
 
-## Activity metadata elements mapping, based on the “LTER Zöbelboden Austria deposition” activity (DEIMS.ID - https://deims.org/activity/4efaa2f2-6f4a-4f75-b95c-c3ffb13594a5)
+## Activity metadata elements mapping, based on the “LTER Zöbelboden Austria deposition” activity (DEIMS.ID - https://deims.org/activity/4efaa2f2-6f4a-4f75-b95c-c3ffb13594a5). See also [JSON file for this activity](activity.json)
 
 | **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
 | --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |
