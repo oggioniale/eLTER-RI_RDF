@@ -4,7 +4,7 @@ Authors: Alessandro Oggioni [^1]
 [^1]: alessandro.oggioni@cnr.it
 
 
-## Dataset metadata elements mapping, based on LTER Zöbelboden, Austria, Air chemistry, 2012 (DEIMS.ID: https://deims.org/api/datasets/cd1fb6f8-5e57-11e3-aa73-005056ab003f)
+## Dataset metadata elements mapping, based on LTER Zöbelboden, Austria, Air chemistry, 2012 (DEIMS.ID: https://deims.org/datasets/cd1fb6f8-5e57-11e3-aa73-005056ab003f)
 
 | **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
 | --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |

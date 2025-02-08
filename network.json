@@ -1,154 +1,263 @@
-[
-  {
-    "title": "LTER Estonia",
-    "id": {
-      "prefix": "https://deims.org/networks/",
-      "suffix": "2a93fa54-1bc8-4d3f-b66d-035bba03901f"
-    },
-    "changed": "2019-11-12T11:12:50+0100"
+{
+  "title": "LTER Europe",
+  "id": {
+    "prefix": "https://deims.org/networks/",
+    "suffix": "4742ffca-65ac-4aae-815f-83738500a1fc"
   },
-  {
-    "title": "LTER Hungary",
-    "id": {
-      "prefix": "https://deims.org/networks/",
-      "suffix": "0615a89f-2883-47ab-8cd0-2508f413cab7"
+  "type": "network",
+  "created": "2020-03-02T13:11:00+0100",
+  "changed": "2023-02-17T12:48:37+0100",
+  "attributes": {
+    "abstract": "Long-Term Ecosystem Research (LTER) is an essential component of world-wide efforts to better understand ecosystems and the environment we depend on. Through research and long-term observation of representative sites around the globe, LTER enhances our understanding of the structure and functions of ecosystems, which provide essential services to people. LTER contributes to the knowledge base informing policy and to the development of management options in response to the Grand Challenges under Global Change.\r\nLTER capitalizes on research infrastructures such as the in-situ network of sites and information technology. Thousands of research projects have been carried out taking advantage of this infrastructure. The increasing complexity of ecosystem research led to the networking and global organization of LTER.\r\n\r\nLTER in Europe (or LTER-Europe) comprises three components, well embedded in the European Research Area:\r\n- Networking\r\n- Research and Development\r\n- Infrastructure",
+    "url": [
+      {
+        "title": null,
+        "value": "https://elter-ri.eu/"
+      }
+    ],
+    "logo": [
+      {
+        "url": "https://deims.org/sites/default/files/2020-10/elter%20logo_2.png",
+        "alt": "LTER Europe Logo"
+      }
+    ],
+    "belongsTo": [
+      {
+        "type": "network",
+        "title": "GERI",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "c3abdc60-49f1-49db-81fe-863b7dbb21d3"
+        }
+      },
+      {
+        "type": "network",
+        "title": "ILTER",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "1aa7ccb2-a14b-43d6-90ac-5e0a6bc1d65b"
+        }
+      }
+    ],
+    "consistsOf": [
+      {
+        "type": "network",
+        "title": "CZ-LTER",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "0a5cf43b-2e31-4348-803c-e45f2ff7d27a"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Austria",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "d45c2690-dbef-4dbc-a742-26ea846edf28"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Belgium",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "735946e0-4e9e-484a-acee-85e31f4e2a2e"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Bulgaria",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "20ad4fa2-cc07-4848-b9ed-8952c55f1a3f"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Denmark",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "e3911e8a-ce9b-46ce-8265-c2dc9676ad03"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Finland",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "aaae2a46-f355-41d0-8067-c2f0cd52e814"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER France",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "d8d9206f-b1bd-4f90-84b7-8c662d4235a2"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Greece",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "83453a6c-792d-4549-9dbb-c17ced2e0cc3"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Hungary",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "0615a89f-2883-47ab-8cd0-2508f413cab7"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Israel",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "e0f680c2-22b1-4424-bf54-58aa9b7476a0"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Italia (Italy)",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "7fef6b73-e5cb-4cd2-b438-ed32eb1504b3"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Latvia",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "639d54fa-8f80-4090-919e-93fa7e9241f8"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Lithuania",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "098f69df-3a84-4917-8590-377726f98cd8"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Norway",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "bc7c517b-3648-40cc-a04c-8c98d009c4a9"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Poland",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "67763729-45a7-4248-a70d-622b1d0a3d41"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Portugal",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "d8eb4823-b707-4590-94d8-d90c1d07d6f8"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Romania",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "4260f964-0ac4-4406-8adc-5afc06e31779"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Serbia",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "9b50de5e-a879-470a-97cb-46262ad76ec9"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Slovakia",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "3d6a8d72-9f86-4082-ad56-a361b4cdc8a0"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Slovenia",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "fda2984f-9aea-4abf-9f6c-c3eca0f82eb8"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Spain",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "2b70f1fb-f7d9-4615-a1a3-33fc6fa44600"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Sweden",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "a50d9e39-d4b6-4d30-bba2-43580ac8c0b2"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER Switzerland",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "cedf695c-c6dc-4660-b944-3c22f12ad0d9"
+        }
+      },
+      {
+        "type": "network",
+        "title": "LTER-D (Germany)",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "e904354a-f3a0-40ce-a9b5-61741f66c824"
+        }
+      },
+      {
+        "type": "network",
+        "title": "Netherlands LTER",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "8312c2c4-a787-4986-9a3d-3f1364bab3ba"
+        }
+      },
+      {
+        "type": "network",
+        "title": "UK ECN",
+        "id": {
+          "prefix": "https://deims.org/networks/",
+          "suffix": "a197664f-569e-4df6-933a-86de676dbfc5"
+        }
+      }
+    ],
+    "verifiedMemberSites": {
+      "title": "API call for listing all verified member sites of the network",
+      "href": "https://deims.org/api/sites?network=4742ffca-65ac-4aae-815f-83738500a1fc\u0026verified=true",
+      "type": "application/json"
     },
-    "changed": "2020-03-09T13:34:01+0100"
-  },
-  {
-    "title": "LTER Israel",
-    "id": {
-      "prefix": "https://deims.org/networks/",
-      "suffix": "e0f680c2-22b1-4424-bf54-58aa9b7476a0"
-    },
-    "changed": "2020-03-09T13:34:16+0100"
-  },
-  {
-    "title": "LTER-D (Germany)",
-    "id": {
-      "prefix": "https://deims.org/networks/",
-      "suffix": "e904354a-f3a0-40ce-a9b5-61741f66c824"
-    },
-    "changed": "2020-03-09T13:33:35+0100"
-  },
-  {
-    "title": "JaLTER (Japan)",
-    "id": {
-      "prefix": "https://deims.org/networks/",
-      "suffix": "6a7c82f8-f472-40ad-ae28-3035e239f3b6"
-    },
-    "changed": "2020-04-24T11:13:38+0200"
-  },
-  {
-    "title": "KLTER (Korea)",
-    "id": {
-      "prefix": "https://deims.org/networks/",
-      "suffix": "639bbd69-dcf5-49de-98e2-35a1d0d1b97b"
-    },
-    "changed": "2023-03-10T12:40:44+0100"
-  },
-  {
-    "title": "LTER Venezuela (ecored)",
-    "id": {
-      "prefix": "https://deims.org/networks/",
-      "suffix": "896b67d5-af43-4d9d-8422-1a62936976b0"
-    },
-    "changed": "2019-11-12T11:28:01+0100"
-  },
-  {
-    "title": "Mex-LTER (Mexico)",
-    "id": {
-      "prefix": "https://deims.org/networks/",
-      "suffix": "dae20892-ab85-4994-9c7c-797582f1d9f9"
-    },
-    "changed": "2023-03-10T12:40:33+0100"
-  },
-  {
-    "title": "LTER Thailand",
-    "id": {
-      "prefix": "https://deims.org/networks/",
-      "suffix": "2e7519bc-f94c-428d-aff4-a9de7e9edf2c"
-    },
-    "changed": "2023-03-10T12:40:22+0100"
-  },
-  {
-    "title": "LTER Latvia",
-    "id": {
-      "prefix": "https://deims.org/networks/",
-      "suffix": "639d54fa-8f80-4090-919e-93fa7e9241f8"
-    },
-    "changed": "2020-03-09T13:34:54+0100"
-  },
-  {
-    "title": "LTER Slovakia",
-    "id": {
-      "prefix": "https://deims.org/networks/",
-      "suffix": "3d6a8d72-9f86-4082-ad56-a361b4cdc8a0"
-    },
-    "changed": "2020-03-09T13:36:46+0100"
-  },
-  {
-    "title": "SAEON",
-    "id": {
-      "prefix": "https://deims.org/networks/",
-      "suffix": "bce17afa-e548-4410-99d2-4eade740c9a9"
-    },
-    "changed": "2023-03-10T12:40:09+0100"
-  },
-  {
-    "title": "CERN (LTER China)",
-    "id": {
-      "prefix": "https://deims.org/networks/",
-      "suffix": "4dac034d-92d5-4c06-8e4e-aabafdbcedff"
-    },
-    "changed": "2023-03-10T12:39:43+0100"
-  },
-  {
-    "title": "LTER Poland",
-    "id": {
-      "prefix": "https://deims.org/networks/",
-      "suffix": "67763729-45a7-4248-a70d-622b1d0a3d41"
-    },
-    "changed": "2020-03-09T13:36:08+0100"
-  },
-  {
-    "title": "LTER Austria",
-    "id": {
-      "prefix": "https://deims.org/networks/",
-      "suffix": "d45c2690-dbef-4dbc-a742-26ea846edf28"
-    },
-    "changed": "2020-03-09T11:53:52+0100"
-  },
-  {
-    "title": "TERN (Taiwan)",
-    "id": {
-      "prefix": "https://deims.org/networks/",
-      "suffix": "0a4cceb1-2db0-47b0-b41b-5448720e201d"
-    },
-    "changed": "2023-03-10T12:39:29+0100"
-  },
-  {
-    "title": "LTER Lithuania",
-    "id": {
-      "prefix": "https://deims.org/networks/",
-      "suffix": "098f69df-3a84-4917-8590-377726f98cd8"
-    },
-    "changed": "2023-03-10T12:39:19+0100"
-  },
-  {
-    "title": "LTER Jordan",
-    "id": {
-      "prefix": "https://deims.org/networks/",
-      "suffix": "0ace86b8-9744-488e-b274-6221ef14ca7c"
-    },
-    "changed": "2019-11-12T13:25:40+0100"
-  },
-  {
-    "title": "LTER Italia (Italy)",
-    "id": {
-      "prefix": "https://deims.org/networks/",
-      "suffix": "7fef6b73-e5cb-4cd2-b438-ed32eb1504b3"
-    },
-    "changed": "2020-03-09T13:34:33+0100"
+    "unverifiedMemberSites": {
+      "title": "API call for listing all unverified sites claiming to be part of the network",
+      "href": "https://deims.org/api/sites?network=4742ffca-65ac-4aae-815f-83738500a1fc\u0026verified=false",
+      "type": "application/json"
+    }
   }
-]
+}

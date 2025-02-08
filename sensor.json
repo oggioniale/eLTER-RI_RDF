@@ -17,22 +17,21 @@
             "prefix": "https://deims.org/",
             "suffix": "8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6"
           },
-          "changed": "2023-05-15T08:17:31+0200"
+          "changed": "2025-01-07T11:14:56+0100"
         }
       ],
       "contact": [
+        {
+          "type": "organisation",
+          "name": "Environment Agency Austria (EAA)",
+          "url": "http://www.umweltbundesamt.at/",
+          "ror": "https://ror.org/013vyke20"
+        },
         {
           "type": "person",
           "name": "Thomas Dirnboeck",
           "email": "thomas.dirnboeck@umweltbundesamt.at",
           "orcid": "https://orcid.org/0000-0002-8294-0690"
-        },
-        {
-          "type": "organisation",
-          "name": "Environment Agency Austria (EAA)",
-          "url": "http://www.umweltbundesamt.at/",
-          "ror": "https://ror.org/01zewfb16",
-          "funderId": null
         }
       ],
       "abstract": "Precipitation measurement at LTER Zöbelboden Austria, Wildwiese (forest clearing area)",

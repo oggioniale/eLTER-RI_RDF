@@ -4,7 +4,7 @@ Authors: Alessandro Oggioni [^1]
 [^1]: alessandro.oggioni@cnr.it
 
 
-## Sites metadata elements mapping, based on the “LTER Zöbelboden” site (DEIMS.ID - https://deims.org/api/sites/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6)
+## Sites metadata elements mapping, based on the “LTER Zöbelboden” site (DEIMS.ID - https://deims.org/sites/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6)
 
 | **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
 | --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |

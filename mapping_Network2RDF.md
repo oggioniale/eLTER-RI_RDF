@@ -4,7 +4,7 @@ Authors: Alessandro Oggioni [^1]
 [^1]: alessandro.oggioni@cnr.it
 
 
-## Mapping based on the network <https://deims.org/networks/7fef6b73-e5cb-4cd2-b438-ed32eb1504b3>
+## Mapping based on the network <https://deims.org/networks/4742ffca-65ac-4aae-815f-83738500a1fc>
 
 | **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
 | --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |

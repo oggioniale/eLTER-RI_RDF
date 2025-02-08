@@ -1,0 +1,155 @@
+{
+  "title": "LTER Zöbelboden, Austria, Air chemistry, 2012",
+  "id": {
+    "prefix": "https://deims.org/dataset/",
+    "suffix": "cd1fb6f8-5e57-11e3-aa73-005056ab003f"
+  },
+  "type": "dataset",
+  "created": "2013-12-06T10:21:34+0100",
+  "changed": "2023-07-17T10:02:00+0200",
+  "attributes": {
+    "general": {
+      "abstract": "Air chemistry data of the LTER station Zöbelboden from the year 2012",
+      "keywords": [
+        {
+          "label": "air chemistry",
+          "uri": null
+        },
+        {
+          "label": "atmosphere",
+          "uri": null
+        }
+      ],
+      "inspire": null,
+      "dateRange": {
+        "from": "2011-12-31",
+        "to": null
+      },
+      "language": "English",
+      "relatedSite": [
+        {
+          "type": "site",
+          "title": "LTER Zöbelboden - Austria",
+          "id": {
+            "prefix": "https://deims.org/",
+            "suffix": "8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6"
+          },
+          "changed": "2025-01-07T11:14:56+0100"
+        }
+      ]
+    },
+    "contact": {
+      "corresponding": [
+        {
+          "type": "person",
+          "name": "Michael Mirtl",
+          "email": "michael.mirtl@umweltbundesamt.at",
+          "orcid": null
+        },
+        {
+          "type": "person",
+          "name": "Thomas Dirnboeck",
+          "email": "thomas.dirnboeck@umweltbundesamt.at",
+          "orcid": "https://orcid.org/0000-0002-8294-0690"
+        }
+      ],
+      "creator": [
+        {
+          "type": "person",
+          "name": "Thomas Dirnboeck",
+          "email": "thomas.dirnboeck@umweltbundesamt.at",
+          "orcid": "https://orcid.org/0000-0002-8294-0690"
+        }
+      ],
+      "metadataProvider": [
+        {
+          "type": "person",
+          "name": "Michael Mirtl",
+          "email": "michael.mirtl@umweltbundesamt.at",
+          "orcid": null
+        },
+        {
+          "type": "person",
+          "name": "Thomas Dirnboeck",
+          "email": "thomas.dirnboeck@umweltbundesamt.at",
+          "orcid": "https://orcid.org/0000-0002-8294-0690"
+        }
+      ]
+    },
+    "observations": {
+      "parameters": null,
+      "speciesGroups": null
+    },
+    "geographic": [
+      {
+        "boundaries": "POLYGON ((14.441857090554 47.837813130617, 14.441154972723 47.837597720893, 14.441008302418 47.83797671883, 14.440968765339 47.838147435931, 14.44091131507 47.838403147425, 14.441147826103 47.83842487587, 14.441510320342 47.838511199564, 14.441638656816 47.838125687873, 14.441857090554 47.837813130617))",
+        "abstract": "LTER Zöbelboden open area \u0022Wildwiese\u0022",
+        "elevation": {
+          "min": "889",
+          "max": "900",
+          "unit": "msl"
+        }
+      }
+    ],
+    "onlineDistribution": {
+      "dataPolicyUrl": null,
+      "doi": null,
+      "onlineLocation": [
+        {
+          "function": "url",
+          "url": {
+            "title": "B2Share Landing Page",
+            "value": "https://b2share.eudat.eu/records/2ec9cd568cfd40aa899beadcc8fe1b86"
+          },
+          "email": null
+        }
+      ]
+    },
+    "legal": {
+      "accessUse": [
+        {
+          "label": "Free for access",
+          "uri": null
+        },
+        {
+          "label": "Free for access and use upon request",
+          "uri": null
+        }
+      ],
+      "rights": null,
+      "legalAct": null,
+      "citation": null
+    },
+    "method": {
+      "instrumentation": [
+        "EMEP standards"
+      ],
+      "qualityAssurance": null,
+      "methodUrl": [
+        {
+          "title": "Manual for Integrated Monitoring",
+          "value": "https://www.slu.se/en/Collaborative-Centres-and-Projects/integrated-monitoring/monitoring-manual/"
+        }
+      ],
+      "methodDescription": [
+        "fff"
+      ],
+      "samplingTimeUnit": {
+        "label": "daily",
+        "uri": null
+      },
+      "spatialDesign": {
+        "label": "single point",
+        "uri": null
+      },
+      "spatialScale": {
+        "label": "plot",
+        "uri": null
+      },
+      "temporalResolution": {
+        "label": "daily",
+        "uri": null
+      }
+    }
+  }
+}

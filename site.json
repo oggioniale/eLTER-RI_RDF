@@ -6,7 +6,7 @@
   },
   "type": "site",
   "created": "2012-12-25T18:53:54+0100",
-  "changed": "2023-05-15T08:17:31+0200",
+  "changed": "2025-01-07T11:14:56+0100",
   "attributes": {
     "affiliation": {
       "networks": [
@@ -20,6 +20,17 @@
           },
           "siteCode": null,
           "verified": false
+        },
+        {
+          "network": {
+            "name": "GERI",
+            "id": {
+              "prefix": "https://deims.org/networks/",
+              "suffix": "c3abdc60-49f1-49db-81fe-863b7dbb21d3"
+            }
+          },
+          "siteCode": null,
+          "verified": true
         },
         {
           "network": {
@@ -81,7 +92,7 @@
         },
         {
           "label": "ICP Integrated Monitoring",
-          "uri": null
+          "uri": "https://unece.org/integrated-monitoring"
         },
         {
           "label": "LIFEPLAN",
@@ -113,15 +124,15 @@
         },
         {
           "label": "eLTER PLUS (H2020) - RA",
-          "uri": "https://cordis.europa.eu/project/id/871128"
+          "uri": "https://doi.org/10.3030/871128"
         },
         {
           "label": "eLTER PLUS (H2020) - TA",
-          "uri": "https://cordis.europa.eu/project/id/871128"
+          "uri": "https://doi.org/10.3030/871128"
         },
         {
           "label": "eLTER PLUS (H2020) - VA",
-          "uri": "https://cordis.europa.eu/project/id/871128"
+          "uri": "https://doi.org/10.3030/871128"
         },
         {
           "label": "eLTER catalogue",
@@ -149,8 +160,7 @@
           "type": "organisation",
           "name": "Environment Agency Austria (EAA)",
           "url": "http://www.umweltbundesamt.at/",
-          "ror": "https://ror.org/01zewfb16",
-          "funderId": null
+          "ror": "https://ror.org/013vyke20"
         }
       ],
       "metadataProvider": [
@@ -196,8 +206,7 @@
           "type": "organisation",
           "name": "Environment Agency Austria (EAA)",
           "url": "http://www.umweltbundesamt.at/",
-          "ror": "https://ror.org/01zewfb16",
-          "funderId": null
+          "ror": "https://ror.org/013vyke20"
         }
       ],
       "siteUrl": [
@@ -208,35 +217,38 @@
         {
           "title": "Zöbelboden Video on Youtube",
           "value": "https://www.youtube.com/watch?v=cGKvIRGLHmw"
-        },
-        {
-          "title": "ResearchGate project page with all publications, news, etc",
-          "value": "https://www.researchgate.net/project/LTER-Zoebelboden-Austria"
         }
       ]
     },
     "general": {
       "abstract": "The Zöbelboden was established in 1992 as the only Integrated Monitoring station in Austria under the UN Convention on long-range transboundary air pollution (CLRTAP). In 2006 it became part of LTER Austria. The Zöbelboden covers a small forested catchment (90 ha) of a karstic mountain range (500 to 950 m above sea level) in the Kalkalpen National Park. Monitoring and research is focussing on climate change effects on forest ecosystems, the forest carbon and nitrogen cycle, biodiversity, and air pollution effects on forested catchments. The Zöbelboden represents one of the best known karst catchments in Europe with long-term data series of the major components of its ecosystems. The site is part of many national and international monitoring and research networks (ICP Integrated Monitoring, EMEP, LTER, forestREplot, SoilTemp, LifePlan, IG-L, EU NEC-D, etc.). The Zöbelboden is managed by the Environment Agency Austria with technical support of the Kalkalpen National Park and the Austrian Federal Forests.",
+      "citation": "Zöbelboden (1992), Austria. Mountain forest ecosystem in a karst catchment area of the Northern Limestone Alps. Umweltbundesamt GmbH. https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6.\r\n",
+      "relatedIdentifiers": null,
       "status": {
         "label": "Operational",
-        "uri": "https://codes.wmo.int/wmdr/ReportingStatus/operational"
+        "uri": "http://codes.wmo.int/wmdr/ReportingStatus/operational"
       },
       "yearEstablished": 1992,
       "yearClosed": null,
-      "hierarchy": {
-        "parent": [
-          {
-            "type": "site",
-            "title": "LTSER Platform Eisenwurzen (EW) - Austria",
-            "id": {
-              "prefix": "https://deims.org/",
-              "suffix": "d0a8da18-0881-4ebe-bccf-bc4cb4e25701"
-            },
-            "changed": "2023-03-15T14:09:08+0100"
-          }
-        ],
-        "children": null
-      },
+      "relatedSites": [
+        {
+          "typeOfRelationship": {
+            "label": "belongs to",
+            "uri": "null"
+          },
+          "listOfSites": [
+            {
+              "type": "site",
+              "title": "LTSER Platform Eisenwurzen (EW) - Austria",
+              "id": {
+                "prefix": "https://deims.org/",
+                "suffix": "d0a8da18-0881-4ebe-bccf-bc4cb4e25701"
+              },
+              "changed": "2025-01-07T11:14:56+0100"
+            }
+          ]
+        }
+      ],
       "siteName": "LTER Zöbelboden",
       "shortName": "Zöbelboden",
       "siteType": "Stationary land-based site",
@@ -295,7 +307,7 @@
       "images": [
         {
           "url": "https://deims.org/sites/default/files/photos/lter-zobelboden-austria_6805.jpg",
-          "alt": "automatic chamber for soil carbon respiration "
+          "alt": "Automatic chamber for soil carbon respiration "
         },
         {
           "url": "https://deims.org/sites/default/files/photos/lter-zobelboden-austria_6806.jpg",
@@ -303,7 +315,7 @@
         },
         {
           "url": "https://deims.org/sites/default/files/photos/lter-zobelboden-austria_6807.jpg",
-          "alt": "Ancient beech forest exist in part of the area"
+          "alt": "Ancient beech forests exist in part of the area"
         },
         {
           "url": "https://deims.org/sites/default/files/photos/lter-zobelboden-austria_6808.jpg",
@@ -323,7 +335,7 @@
         },
         {
           "url": "https://deims.org/sites/default/files/2019-12/Uebersicht_zoebelboden_mitLuftbild_v1.png",
-          "alt": "overview LTER Zöbelboden"
+          "alt": "Aerial overview of LTER Zöbelboden"
         }
       ]
     },
@@ -331,18 +343,18 @@
       "airTemperature": {
         "yearlyAverage": 7.2,
         "monthlyAverage": [
-          "-0.55",
-          "0.17",
-          "2.88",
-          "7.39",
-          "11.77",
-          "15.12",
-          "16.77",
-          "16.7",
-          "12.33",
-          "9.09",
-          "4.24",
-          "0.78"
+          -0.55,
+          0.17,
+          2.88,
+          7.39,
+          11.77,
+          15.12,
+          16.77,
+          16.7,
+          12.33,
+          9.09,
+          4.24,
+          0.78
         ],
         "unit": "°C",
         "referencePeriod": {
@@ -353,18 +365,18 @@
       "precipitation": {
         "yearlyAverage": 1600,
         "monthlyAverage": [
-          "129",
-          "93",
-          "142",
-          "97",
-          "169",
-          "165",
-          "163",
-          "161",
-          "157",
-          "109",
-          "88",
-          "113"
+          129,
+          93,
+          142,
+          97,
+          169,
+          165,
+          163,
+          161,
+          157,
+          109,
+          88,
+          113
         ],
         "unit": "mm",
         "referencePeriod": {
@@ -447,7 +459,7 @@
             "prefix": "https://deims.org/locations/",
             "suffix": "12b38f3f-7e72-425a-80c7-7cad35ce4c7b"
           },
-          "changed": "2021-05-18T10:13:08+0200"
+          "changed": "2024-05-07T14:22:05+0200"
         },
         {
           "title": "LTER Zöbelboden IP1",
@@ -455,7 +467,7 @@
             "prefix": "https://deims.org/locations/",
             "suffix": "85dc6019-9654-4ba0-8338-08c4ffe8fe47"
           },
-          "changed": "2021-11-15T14:41:24+0100"
+          "changed": "2024-05-07T14:23:57+0200"
         },
         {
           "title": "LTER Zöbelboden IP2",
@@ -463,7 +475,7 @@
             "prefix": "https://deims.org/locations/",
             "suffix": "bc96a499-1b20-4da8-be2d-17306d64b788"
           },
-          "changed": "2021-11-15T14:41:39+0100"
+          "changed": "2024-05-07T14:23:57+0200"
         },
         {
           "title": "LTER Zöbelboden IP3",
@@ -471,7 +483,7 @@
             "prefix": "https://deims.org/locations/",
             "suffix": "f4047a43-f917-4d58-896d-b6a5c30da973"
           },
-          "changed": "2021-11-19T15:15:00+0100"
+          "changed": "2024-05-07T14:23:57+0200"
         },
         {
           "title": "LTER Zöbelboden Wildwiese",
@@ -479,7 +491,7 @@
             "prefix": "https://deims.org/locations/",
             "suffix": "d181ffd1-85f3-463e-bd8b-71676751ca22"
           },
-          "changed": "2023-03-02T13:50:19+0100"
+          "changed": "2024-05-07T14:23:57+0200"
         },
         {
           "title": "LTER Zöbelboden Measuring weir",
@@ -487,7 +499,7 @@
             "prefix": "https://deims.org/locations/",
             "suffix": "a166f9f9-e9ae-4206-af55-8effe38406d5"
           },
-          "changed": "2021-11-17T10:07:35+0100"
+          "changed": "2024-05-07T14:22:47+0200"
         },
         {
           "title": "LTER Zöbelboden Measuring Tower",
@@ -495,7 +507,7 @@
             "prefix": "https://deims.org/locations/",
             "suffix": "04de8301-b481-4ed2-89ff-2f48562e2514"
           },
-          "changed": "2021-11-17T10:07:44+0100"
+          "changed": "2024-05-07T14:22:47+0200"
         }
       ]
     },
@@ -1642,7 +1654,7 @@
           "suffix": "cd1fb6f8-5e57-11e3-aa73-005056ab003f"
         },
         "title": "LTER Zöbelboden, Austria, Air chemistry, 2012",
-        "changed": "2019-12-20T13:21:59+0100"
+        "changed": "2023-07-17T10:02:00+0200"
       },
       {
         "id": {
@@ -1650,7 +1662,7 @@
           "suffix": "75a7f938-7c77-11e3-8832-005056ab003f"
         },
         "title": "LTER Zöbelboden, Austria, Air chemistry, 2001-2011",
-        "changed": "2019-12-20T13:21:59+0100"
+        "changed": "2023-07-17T10:00:25+0200"
       },
       {
         "id": {
@@ -1658,7 +1670,7 @@
           "suffix": "1ddef9fc-7c79-11e3-8832-005056ab003f"
         },
         "title": "LTER Zöbelboden, Austria, Meteorology, 2012",
-        "changed": "2020-04-29T10:19:03+0200"
+        "changed": "2023-07-17T10:25:03+0200"
       },
       {
         "id": {
@@ -1666,7 +1678,7 @@
           "suffix": "8d2c597c-7c78-11e3-8832-005056ab003f"
         },
         "title": "LTER Zöbelboden, Austria, Meteorology, 2001-2011",
-        "changed": "2019-12-20T13:21:59+0100"
+        "changed": "2023-06-30T14:58:52+0200"
       },
       {
         "id": {
@@ -1674,7 +1686,7 @@
           "suffix": "ebde825e-7c7a-11e3-8832-005056ab003f"
         },
         "title": "LTER Zöbelboden, Austria, Litterfall chemistry, 1993-2011",
-        "changed": "2023-06-30T11:52:44+0200"
+        "changed": "2023-06-30T12:46:00+0200"
       },
       {
         "id": {
@@ -1682,7 +1694,7 @@
           "suffix": "9e3def98-7c7b-11e3-8832-005056ab003f"
         },
         "title": "LTER Zöbelboden, Austria, Litterfall chemistry, 2012",
-        "changed": "2020-11-25T11:00:06+0100"
+        "changed": "2023-06-30T12:47:38+0200"
       },
       {
         "id": {
@@ -1690,7 +1702,7 @@
           "suffix": "bc717ac6-5dcf-11e4-a597-005056ab003f"
         },
         "title": "LTER Zöbelboden, Austria, Soil water chemistry, 1993-2012",
-        "changed": "2023-01-13T14:59:56+0100"
+        "changed": "2023-07-14T09:07:33+0200"
       },
       {
         "id": {
@@ -1698,7 +1710,7 @@
           "suffix": "bf4bdb26-5387-11e4-a597-005056ab003f"
         },
         "title": "LTER Zöbelboden, Austria, Throughfall chemistry, 1993-2012",
-        "changed": "2020-04-29T10:55:21+0200"
+        "changed": "2023-07-13T09:41:57+0200"
       },
       {
         "id": {
@@ -1714,7 +1726,7 @@
           "suffix": "63b2325e-4eca-11e4-a597-005056ab003f"
         },
         "title": "LTER Zöbelboden, Austria, Epiphytic Lichens, 1993-2010",
-        "changed": "2019-12-20T13:21:59+0100"
+        "changed": "2023-07-17T10:05:58+0200"
       },
       {
         "id": {
@@ -1745,8 +1757,8 @@
           "prefix": "https://deims.org/activity/",
           "suffix": "1f23526e-c156-48c6-b795-9b6b0e0358c4"
         },
-        "title": "LTER Zöbelboden Austria forest structure",
-        "changed": "2021-07-28T08:59:50+0200"
+        "title": "LTER Zöbelboden - Austria - biological parameter, canopy cover rate, canopy height, tree age, tree diameter, tree height, ecosystem parameter, deadwood decaying rate, ecosystem structure, forest structure, species turnover, tree diameter at breast height,",
+        "changed": "2024-07-01T15:44:27+0200"
       },
       {
         "id": {
@@ -1793,8 +1805,8 @@
           "prefix": "https://deims.org/dataset/",
           "suffix": "32721c46-717c-49fb-824f-24fd8cddf159"
         },
-        "title": "LTER Zöbelboden, Austria, Vegetation data 1993 - 2014",
-        "changed": "2020-01-07T14:31:29+0100"
+        "title": "LTER Zöbelboden, Austria, Vegetation data 1993 - 2021",
+        "changed": "2024-03-14T13:26:55+0100"
       },
       {
         "id": {
@@ -1818,31 +1830,31 @@
           "suffix": "1ebafb26-1c04-4f18-9690-aae8378fd04f"
         },
         "title": "LTER Zöbelboden, Austria, Precipitation chemistry, 2014",
-        "changed": "2020-04-29T10:22:52+0200"
+        "changed": "2023-07-12T10:28:28+0200"
       },
       {
         "id": {
           "prefix": "https://deims.org/dataset/",
           "suffix": "14f88f20-ccd3-4bc7-871c-366ad28af223"
         },
-        "title": "LTER Zöbelboden, Austria, Method documentation - Air meteorology",
-        "changed": "2019-12-20T13:21:59+0100"
+        "title": "LTER Zöbelboden, Austria, Metadata - Air meteorology",
+        "changed": "2023-07-03T10:37:26+0200"
       },
       {
         "id": {
           "prefix": "https://deims.org/dataset/",
           "suffix": "0a9bb28d-83f2-487a-ac67-0b39313e16cc"
         },
-        "title": "LTER Zöbelboden, Austria, Method documentation - Precipitation chemistry",
-        "changed": "2019-12-20T13:21:59+0100"
+        "title": "LTER Zöbelboden, Austria, Metadata - Precipitation chemistry",
+        "changed": "2023-07-12T10:01:04+0200"
       },
       {
         "id": {
           "prefix": "https://deims.org/dataset/",
           "suffix": "d9b8f5f4-f92f-4e95-ad23-f4951196dec2"
         },
-        "title": "LTER Zöbelboden, Austria, Method documentation - Throughfall chemistry",
-        "changed": "2021-09-03T11:42:20+0200"
+        "title": "LTER Zöbelboden, Austria, Metadata - Throughfall chemistry",
+        "changed": "2023-07-13T09:38:32+0200"
       },
       {
         "id": {
@@ -1850,7 +1862,7 @@
           "suffix": "cfc1a860-840a-41f2-a208-cf66ab25dfa4"
         },
         "title": "LTER Zöbelboden, Austria, Precipitation chemistry, 2015",
-        "changed": "2020-01-07T14:21:58+0100"
+        "changed": "2023-07-12T10:30:36+0200"
       },
       {
         "id": {
@@ -1866,7 +1878,7 @@
           "suffix": "d099e87a-200c-4707-8172-f03363eb3398"
         },
         "title": "LTER Zöbelboden, Austria, Throughfall chemistry, 2013",
-        "changed": "2020-01-07T14:27:18+0100"
+        "changed": "2023-07-13T09:49:13+0200"
       },
       {
         "id": {
@@ -1874,7 +1886,7 @@
           "suffix": "24114cab-8bdc-472a-9131-291330aa5aad"
         },
         "title": "LTER Zöbelboden, Austria, Throughfall chemistry, 2014",
-        "changed": "2020-01-07T14:28:19+0100"
+        "changed": "2023-07-13T09:55:21+0200"
       },
       {
         "id": {
@@ -1882,7 +1894,7 @@
           "suffix": "5ceeb7a8-db86-444b-aef5-24e81c4f4e2f"
         },
         "title": "LTER Zöbelboden, Austria, Throughfall chemistry, 2015",
-        "changed": "2020-01-07T14:29:20+0100"
+        "changed": "2023-07-13T09:57:19+0200"
       },
       {
         "id": {
@@ -1890,7 +1902,7 @@
           "suffix": "c2f0bc25-0d5b-4b0e-9ad9-56b9dda4402e"
         },
         "title": "LTER Zöbelboden, Austria, Precipitation chemistry, 2013",
-        "changed": "2020-05-05T11:28:46+0200"
+        "changed": "2023-07-12T10:09:13+0200"
       },
       {
         "id": {
@@ -1898,7 +1910,7 @@
           "suffix": "bee71659-3d19-4cca-81a6-f1dad53a45b6"
         },
         "title": "LTER Zöbelboden, Austria, Reference documentation",
-        "changed": "2020-01-07T14:54:10+0100"
+        "changed": "2023-07-13T10:26:53+0200"
       },
       {
         "id": {
@@ -1906,7 +1918,7 @@
           "suffix": "1a90bf6b-54d2-4755-80ea-cee989c62bf6"
         },
         "title": "LTER Zöbelboden, Austria, Precipitation chemistry, 1993-2012",
-        "changed": "2019-12-20T13:21:59+0100"
+        "changed": "2023-07-12T10:07:33+0200"
       },
       {
         "id": {
@@ -1930,7 +1942,7 @@
           "suffix": "1662162b-1102-4f4e-9420-cf9c6afc8ce8"
         },
         "title": "LTER Zöbelboden, Austria, Precipitation chemistry, 2016",
-        "changed": "2020-05-05T11:31:58+0200"
+        "changed": "2023-07-12T10:33:36+0200"
       },
       {
         "id": {
@@ -1938,7 +1950,7 @@
           "suffix": "6eb2ae3d-686f-4c8a-9656-025b7f1c1fbf"
         },
         "title": "LTER Zöbelboden, Austria, Litterfall chemistry, 2016",
-        "changed": "2020-11-25T13:30:10+0100"
+        "changed": "2023-06-30T13:49:57+0200"
       },
       {
         "id": {
@@ -1946,7 +1958,7 @@
           "suffix": "6eb2ae3d-686f-4c8a-9656-025b7f1c1fbf"
         },
         "title": "LTER Zöbelboden, Austria, Litterfall chemistry, 2015",
-        "changed": "2020-11-25T13:26:50+0100"
+        "changed": "2023-06-30T13:49:19+0200"
       },
       {
         "id": {
@@ -1954,7 +1966,7 @@
           "suffix": "6eb2ae3d-686f-4c8a-9656-025b7f1c1fbf"
         },
         "title": "LTER Zöbelboden, Austria, Litterfall chemistry, 2014",
-        "changed": "2020-11-25T13:23:03+0100"
+        "changed": "2023-06-30T13:41:54+0200"
       },
       {
         "id": {
@@ -1962,7 +1974,7 @@
           "suffix": "6eb2ae3d-686f-4c8a-9656-025b7f1c1fbf"
         },
         "title": "LTER Zöbelboden, Austria, Litterfall chemistry, 2013",
-        "changed": "2020-11-25T12:39:20+0100"
+        "changed": "2023-06-30T13:39:35+0200"
       },
       {
         "id": {
@@ -1970,7 +1982,7 @@
           "suffix": "5ceeb7a8-db86-444b-aef5-24e81c4f4e2f"
         },
         "title": "LTER Zöbelboden, Austria, Throughfall chemistry, 2016",
-        "changed": "2020-05-05T11:13:00+0200"
+        "changed": "2023-07-13T09:59:48+0200"
       },
       {
         "id": {
@@ -1978,7 +1990,7 @@
           "suffix": "bc717ac6-5dcf-11e4-a597-005056ab003f"
         },
         "title": "LTER Zöbelboden, Austria, Soil water chemistry 2013",
-        "changed": "2021-07-19T15:21:37+0200"
+        "changed": "2023-07-14T12:00:01+0200"
       },
       {
         "id": {
@@ -1986,7 +1998,7 @@
           "suffix": "bc717ac6-5dcf-11e4-a597-005056ab003f"
         },
         "title": "LTER Zöbelboden, Austria, Soil water chemistry 2014",
-        "changed": "2020-04-16T13:30:44+0200"
+        "changed": "2023-07-14T11:55:55+0200"
       },
       {
         "id": {
@@ -1994,7 +2006,7 @@
           "suffix": "bc717ac6-5dcf-11e4-a597-005056ab003f"
         },
         "title": "LTER Zöbelboden, Austria, Soil water chemistry 2015",
-        "changed": "2020-04-16T16:33:46+0200"
+        "changed": "2023-07-14T12:03:04+0200"
       },
       {
         "id": {
@@ -2002,7 +2014,7 @@
           "suffix": "bc717ac6-5dcf-11e4-a597-005056ab003f"
         },
         "title": "LTER Zöbelboden, Austria, Soil water chemistry 2016",
-        "changed": "2020-04-16T16:38:54+0200"
+        "changed": "2023-07-14T12:05:21+0200"
       },
       {
         "id": {
@@ -2010,7 +2022,7 @@
           "suffix": "534d7c99-c820-4f61-8641-db9a6ef02786"
         },
         "title": "LTER Zöbelboden, Austria, Runoff Water Chemistry, 1993-2011",
-        "changed": "2021-07-21T12:52:34+0200"
+        "changed": "2023-07-06T11:27:26+0200"
       },
       {
         "id": {
@@ -2018,7 +2030,7 @@
           "suffix": "a5929e6b-a599-4b06-9171-005975626756"
         },
         "title": "LTER Zöbelboden, Austria, Precipitation chemistry, 2017",
-        "changed": "2020-05-05T11:45:16+0200"
+        "changed": "2023-07-12T10:35:47+0200"
       },
       {
         "id": {
@@ -2026,7 +2038,7 @@
           "suffix": "86a375b7-08a5-4606-8d93-6489c422b6cb"
         },
         "title": "LTER Zöbelboden, Austria, Throughfall chemistry, 2017",
-        "changed": "2020-05-05T13:36:07+0200"
+        "changed": "2023-07-13T10:01:02+0200"
       },
       {
         "id": {
@@ -2034,7 +2046,7 @@
           "suffix": "cc6031d4-ee77-4fac-9f32-a382c6ee50ae"
         },
         "title": "LTER Zöbelboden, Austria, Throughfall chemistry, 2018",
-        "changed": "2020-05-08T10:08:55+0200"
+        "changed": "2023-07-13T10:02:33+0200"
       },
       {
         "id": {
@@ -2042,7 +2054,7 @@
           "suffix": "fbd7d537-d863-4777-951e-392667354592"
         },
         "title": "LTER Zöbelboden, Austria, Precipitation chemistry, 2018",
-        "changed": "2020-05-08T10:15:34+0200"
+        "changed": "2023-07-12T10:37:13+0200"
       },
       {
         "id": {
@@ -2050,7 +2062,7 @@
           "suffix": "09d9605f-21eb-4cce-adeb-33f5110f90e9"
         },
         "title": "LTER Zöbelboden, Austria, Metadata - Sap flow and automated dendrometers",
-        "changed": "2020-12-18T14:00:09+0100"
+        "changed": "2023-08-04T12:28:46+0200"
       },
       {
         "id": {
@@ -2082,7 +2094,7 @@
           "suffix": "48768e3c-5ec0-4533-87d2-4df1469480a2"
         },
         "title": "LTER Zöbelboden, Austria, Litterfall chemistry, 2017",
-        "changed": "2020-11-27T16:57:22+0100"
+        "changed": "2023-07-11T18:46:53+0200"
       },
       {
         "id": {
@@ -2090,7 +2102,7 @@
           "suffix": "436baf30-8fc1-4b90-9394-f63eac4bc09b"
         },
         "title": "LTER Zöbelboden, Austria, Litterfall chemistry, 2018",
-        "changed": "2020-11-27T17:11:33+0100"
+        "changed": "2023-06-30T13:51:46+0200"
       },
       {
         "id": {
@@ -2098,7 +2110,7 @@
           "suffix": "68d3b41e-3fe3-4a27-afb6-a5ee3cc56b9f"
         },
         "title": "LTER Zöbelboden, Austria, Litterfall chemistry, 2019",
-        "changed": "2020-11-27T17:22:14+0100"
+        "changed": "2023-06-30T13:53:57+0200"
       },
       {
         "id": {
@@ -2114,7 +2126,7 @@
           "suffix": "aa4fa946-0e09-4602-a6c8-ec63f88176b2"
         },
         "title": "LTER Zöbelboden, Austria, Air quality, 2000-2020",
-        "changed": "2020-12-02T12:04:46+0100"
+        "changed": "2023-07-04T15:45:29+0200"
       },
       {
         "id": {
@@ -2122,7 +2134,7 @@
           "suffix": "98c1d643-2746-4dfb-a3c5-c7773b0a5888"
         },
         "title": "LTER Zöbelboden, Austria, Runoff Water Chemistry, 2012",
-        "changed": "2020-12-04T10:40:51+0100"
+        "changed": "2023-07-06T11:32:36+0200"
       },
       {
         "id": {
@@ -2130,7 +2142,7 @@
           "suffix": "89fd62b1-1c02-4ce5-9141-b9cfa065c20e"
         },
         "title": "LTER Zöbelboden, Austria, Runoff Water Chemistry, 2013",
-        "changed": "2020-12-04T10:58:21+0100"
+        "changed": "2023-07-06T11:34:07+0200"
       },
       {
         "id": {
@@ -2138,7 +2150,7 @@
           "suffix": "726371a8-ea94-4bb0-b4cb-cfaf24fe11e0"
         },
         "title": "LTER Zöbelboden, Austria, Runoff Water Chemistry, 2014",
-        "changed": "2020-12-04T11:06:52+0100"
+        "changed": "2023-07-06T11:35:37+0200"
       },
       {
         "id": {
@@ -2146,7 +2158,7 @@
           "suffix": "36c5d327-2936-4254-b2a8-847c8537ee6d"
         },
         "title": "LTER Zöbelboden, Austria, Runoff Water Chemistry, 2015",
-        "changed": "2020-12-04T11:16:09+0100"
+        "changed": "2023-07-06T11:36:52+0200"
       },
       {
         "id": {
@@ -2154,7 +2166,7 @@
           "suffix": "13f6b5bd-4d97-4ace-9504-e776f2c08ee4"
         },
         "title": "LTER Zöbelboden, Austria, Runoff Water Chemistry, 2016",
-        "changed": "2020-12-04T11:24:40+0100"
+        "changed": "2023-07-06T11:40:28+0200"
       },
       {
         "id": {
@@ -2162,7 +2174,7 @@
           "suffix": "dfcdcb09-8fe0-43d0-b1c8-91fcfde8138c"
         },
         "title": "LTER Zöbelboden, Austria, Runoff Water Chemistry, 2017",
-        "changed": "2020-12-04T11:33:09+0100"
+        "changed": "2023-07-06T11:42:12+0200"
       },
       {
         "id": {
@@ -2170,7 +2182,7 @@
           "suffix": "956e7d6d-bdf1-4d2b-86d6-ac8e9d9e634e"
         },
         "title": "LTER Zöbelboden, Austria, Runoff Water Chemistry, 2018",
-        "changed": "2020-12-04T11:40:56+0100"
+        "changed": "2023-07-06T11:43:04+0200"
       },
       {
         "id": {
@@ -2178,7 +2190,7 @@
           "suffix": "ba91d455-ece1-4326-b85e-da64c18d8352"
         },
         "title": "LTER Zöbelboden, Austria, Runoff Water Chemistry, 2019",
-        "changed": "2020-12-04T11:48:16+0100"
+        "changed": "2023-07-06T11:45:48+0200"
       },
       {
         "id": {
@@ -2186,7 +2198,7 @@
           "suffix": "dd26da08-a208-4492-8589-9ef2a106d1bc"
         },
         "title": "LTER Zöbelboden, Austria, Epiphytic Lichens, 2005-2019",
-        "changed": "2020-12-17T14:50:21+0100"
+        "changed": "2023-07-17T10:08:47+0200"
       },
       {
         "id": {
@@ -2202,7 +2214,7 @@
           "suffix": "de97b80c-8285-43d4-8ffa-1bea3671ed05"
         },
         "title": "LTER Zöbelboden, Austria, Foliage chemistry, 2017",
-        "changed": "2021-07-21T12:48:29+0200"
+        "changed": "2023-07-11T18:31:55+0200"
       },
       {
         "id": {
@@ -2234,7 +2246,7 @@
           "suffix": "fbd7d537-d863-4777-951e-392667354592"
         },
         "title": "LTER Zöbelboden, Austria, Precipitation chemistry, 2019",
-        "changed": "2021-04-16T16:15:15+0200"
+        "changed": "2023-07-12T10:55:27+0200"
       },
       {
         "id": {
@@ -2242,7 +2254,7 @@
           "suffix": "cc6031d4-ee77-4fac-9f32-a382c6ee50ae"
         },
         "title": "LTER Zöbelboden, Austria, Throughfall chemistry, 2019",
-        "changed": "2021-04-16T17:36:07+0200"
+        "changed": "2023-07-13T10:11:19+0200"
       },
       {
         "id": {
@@ -2250,7 +2262,7 @@
           "suffix": "bc717ac6-5dcf-11e4-a597-005056ab003f"
         },
         "title": "LTER Zöbelboden, Austria, Soil water chemistry 2017",
-        "changed": "2021-04-22T16:57:16+0200"
+        "changed": "2023-07-14T12:07:45+0200"
       },
       {
         "id": {
@@ -2258,7 +2270,7 @@
           "suffix": "bc717ac6-5dcf-11e4-a597-005056ab003f"
         },
         "title": "LTER Zöbelboden, Austria, Soil water chemistry 2018",
-        "changed": "2021-04-22T17:02:02+0200"
+        "changed": "2023-07-14T12:10:17+0200"
       },
       {
         "id": {
@@ -2266,7 +2278,7 @@
           "suffix": "bc717ac6-5dcf-11e4-a597-005056ab003f"
         },
         "title": "LTER Zöbelboden, Austria, Soil water chemistry 2019",
-        "changed": "2021-07-19T15:55:52+0200"
+        "changed": "2023-07-14T12:12:24+0200"
       },
       {
         "id": {
@@ -2274,7 +2286,7 @@
           "suffix": "79cf34dd-0c01-4d67-809b-67416dfeccb0"
         },
         "title": "LTER Zöbelboden, Austria, Foliage chemistry, 2019",
-        "changed": "2021-07-21T12:48:45+0200"
+        "changed": "2023-07-11T18:46:00+0200"
       },
       {
         "id": {
@@ -2282,7 +2294,7 @@
           "suffix": "26136592-8d64-4175-a085-f79a53049529"
         },
         "title": "LTER Zöbelboden, Austria, Foliage chemistry, 2016",
-        "changed": "2021-07-21T12:48:09+0200"
+        "changed": "2023-07-11T17:57:49+0200"
       },
       {
         "id": {
@@ -2290,7 +2302,7 @@
           "suffix": "d9557318-0186-4e2a-9032-e1eeaccb9c1e"
         },
         "title": "LTER Zöbelboden, Austria, Foliage chemistry, 2015",
-        "changed": "2021-07-21T12:47:53+0200"
+        "changed": "2023-07-11T17:47:09+0200"
       },
       {
         "id": {
@@ -2298,7 +2310,7 @@
           "suffix": "bcd9ae12-b11b-4ba6-8941-6beb7e05a885"
         },
         "title": "LTER Zöbelboden, Austria, Foliage chemistry, 2014",
-        "changed": "2021-07-21T12:47:37+0200"
+        "changed": "2023-07-11T18:34:26+0200"
       },
       {
         "id": {
@@ -2338,7 +2350,7 @@
           "suffix": "7a7be353-59ed-41e8-a536-b3562c67758f"
         },
         "title": "LTER Zöbelboden, Austria, Foliage chemistry, 2018",
-        "changed": "2021-06-14T22:15:54+0200"
+        "changed": "2023-07-11T18:41:45+0200"
       },
       {
         "id": {
@@ -2346,7 +2358,7 @@
           "suffix": "c4eeb0c5-96c8-49c6-ab29-369568beb4c6"
         },
         "title": "LTER Zöbelboden, Austria, Foliage chemistry, 2011",
-        "changed": "2021-06-14T22:22:24+0200"
+        "changed": "2023-07-11T13:23:24+0200"
       },
       {
         "id": {
@@ -2354,15 +2366,7 @@
           "suffix": "8d6b2fc7-b377-4d0f-b771-7950b12f410d"
         },
         "title": "LTER Zöbelboden, Austria, Foliage chemistry, 2008",
-        "changed": "2021-06-14T23:04:38+0200"
-      },
-      {
-        "id": {
-          "prefix": "https://deims.org/dataset/",
-          "suffix": "7f6e18d1-4f9c-48a2-8250-312078919bb6"
-        },
-        "title": "LTER Zöbelboden, Austria, Foliage chemistry, 2007",
-        "changed": "2021-06-14T23:05:44+0200"
+        "changed": "2023-07-11T18:37:07+0200"
       },
       {
         "id": {
@@ -2370,7 +2374,7 @@
           "suffix": "a647ab04-c139-4c50-89af-d597fd64932e"
         },
         "title": "LTER Zöbelboden, Austria, Foliage chemistry, 1992-2006",
-        "changed": "2021-07-19T17:57:42+0200"
+        "changed": "2023-07-11T18:39:22+0200"
       },
       {
         "id": {
@@ -2378,7 +2382,7 @@
           "suffix": "a647ab04-c139-4c50-89af-d597fd64932e"
         },
         "title": "LTER Zöbelboden, Austria, Foliage chemistry, 2007",
-        "changed": "2021-07-19T18:05:40+0200"
+        "changed": "2023-07-11T18:38:09+0200"
       },
       {
         "id": {
@@ -2386,7 +2390,7 @@
           "suffix": "f8bd4b8b-97fe-432c-b2fa-782fe36fccb3"
         },
         "title": "LTER Zöbelboden, Austria, Permanent Monitoring Plots, Forest inventory and tree biomass data 1993 \u2013 2019",
-        "changed": "2021-07-28T09:33:05+0200"
+        "changed": "2023-08-04T12:24:02+0200"
       },
       {
         "id": {
@@ -2403,6 +2407,102 @@
         },
         "title": "LTER Zöbelboden, Austria, Soil moisture data 2018-2020",
         "changed": "2022-07-21T16:18:49+0200"
+      },
+      {
+        "id": {
+          "prefix": "https://deims.org/dataset/",
+          "suffix": "258edc81-f7ae-47da-a7f8-e137ff090e31"
+        },
+        "title": "LTER Zöbelboden, Austria, Metadata - Soil temperature",
+        "changed": "2023-07-06T10:24:03+0200"
+      },
+      {
+        "id": {
+          "prefix": "https://deims.org/dataset/",
+          "suffix": null
+        },
+        "title": "LTER Zöbelboden, Austria, Metadata - Soil water content \u0026 soil temperature",
+        "changed": "2023-07-10T09:18:42+0200"
+      },
+      {
+        "id": {
+          "prefix": "https://deims.org/dataset/",
+          "suffix": "fbd7d537-d863-4777-951e-392667354592"
+        },
+        "title": "LTER Zöbelboden, Austria, Precipitation chemistry, 2020",
+        "changed": "2024-03-28T10:01:37+0100"
+      },
+      {
+        "id": {
+          "prefix": "https://deims.org/dataset/",
+          "suffix": "fbd7d537-d863-4777-951e-392667354592"
+        },
+        "title": "LTER Zöbelboden, Austria, Precipitation chemistry, 2021",
+        "changed": "2024-03-28T10:11:21+0100"
+      },
+      {
+        "id": {
+          "prefix": "https://deims.org/dataset/",
+          "suffix": "fbd7d537-d863-4777-951e-392667354592"
+        },
+        "title": "LTER Zöbelboden, Austria, Precipitation chemistry, 2022",
+        "changed": "2024-03-28T10:25:36+0100"
+      },
+      {
+        "id": {
+          "prefix": "https://deims.org/dataset/",
+          "suffix": "cc6031d4-ee77-4fac-9f32-a382c6ee50ae"
+        },
+        "title": "LTER Zöbelboden, Austria, Throughfall chemistry, 2020",
+        "changed": "2024-03-28T10:47:51+0100"
+      },
+      {
+        "id": {
+          "prefix": "https://deims.org/dataset/",
+          "suffix": "cc6031d4-ee77-4fac-9f32-a382c6ee50ae"
+        },
+        "title": "LTER Zöbelboden, Austria, Throughfall chemistry, 2021",
+        "changed": "2024-03-28T11:12:01+0100"
+      },
+      {
+        "id": {
+          "prefix": "https://deims.org/dataset/",
+          "suffix": "cc6031d4-ee77-4fac-9f32-a382c6ee50ae"
+        },
+        "title": "LTER Zöbelboden, Austria, Throughfall chemistry, 2022",
+        "changed": "2024-03-28T11:16:59+0100"
+      },
+      {
+        "id": {
+          "prefix": "https://deims.org/dataset/",
+          "suffix": "bc717ac6-5dcf-11e4-a597-005056ab003f"
+        },
+        "title": "LTER Zöbelboden, Austria, Soil water chemistry 2020",
+        "changed": "2024-03-28T11:57:18+0100"
+      },
+      {
+        "id": {
+          "prefix": "https://deims.org/dataset/",
+          "suffix": "ba91d455-ece1-4326-b85e-da64c18d8352"
+        },
+        "title": "LTER Zöbelboden, Austria, Runoff Water Chemistry, 2020",
+        "changed": "2024-04-09T13:42:06+0200"
+      },
+      {
+        "id": {
+          "prefix": "https://deims.org/dataset/",
+          "suffix": "ba91d455-ece1-4326-b85e-da64c18d8352"
+        },
+        "title": "LTER Zöbelboden, Austria, Runoff Water Chemistry, 2021",
+        "changed": "2024-04-09T13:44:46+0200"
+      },
+      {
+        "id": {
+          "prefix": "https://deims.org/dataset/",
+          "suffix": "ba91d455-ece1-4326-b85e-da64c18d8352"
+        },
+        "title": "LTER Zöbelboden, Austria, Runoff Water Chemistry, 2022",
+        "changed": "2024-04-09T13:50:07+0200"
       }
     ],
     "projectRelated": {
