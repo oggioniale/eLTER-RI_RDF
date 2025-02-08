@@ -9,7 +9,7 @@ Authors: Alessandro Oggioni [^1]
 | **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
 | --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |
 | 1	| type | $.type | `"Feature"`	| -	| not included | 
-| 2	| geometry	| $.geometry	| `{ "type": "Polygon", "coordinates": [[[ 14.435456610495, 47.839857143486 ], [ 14.435472337877, … ], … ]] }`	| -	| not yet included because the JSON result is not a WKT | 
+| 2	| geometry	| $.geometry	| `{ "type": "Polygon", "coordinates": [[[ 14.435456610495, 47.839857143486 ], [ 14.435472337877, … ], … ]]}`	| -	| not yet included because the JSON result is not a WKT | 
 | 3.1	| properties.title | $.properties.title	| `"LTER Zöbelboden, Austria, Project area"` | `ef:name "LTER Zöbelboden, Austria, Project area"@en` | | 
 | 3.2	| properties.id	| concat( \$.properties.id.prefix, \$.properties.id.suffix) | `"https://deims.org/locations/12b38f3f-7e72-425a-80c7-7cad35ce4c7b"`	| `<https://deims.org/locations/12b38f3f-7e72-425a-80c7-7cad35ce4c7b> rdf:type prov:Entity , ef:EnvironmentalMonitoringFacility` | | 
 | 3.3	| properties.created | $.properties.created	| `"2017-04-06T09:36:06+0200"` | `dcterms:issued "2017-04-06T09:36:06+0200"^^xsd:dateTime` | | 
