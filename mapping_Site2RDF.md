@@ -1,7 +1,8 @@
 # Mapping of DEIMS-SDR entities provided in JSON moreover onto Environmental Monitoring Facility Vocabulary SmOD, Semantic Sensor Network (SSN), Sensor, Observation, Sample, Actuator (SOSA), Friends Of A Friends (FOAF), and Provenance (PROV-O) ontologies
 
 Authors: Alessandro Oggioni [^1]
-[^1]: oggioni.a@irea.cnr.it
+[^1]: alessandro.oggioni@cnr.it
+
 
 ## Sites metadata elements mapping, based on the “LTER Zöbelboden” site (DEIMS.ID - https://deims.org/api/sites/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6)
 
@@ -70,73 +71,3 @@ Authors: Alessandro Oggioni [^1]
 | | | $.attributes.relatedResources[*].[?(@.id.prefix=='https://deims.org/sensors/')].id[?(@.suffix != null)].suffix | `[ "fb583610-fe71-4793-b1a9-43097ed5c3e3" ]`	| `ef:narrow <https://deims.org/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3>` | Sensor - see other mapping below |
 | | | $.attributes[?(@.relatedResources != null)].relatedResources[?(@.id.prefix=='https://deims.org/dataset/')].id[?(@.suffix != null)].suffix	| `[ "cd1fb6f8-5e57-11e3-aa73-005056ab003f",	"75a7f938-7c77-11e3-8832-005056ab003f", … ]`	| `ef:hasObservation <https://deims.org/dataset/cd1fb6f8-5e57-11e3-aa73-005056ab003f > , <https://deims.org/dataset/75a7f938-7c77-11e3-8832-005056ab003f > ,	...` | Dataset - see other mapping below |
 | 6.9	| attributes.projectRelated	| $.attributes.projectRelated	| `{ "lter": { "lterSiteClassification": "Master Site" } }`	| -	| not included |
-
-
-## Activity metadata elements mapping, based on the “LTER Zöbelboden Austria deposition” activity (DEIMS.ID - https://deims.org/activity/4efaa2f2-6f4a-4f75-b95c-c3ffb13594a5)
-
-| **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
-| --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |
-| 1	| title	| $.title	| "LTER Zöbelboden Austria deposition" | `ef:name "LTER Zöbelboden Austria deposition"@en` | | | 
-| 2	| id | concat( \$.id.prefix, \$.id.suffix) | `"https://deims.org/activity/4efaa2f2-6f4a-4f75-b95c-c3ffb13594a5"` | `<https://deims.org/activity/4efaa2f2-6f4a-4f75-b95c-c3ffb13594a5> rdf:type prov:Activity , ef:EnvironmentalMonitoringActivity` | | | 
-| 3	| type | $.type | `"activity"` | `ef:specialisedEMFType ‘activity’@en` | | | 
-| 4	| created	| $.created	| `"2016-09-12T18:45:29+0200"` | `dcterms:issued "2016-09-12T18:45:29+0200"^^xsd:dateTime`	| | | 
-| 5	| changed	| $.changed	| `"2019-08-20T13:13:04+0200"` | `dcterms:modified "2019-08-20T13:13:04+0200"^^xsd:dateTime` | | | 
-| 6.1.1	| attributes.general.relatedSite | $.attributes.general.relatedSite[*].id.[?(@.suffix != null)].suffix	| `[ { "type": "site", "title": "LTER Zöbelboden - Austria", "id": { "prefix": "https://deims.org/", "suffix": "8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6" }, "changed": "2025-01-07T11:14:56+0100" } ]`	| - | not included | 
-| 6.1.2	| attributes.general.abstract	| $.attributes.general.abstract	| `"Deposition data from LTER Zöbelboden. The data comprises … "`	| `dcterms:description  "Deposition data from LTER Zöbelboden. The data comprises … "` | | | 
-| 6.1.3	| attributes.general.keywords	| $.attributes.general.keywords[*].label | `[ "Base cations deposition", … ]`	| `dcat:keyword "Base cations deposition"@en , …`	| | | 
-| 6.1.4	| attributes.general.dateRange | $.attributes.general.dateRange.from | `"1993-01-01"` | `prov:startedAtTime "1993-01-01"^^xsd:dateTime`	| | | 
-| | | $.attributes.general.dateRange.to	| `"2015-12-31"` | `prov:endedAtTime "2015-12-31"^^xsd:dateTime` | | | 
-| 6.2.1	| attributes.contact.corresponding | $.attributes.contact.corresponding[*].[?(@.type == 'person')]	| `[ { "type": "person", "name": "Ika Djukic", "email": "ika.djukic@umweltbundesamt.at", "orcid": null }, … ]`	| -	| not yet included | 
-| 6.2.2	| attributes.contact.metadataProvider	| $.attributes.contact.metadataProvider	| `[ { "type": "person", "name": "Ika Djukic", "email": "ika.djukic@umweltbundesamt.at", "orcid": null }, … ]`	| -	| not yet included | 
-| 6.3.1	| attributes.geographic.boundaries | $.attributes.geographic.boundaries | `"POLYGON ((14.435456610419 47.83985714374, 14.435472337769 …, ))"`	| `dcterms:spatial [ rdf:type dcterms:Location; locn:geometry  "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((14.435456610419 47.83985714374, 14.435472337769 …, ]` | | | 
-| 6.4	| attributes.availability	| $.attributes.availability	| `{ "digitally": true, "forEcopotential": true, "openData": true, "notes": "DEIMS data sets", "source": { "url": null } }`	| -	| not included | 
-| 6.5.1	| attributes.observation | $.attributes.observation | `{ "parameters": [ { "label": "atmospheric parameter", "uri": "http://vocabs.lter-europe.net/EnvThes/20937" }, … ] }`	| `ef:observedProperty  <http://vocabs.lter-europe.net/EnvThes/20937> , …` | | | 
-| 6.6	| attributes.resolution	| $.attributes.resolution	| `{ "spatial": null, "temporal": { "label": "weekly", "uri": null } }`	| -	| not yet included | 
-| 6.7	| attributes.relatedResources	| $.attributes[?(@.relatedResources != null)].relatedResources[?(@.id.prefix=='https://deims.org/dataset/')].id[?(@.suffix != null)].suffix	| `[ { "id": { "prefix": "https://deims.org/dataset/", "suffix": "bf4bdb26-5387-11e4-a597-005056ab003f" }, "title": "LTER Zöbelboden, Austria, Throughfall chemistry, 1993-2012", "changed": "2023-07-13T09:41:57+0200" } ]`	| `ef:hasObservation <https://deims.org/dataset/bf4bdb26-5387-11e4-a597-005056ab003f>` | | | 
-| | | $.attributes[?(@.relatedResources != null)].relatedResources[?(@.id.prefix=='https://deims.org/sensor/')].id[?(@.suffix != null)].suffix | `null` | `ef:uses` | | |
-
-## Sensor metadata elements mapping, based on “LTER Zöbelboden Austria precipitation WW” sensor (DEIMS.ID - https://deims.org/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3)
-
-| **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
-| --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |
-| 1	| title | $.title | `"LTER Zöbelboden Austria precipitation WW"` | `ef:name "LTER Zöbelboden Austria precipitation WW"@en` | | 
-| 2 | id | concat( \$.id.prefix, \$.id.suffix) | `"https://deims.org/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3"` | `<https://deims.org/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3> rdf:type prov:Entity , sosa:Sensor , ssn:System` | | |	
-| 3	| type | $.type | `"sensor"` | - | not included | 
-| 4	| created	| $.created	| `"2017-02-14T21:40:40+0100"` | `dcterms:issued "2017-02-14T21:40:40+0100"^^xsd:dateTime` | | | 
-| 5	| changed	| $.changed	| `"2019-11-29T11:33:23+0100"` | `dcterms:modified "2019-11-29T11:33:23+0100"^^xsd:dateTime` | | | 
-| 6.1.1	| attributes.general.relatedSite | $.attributes.general.relatedSite[*].id.[?(@.suffix != null)].suffix	| `[ "8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6" ]`	| `sosa:isHostedBy <https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6>` | | | 	
-| 6.1.2	| attributes.general.contact | $.attributes.general.contact	| `[{ "type": "organisation", "name": "Environment Agency Austria (EAA)", "url": "http://www.umweltbundesamt.at/", "ror": "https://ror.org/013vyke20" }, … ]`	| -	| not included | 
-| 6.1.3	| attributes.general.abstract	| $.attributes.general.abstract	| `"Precipitation measurement at LTER Zöbelboden …"` | `dcterms:description "Precipitation measurement at LTER Zöbelboden …"`	| | 
-| 6.1.4	| attributes.general.dataRange | $.attributes.general.dateRange.from | `"1995-01-01"` | `prov:startedAtTime "1995-01-01"^^xsd:date`	| | 
-| | | $.attributes.general.dateRange.to	| `null` | `prov:startedAtTime ""^^xsd:date`	| | | 
-| 6.1.5	| attributes.general.keywords	| $.attributes.general.keywords[*].label | `[ "precipitation" ]` | `dcat:keyword "precipitation"@en`	| | |
-| 6.2.1	| attributes.geographic.coordinates	| $.attributes.geographic.coordinates	| `"POINT (14.442 47.842)"`	| `dcterms:spatial [ rdf:type dcterms:Location; dcat:centroid  "<http://www.opengis.net/def/crs/EPSG/0/4326> POINT (14.442 47.842)"^^geosparql:wktLiteral ]`	|  |
-| 6.2.2	| attributes.geographic.trajectory | $.attributes.geographic.trajectory	| `null` | - | not yet included | 
-| 6.2.3	| attributes.geographic.elevation	| $.attributes.geographic.elevation.value	| `893`	| `geo:alt 893`	| |
-| 6.3.1	| attributes.observation.sensorType	| $.attributes.observation.sensorType.label	| `"precipitation sensor"` | - | not included |
-| 6.3.2	| attributes.observation.resultAcquisitionSource | $.attributes.observation.resultAcquisitionSource	| `"in-situ"` | - | not included |
-| 6.3.3	| attributes.observation.observedProperty	| $.attributes.observation.observedProperty	| `null` | - | not included |
-
-## Dataset metadata elements mapping, based on LTER Zöbelboden, Austria, Air chemistry, 2012 (DEIMS.ID: https://deims.org/api/datasets/cd1fb6f8-5e57-11e3-aa73-005056ab003f)
-
-| **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
-| --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |
-| 2	| id | concat( \$.id.prefix, \$.id.suffix) | `https://deims.org/dataset/cd1fb6f8-5e57-11e3-aa73-005056ab003f` | `<https://deims.org/dataset/cd1fb6f8-5e57-11e3-aa73-005056ab003f> rdf:type dcat:Dataset`	| Only the ID is used, as the RDF correspondence of the dataset is provided by DAR or B2Share |
-
-
-## Location metadata elements mapping, based on LTER Zöbelboden, Austria, Project area (DEIMS.ID - https://deims.org/locations/12b38f3f-7e72-425a-80c7-7cad35ce4c7b)
-
-| **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
-| --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |
-| 1	| type | $.type | `"Feature"`	| -	| not included | 
-| 2	| geometry	| $.geometry	| `{ "type": "Polygon", "coordinates": [[[ 14.435456610495, 47.839857143486 ], [ 14.435472337877, … ], … ]] }`	| -	| not yet included because the JSON result is not a WKT | 
-| 3.1	| properties.title | $.properties.title	| `"LTER Zöbelboden, Austria, Project area"` | `ef:name "LTER Zöbelboden, Austria, Project area"@en` | | 
-| 3.2	| properties.id	| concat( \$.properties.id.prefix, \$.properties.id.suffix) | `"https://deims.org/locations/12b38f3f-7e72-425a-80c7-7cad35ce4c7b"`	| `<https://deims.org/locations/12b38f3f-7e72-425a-80c7-7cad35ce4c7b> rdf:type prov:Entity , ef:EnvironmentalMonitoringFacility` | | 
-| 3.3	| properties.created | $.properties.created	| `"2017-04-06T09:36:06+0200"` | `dcterms:issued "2017-04-06T09:36:06+0200"^^xsd:dateTime` | | 
-| 3.4	| properties.changed | $.properties.changed	| `"2024-05-07T14:22:05+0200"` | `dcterms:modified "2024-05-07T14:22:05+0200"^^xsd:dateTime` | | 
-| 3.4	| properties.locationType	| $.properties.locationType	| `{ "label": "Sampling Location", "uri": "http://vocabs.lter-europe.net/elter_cl/10494" }`	| `ef:specialisedEMFType <http://vocabs.lter-europe.net/elter_cl/10494>`	| | 
-| 3.5	| properties.relatedSite | $.properties.relatedSite.id.[?(@.suffix != null)].suffix | `[ "8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6" ]`	| `ef:belongsTo <https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6>`	| | 
-| 3.6	| properties.abstract	| $.properties.abstract	| `"Bounding Box for the LTER Station Zöbelboden"`	| `dcterms:description "Bounding Box for the LTER Station Zöbelboden"@en`	| | 
-| 3.7	| properties.size	| $.properties.size	| `{ "value": 88.45, "unit": "ha" }`	| -	| not included | 
-| 3.8	| properties.elevation | $.properties.elevation | `{ "min": 440, "max": 957, "unit": "msl" }`	| -	| not included |
-| 3.9	| properties.images	| $.properties.images	| `null` | - | not included |
