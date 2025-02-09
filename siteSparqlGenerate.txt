@@ -389,3 +389,4 @@ WHERE {
   BIND(fun:JSONPath(?source, "$.attributes.general.yearClosed") AS ?to)
   BIND(fun:JSONPath(?source, "$.created") AS ?created)
   BIND(fun:JSONPath(?source, "$.changed") AS ?changed)
+}

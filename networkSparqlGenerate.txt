@@ -51,3 +51,4 @@ WHERE {
   BIND(fun:JSONPath(?netApi, "$.attributes.abstract") AS ?netDescr)
   BIND(fun:JSONPath(?netApi, "$.created") AS ?netCreated)
   BIND(fun:JSONPath(?netApi, "$.changed") AS ?netChanged)
+}
