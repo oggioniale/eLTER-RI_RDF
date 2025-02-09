@@ -1,3 +1,5 @@
+# DEIMS-SDR to RDF
+
 ## Aim of the work
 The idea is to produce a copy of the shared entities through DEIMS-SDR (Dynamic Ecological Information Management System - Site and dataset registry) in an RDF format that can be used for creating a knowledge graph. This work was inspired by and originated from the work carried out in [![](https://img.shields.io/badge/doi-10.5281/zenodo.7313046-yellow.svg)](https://doi.org/10.5281/zenodo.7313046).
 
@@ -9,7 +11,7 @@ SPARQL-Generate is an expressive template-based language to generate RDF streams
 
 SPARQL-Generate is a W3C member submission, and it is currently under review by the W3C RDF Data Shapes Working Group.
 
-# How is work organized?
+## How is work organized?
 Thanks to the use of the SPARQL-Generate engine, it is possible to generate graphs related to a site or a network. In particular, for a site, it also allows generating all related resources, such as datasets, sensors, activities, locations, as well as people, organizations, and projects, along with the relationships between them.  
 
 In the case of a DEIMS-SDR site, the work can be reproduced following this two files:  

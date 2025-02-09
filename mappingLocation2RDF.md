@@ -1,8 +1,18 @@
-# Mapping of DEIMS-SDR entities provided in JSON moreover onto Environmental Monitoring Facility Vocabulary SmOD, Semantic Sensor Network (SSN), Sensor, Observation, Sample, Actuator (SOSA), Friends Of A Friends (FOAF), and Provenance (PROV-O) ontologies
+# Mapping of DEIMS-SDR's location entity provided in JSON moreover using Environmental Monitoring Facility Vocabulary [(SmOD)](https://www.w3.org/2015/03/inspire/ef), and Dublin core terms [(DC)](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/).
 
 Authors: Alessandro Oggioni [^1]
 [^1]: alessandro.oggioni@cnr.it
 
+Namespaces and prefixes used in this documentation:
+
+| **Prefix** | **Namespace IRI** |
+| ---------- | ----------------- |
+| ef | http://www.w3.org/2015/03/inspire/ef# |
+| prov | http://www.w3.org/ns/prov# |
+| rdf | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
+| dcterm | http://purl.org/dc/terms/ |
+| dcterms | http://purl.org/dc/terms/ |
+| xsd | http://www.w3.org/2001/XMLSchema# |
 
 ## Location metadata elements mapping, based on LTER Zöbelboden, Austria, Project area (DEIMS.ID - https://deims.org/locations/12b38f3f-7e72-425a-80c7-7cad35ce4c7b). See also [JSON file for this location](location.json)
 

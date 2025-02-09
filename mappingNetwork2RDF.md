@@ -1,8 +1,16 @@
-# Mapping DEIMS-SDR network JSON onto Environmental Monitoring Facility Vocabulary SmOD.
+# Mapping of DEIMS-SDR's network entity provided in JSON moreover using Environmental Monitoring Facility Vocabulary [(SmOD)](https://www.w3.org/2015/03/inspire/ef), and Dublin core terms [(DC)](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/).
 
 Authors: Alessandro Oggioni [^1]
 [^1]: alessandro.oggioni@cnr.it
 
+Namespaces and prefixes used in this documentation:
+
+| **Prefix** | **Namespace IRI** |
+| ---------- | ----------------- |
+| ef | http://www.w3.org/2015/03/inspire/ef# |
+| dcterm | http://purl.org/dc/terms/ |
+| dcterms | http://purl.org/dc/terms/ |
+| xsd | http://www.w3.org/2001/XMLSchema# |
 
 ## Mapping based on the network <https://deims.org/networks/4742ffca-65ac-4aae-815f-83738500a1fc>. See also [JSON file for this network](network.json)
 

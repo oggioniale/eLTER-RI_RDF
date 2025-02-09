@@ -1,8 +1,31 @@
-# Mapping of DEIMS-SDR entities provided in JSON moreover onto Environmental Monitoring Facility Vocabulary SmOD, Semantic Sensor Network (SSN), Sensor, Observation, Sample, Actuator (SOSA), Friends Of A Friends (FOAF), and Provenance (PROV-O) ontologies
+# Mapping of DEIMS-SDR's site entity provided in JSON moreover using Environmental Monitoring Facility Vocabulary [(SmOD)](https://www.w3.org/2015/03/inspire/ef), Dublin core terms [(DC)](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/), Semantic Sensor Network ontology [(SSN)](https://w3c.github.io/sdw-sosa-ssn/ssn/) and Sensor, Observation, Sample, and Actuator [(SOSA)](https://w3c.github.io/sdw-sosa-ssn/ssn/), Friends Of A Friends vocabulary [(FOAF)](http://xmlns.com/foaf/spec/), Data Catalog Vocabulary [(DCAT)](https://semiceu.github.io/DCAT-AP/releases/3.0.0/) and Provenance ontology [(PROV-O)](https://www.w3.org/TR/prov-o/).
 
 Authors: Alessandro Oggioni [^1]
 [^1]: alessandro.oggioni@cnr.it
 
+Namespaces and prefixes used in this documentation:
+
+| **Prefix** | **Namespace IRI** |
+| ---------- | ----------------- |
+| ef | http://www.w3.org/2015/03/inspire/ef# |
+| prov | http://www.w3.org/ns/prov# |
+| dc | http://purl.org/dc/elements/1.1/ |
+| dct | http://purl.org/dc/terms/ |
+| foaf | http://xmlns.com/foaf/0.1/ |
+| rdf | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
+| rdfs | http://www.w3.org/2000/01/rdf-schema# |
+| dcterm | http://purl.org/dc/terms/ |
+| dcterms | http://purl.org/dc/terms/ |
+| dcat | http://www.w3.org/ns/dcat# |
+| geosparql | http://www.opengis.net/ont/geosparql# |
+| geo | http://www.opengis.net/ont/geosparql# |
+| locn | http://www.w3.org/ns/locn# |
+| sosa | http://www.w3.org/ns/sosa/ |
+| ssn | http://www.w3.org/ns/ssn/ |
+| xsd | http://www.w3.org/2001/XMLSchema# |
+| ite | http://w3id.org/sparql-generate/iter/ |
+| fun | http://w3id.org/sparql-generate/fn/ |
+| owl | http://www.w3.org/2002/07/owl# |
 
 ## Sites metadata elements mapping, based on the “LTER Zöbelboden” site (DEIMS.ID - https://deims.org/sites/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6). See also [JSON file for this site](site.json)
 

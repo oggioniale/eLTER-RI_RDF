@@ -1,8 +1,22 @@
-# Mapping of DEIMS-SDR entities provided in JSON moreover onto Environmental Monitoring Facility Vocabulary SmOD, Semantic Sensor Network (SSN), Sensor, Observation, Sample, Actuator (SOSA), Friends Of A Friends (FOAF), and Provenance (PROV-O) ontologies
+# Mapping of DEIMS-SDR's activity entity provided in JSON moreover using Environmental Monitoring Facility Vocabulary [(SmOD)](https://www.w3.org/2015/03/inspire/ef), Dublin core terms [(DC)](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/), Semantic Sensor Network ontology [(SSN)](https://w3c.github.io/sdw-sosa-ssn/ssn/) and Sensor, Observation, Sample, and Actuator [(SOSA)](https://w3c.github.io/sdw-sosa-ssn/ssn/), Data Catalog Vocabulary [(DCAT)](https://semiceu.github.io/DCAT-AP/releases/3.0.0/) and Provenance ontology [(PROV-O)](https://www.w3.org/TR/prov-o/).
 
 Authors: Alessandro Oggioni [^1]
 [^1]: alessandro.oggioni@cnr.it
 
+Namespaces and prefixes used in this documentation:
+
+| **Prefix** | **Namespace IRI** |
+| ---------- | ----------------- |
+| ef | http://www.w3.org/2015/03/inspire/ef# |
+| prov | http://www.w3.org/ns/prov# |
+| rdf | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
+| rdfs | http://www.w3.org/2000/01/rdf-schema# |
+| dcterm | http://purl.org/dc/terms/ |
+| dcterms | http://purl.org/dc/terms/ |
+| dcat | http://www.w3.org/ns/dcat# |
+| geosparql | http://www.opengis.net/ont/geosparql# |
+| geo | http://www.opengis.net/ont/geosparql# |
+| xsd | http://www.w3.org/2001/XMLSchema# |
 
 # Sensor metadata elements mapping, based on “LTER Zöbelboden Austria precipitation WW” sensor (DEIMS.ID - https://deims.org/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3). See also [JSON file for this sensor](sensor.json)
 

@@ -2,16 +2,12 @@ PREFIX fun: <http://w3id.org/sparql-generate/fn/>
 PREFIX ite: <http://w3id.org/sparql-generate/iter/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX schema: <http://schema.org/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX ef: <http://www.w3.org/2015/03/inspire/ef#>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
 PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
-PREFIX sf: <http://www.opengis.net/ont/sf#>
-PREFIX it: <http://www.influencetracker.com/ontology#>
 PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>

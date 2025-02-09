@@ -1,8 +1,14 @@
-# Mapping of DEIMS-SDR entities provided in JSON moreover onto Environmental Monitoring Facility Vocabulary SmOD, Semantic Sensor Network (SSN), Sensor, Observation, Sample, Actuator (SOSA), Friends Of A Friends (FOAF), and Provenance (PROV-O) ontologies
+# Mapping of DEIMS-SDR's dataset entity provided in JSON using Data Catalog Vocabulary [(DCAT)](https://semiceu.github.io/DCAT-AP/releases/3.0.0/).
 
 Authors: Alessandro Oggioni [^1]
 [^1]: alessandro.oggioni@cnr.it
 
+Namespaces and prefixes used in this documentation:
+
+| **Prefix** | **Namespace IRI** |
+| ---------- | ----------------- |
+| rdf | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
+| dcat | http://www.w3.org/ns/dcat# |
 
 ## Dataset metadata elements mapping, based on "LTER Zöbelboden, Austria, Air chemistry, 2012" dataset (DEIMS.ID: https://deims.org/datasets/cd1fb6f8-5e57-11e3-aa73-005056ab003f). See also [JSON file for this dataset](dataset.json)
 
