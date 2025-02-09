@@ -38,18 +38,19 @@ To view the mapping performed for the various entities, refer to the following f
 
 - [`mappingSensor2RDF.md`](mappingSensor2RDF.md) for sensors.
 
-In questo repository sono stati anche inclusi i file JSON relativi alle API di DEIMS-SDR per le varie risorse mappate:
-- [`site.json`](site.json) per i siti;
+In this repository, the JSON files related to the DEIMS-SDR APIs for the various mapped resources have also been included:
 
-- [`network.json`](network.json) per le reti;
+- [`site.json`](site.json) for site;
 
-- [`activity.json`](activity.json) per le attività;
+- [`network.json`](network.json) for network;
 
-- [`dataset.json`](dataset.json) per i dataset;
+- [`activity.json`](activity.json) for activity;
 
-- [`location.json`](location.json) per le locazioni;
+- [`dataset.json`](dataset.json) for dataset;
 
-- [`sensor.json`](sensor.json) per i sensori.
+- [`location.json`](location.json) for location;
+
+- [`sensor.json`](sensor.json) for sensor.
 
 ## Bibliography
 [^1] Maxime Lefrançois, Antoine Zimmermann, Noorani Bakerally A SPARQL extension for generating RDF from heterogeneous formats, In Proc. Extended Semantic Web Conference, ESWC, May 2017, Portoroz, Slovenia. [PDF](https://hal.archives-ouvertes.fr/hal-01518617/file/sparql-generate-eswc2017.pdf)
