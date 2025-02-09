@@ -1,0 +1,391 @@
+PREFIX fun: <http://w3id.org/sparql-generate/fn/>
+PREFIX ite: <http://w3id.org/sparql-generate/iter/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <http://schema.org/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX ef: <http://www.w3.org/2015/03/inspire/ef#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX sf: <http://www.opengis.net/ont/sf#>
+PREFIX it: <http://www.influencetracker.com/ontology#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dcterm: <http://purl.org/dc/terms/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX locn: <http://www.w3.org/ns/locn#>
+PREFIX ssn: <http://www.w3.org/ns/ssn/>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+GENERATE { 
+  # CUSTOM PROPERTIES
+  # We define here properties not found in other ontologies yet.
+  # Properties of EMF, defined in XML EMF Schema, not already mapped in to SmOD Ontology https://www.w3.org/2015/03/inspire/ef
+  ef:hasObservation a rdf:Property ;
+    rdfs:domain ef:EnvironmentalMonitoringFacility ;
+    rdfs:range ef:EnvironmentalMonitoringFacility ;
+    rdfs:comment "Observation of emissions, of the state of environmental media and of other ecosystem parameters (biodiversity, ecological conditions of vegetation, etc.) by or on behalf of public authorities at this AbstractMonitoringFeature."@en ;
+    rdfs:seeAlso <https://inspire.ec.europa.eu/schemas/ef/4.0/EnvironmentalMonitoringFacilities.xsd> .
+      
+  ef:observedProperty a rdf:Property ;
+    rdfs:domain ef:EnvironmentalMonitoringFacility ;
+    rdfs:range ef:EnvironmentalMonitoringFacility ;
+    rdfs:comment "The property being observed or measured at this AMO"@en ;
+    rdfs:seeAlso <https://inspire.ec.europa.eu/schemas/ef/4.0/EnvironmentalMonitoringFacilities.xsd> .
+  
+  ef:narrower a rdf:Property ;
+    rdfs:domain ef:EnvironmentalMonitoringFacility ;
+    rdfs:range ef:EnvironmentalMonitoringFacility ;
+    rdfs:comment "A link pointing to narrower AbstractMonitoringObject(s) (a lower level in a hierarchical structure). The association has additional properties as defined in the association class Hierarchy."@en ;
+    rdfs:seeAlso <https://inspire.ec.europa.eu/schemas/ef/4.0/EnvironmentalMonitoringFacilities.xsd> .
+
+  ef:broader a rdf:Property ;
+    rdfs:domain ef:EnvironmentalMonitoringFacility ;
+    rdfs:range ef:EnvironmentalMonitoringFacility  ;
+    rdfs:comment "A link pointing to a broader AbstractMonitoringObject (a higher level in a hierarchical structure). The association has additional properties as defined in the association class Hierarchy."@en ;
+    rdfs:seeAlso <https://inspire.ec.europa.eu/schemas/ef/4.0/EnvironmentalMonitoringFacilities.xsd> .
+  
+  ?identifier a ef:EnvironmentalMonitoringFacility , prov:Entity;
+  owl:sameAs ?identifier_getit ;
+  ef:specialisedEMFType "{?type}"@en ;
+  ef:name "{?title}"@en ;
+  dcterms:issued "{?created}"^^xsd:dateTime;
+  dct:modified "{?changed}"^^xsd:dateTime ;
+  dct:description "{?description}"@en ;
+  dcterm:spatial [
+      a dcterms:Location ;
+      locn:geometry """<http://www.opengis.net/def/crs/EPSG/0/4326> {?wktmultipolygon}"""^^geosparql:wktLiteral ;
+  ] ;
+  dcterms:spatial [
+    a dcterms:Location ;
+    dcat:centroid "<http://www.opengis.net/def/crs/EPSG/0/4326> {?wktcoordinates}"^^geosparql:wktLiteral ;
+  ] ;
+  geo:lat ?lat ;
+  geo:lon ?lon ;
+  dct:temporal [ 
+    a dct:PeriodOfTime ;
+    dcat:startDate "{?from}"^^xsd:date ;
+    dcat:endDate "{?to}"^^xsd:date ;
+  ] ;
+  
+  # Projects involve Site. Only if project contains the URI
+  GENERATE {
+    # for involve the project into site description
+    ?identifier prov:wasGeneratedBy ?projectUri .
+    # for create the node(s) of the project(s)
+    ?projectUri a foaf:Project ;
+      foaf:name "{?projectLabel}"@en
+  }
+  ITERATOR ite:JSONPath(?source, "$.attributes.affiliation.projects[?(@.uri != null)]", "$.label", "$.uri") AS ?project ?projectLabel ?projectUrl
+  WHERE {
+    BIND(URI(?projectUrl) AS ?projectUri)
+  }
+  .
+    
+  # Parent site. Only if related site contains the suffix
+  GENERATE {
+    ?identifier ef:broader ?parentUri .
+  }
+  ITERATOR ite:JSONPath(?source, "$.attributes.general.relatedSites[?(@.typeOfRelationship.label == 'belongs to')].listOfSites[*].id[?(@.suffix != null)].suffix", "$") AS ?parentSuffix
+  WHERE {
+    BIND(URI(CONCAT('https://deims.org/', ?parentSuffix)) AS ?parentUri)
+  }
+  .
+  
+  # Children site. Only if related site contains the suffix
+  GENERATE {
+    ?identifier ef:narrower ?childrenUri .
+  }
+  ITERATOR ite:JSONPath(?source, "$.attributes.general.relatedSites[?(@.typeOfRelationship.label == 'contains')].listOfSites[*].id[?(@.suffix != null)].suffix", "$") AS ?childrenSuffix
+  WHERE {
+    BIND(URI(CONCAT('https://deims.org/', ?childrenSuffix)) AS ?childrenUri)
+  }
+  .
+  
+  # Observed property
+  GENERATE {
+    ?identifier ef:observedProperty ?obsProUri .
+  }
+  ITERATOR ite:JSONPath(?source, "$.attributes.focusDesignScale.observedProperties[*].uri", "$") AS ?obsProUrl
+  WHERE {
+    BIND(URI(?obsProUrl) AS ?obsProUri)
+  }
+  .
+  
+  # mediaMonitored by ecosystemType
+  GENERATE {
+    ?identifier ef:mediaMonitored "{?mediaBon}"@en . # DEIMS-SDR don't provide the URI of the ecosystemType
+    # ?identifier ef:mediaMonitored ?ecoTypeUri . # When DEIMS-SDR will provide the URI of the ecosystemType
+  }
+  ITERATOR ite:JSONPath(?source, "$.attributes.environmentalCharacteristics.ecosystemType[*]", "$.label", "$.uri" ) AS ?ecoType ?ecoTypeLabel ?ecoTypeUrl
+  WHERE {
+    BIND(URI(?ecoTypeUrl) AS ?ecoTypeUri)
+  }
+  .
+  
+  # mediaMonitored by geoBonBiome
+  GENERATE {
+    ?identifier ef:mediaMonitored "{?geoBonBiome}"@en . # DEIMS-SDR don't provide the URI of the geoBonBiome
+  }
+  ITERATOR ite:JSONPath(?source, "$.attributes.environmentalCharacteristics.geoBonBiome[*]" ) AS ?geoBonBiome
+  .
+  
+  # mediaMonitored by EUNIS habitat
+  GENERATE {
+    ?identifier ef:mediaMonitored "{?eunisLabel}"@en . # DEIMS-SDR don't provide the uri of the EUNIS
+    # ?identifier ef:mediaMonitored ?eunisUri . # When DEIMS-SDR will provide the URI of the EUNIS
+  }
+  ITERATOR ite:JSONPath(?source, "$.attributes.environmentalCharacteristics.eunisHabitat[*]", "$.label", "$.uri" ) AS ?eunis ?eunisLabel ?eunisUrl
+  WHERE {
+    BIND(URI(?eunisUrl) AS ?eunisUri)
+  }
+  .
+
+  # contact siteManager
+  GENERATE {
+    ?identifier dcat:contactPoint [
+          a foaf:Person, prov:Agent ;
+            foaf:fullName ?contactName ;
+            foaf:hasEmail ?contactEmailUri ;
+            rdfs:seeAlso ?contactUrlUri ;
+            rdfs:seeAlso ?contactOrcidUri ;
+    ] .
+  }
+  ITERATOR ite:JSONPath(?source, "$.attributes.contact.siteManager[*].[?(@.type == 'person')]", "$.type", "$.name", "$.email", "$.url", "$.orcid") AS ?item2 ?contactType ?contactName ?contactEmail ?contactUrl ?contactOrcid
+  WHERE {
+    BIND(URI(?contactUrl) AS ?contactUrlUri)
+    BIND(URI(?contactOrcid) AS ?contactOrcidUri)
+    BIND(URI(CONCAT('mailto:', ?contactEmail)) AS ?contactEmailUri)
+  }
+  .
+
+  # contact operatingOrganisation
+  GENERATE {
+   # for generate organization node
+    ?opOrgRorUri a foaf:Organization, prov:Agent ;
+    foaf:name "{?opOrgName}"@en ;
+    foaf:homepage ?opOrgUrlUri .
+    # link the organization into site
+    ?identifier dcterm:publisher ?opOrgRorUri .
+  }
+  ITERATOR ite:JSONPath(?source, "$.attributes.contact.operatingOrganisation[?(@.type == 'organisation')].[?(@.ror != null)]", "$.type", "$.name", "$.url", "$.ror") AS ?opOrg ?opOrgType ?opOrgName ?opOrgUrl ?opOrgRor
+  WHERE {
+    BIND(URI(?opOrgRor) AS ?opOrgRorUri)
+    BIND(URI(?opOrgUrl) AS ?opOrgUrlUri)
+  }
+  .
+  
+  # link to network
+  GENERATE {
+    ?identifier ef:belongsTo ?network .
+  }
+  ITERATOR ite:JSONPath(?source, "$.attributes.affiliation.networks[*].[?(@.network.id.prefix=='https://deims.org/networks/')].network.id[?(@.suffix != null)].suffix", "$") AS ?networksuffix
+  WHERE {
+    BIND(URI(CONCAT('https://deims.org/network/', ?networksuffix))  AS ?network)
+  }
+  .
+  
+  # Activity
+  GENERATE {
+    ?activity a ef:EnvironmentalMonitoringActivity, prov:Activity ;
+    owl:sameAs ?activity_getit ;
+    ef:specialisedEMFType "{?atype}"@en ;
+    ef:name "{?atitle}"@en ;
+    dct:description "{?adescription}"@en ;
+    dcterm:spatial [
+      a dcterms:Location ;
+      locn:geometry """<http://www.opengis.net/def/crs/EPSG/0/4326> {?awktmultipolygon}"""^^geosparql:wktLiteral ;
+    ] ;
+    prov:startedAtTime "{?astarted}"^^xsd:dateTime ;
+    prov:endedAtTime "{?afinish}"^^xsd:dateTime ;
+    dct:modified "{?amodified}"^^xsd:dateTime ;
+    dcterms:issued "{?aissued}"^^xsd:dateTime .
+    
+    # links Site (ef:EnvironmentalMonitoringFacility) to ef:EnvironmentalMonitoringActivity through ef:AbstractMonitoringFeature
+    ?identifier ef:involvedIn ?activity .
+    
+    # keywords
+    GENERATE {
+      ?activity dcat:keyword "{?akeyword}"@en .
+    }
+    ITERATOR ite:JSONPath(?activityapi, "$.attributes.general.keywords[*].label", "$") AS ?akeyword
+    .
+    
+    # link activity to dataset
+    GENERATE {
+      ?activity ef:hasObservation ?aRelDataset .
+  	}
+  	ITERATOR ite:JSONPath(?activityapi, "$.attributes[?(@.relatedResources != null)].relatedResources[?(@.id.prefix=='https://deims.org/dataset/')].id[?(@.suffix != null)].suffix", "$") AS ?aRelDatasetSuffix
+  	WHERE {
+   	  BIND(URI(CONCAT('https://deims.org/dataset/', ?aRelDatasetSuffix))  AS ?aRelDataset)
+  	}
+  	.
+    
+    # link activity to sensor
+    GENERATE {
+      ?activity ef:uses ?aRelSensor .
+  	}
+  	ITERATOR ite:JSONPath(?activityapi, "$.attributes[?(@.relatedResources != null)].relatedResources[?(@.id.prefix=='https://deims.org/sensors/')].id[?(@.suffix != null)].suffix", "$") AS ?aRelSensorSuffix
+  	WHERE {
+   	  BIND(URI(CONCAT('https://deims.org/', ?aRelSensorSuffix))  AS ?aRelSensor)
+  	}
+  	.
+    
+    # link activity to observations (observed property)
+  	GENERATE {
+      ?activity ef:observedProperty ?aobsProUri .
+  	}
+  	ITERATOR ite:JSONPath(?activityapi, "$.attributes.observation.parameters[*].uri", "$") AS ?aobsProUrl
+  	WHERE {
+      BIND(URI(?aobsProUrl) AS ?aobsProUri)
+  	}
+    .
+    
+  }
+  ITERATOR ite:JSONPath(?source, "$.attributes.relatedResources[*].[?(@.id.prefix == 'https://deims.org/activity/')].id[?(@.suffix != null)].suffix", "$") AS ?activitysuffix
+  SOURCE <https://deims.org/api/activities/{ ?activitysuffix }> AS ?activityapi
+  WHERE {
+    BIND(URI(CONCAT('https://deims.org/activity/', ?activitysuffix))  AS ?activity)
+    BIND(URI(CONCAT('http://vocabs.lter-europe.net/entities/activity/', ?activitysuffix))  AS ?activity_getit)
+    BIND(fun:JSONPath(?activityapi, "$.type") AS ?atype)
+    BIND(fun:JSONPath(?activityapi, "$.title") AS ?atitle)
+    BIND(fun:JSONPath(?activityapi, "$.attributes.general.abstract") AS ?adescription)
+    BIND(fun:JSONPath(?activityapi, "$.attributes.geographic.boundaries") AS ?awktmultipolygon)
+    BIND(fun:JSONPath(?activityapi, "$.attributes.general.dateRange.from") AS ?astarted)
+    BIND(fun:JSONPath(?activityapi, "$.attributes.general.dateRange.to") AS ?afinish)
+    BIND(fun:JSONPath(?activityapi, "$.changed") AS ?amodified)
+    BIND(fun:JSONPath(?activityapi, "$.created") AS ?aissued)
+  }
+  .
+  
+  # Sensor
+  GENERATE {
+    ?sensor a sosa:Sensor , ssn:System , prov:Entity ;
+    owl:sameAs ?sensor_getit ;
+    # rdfs:seeAlso <SENSORML>
+    ef:specialisedEMFType "{?stype}"@en ;
+    ef:name "{?stitle}"@en ;
+    dct:description "{?sdescription}"@en ;
+    dcterms:spatial [
+      a dcterms:Location ;
+      dcat:centroid "<http://www.opengis.net/def/crs/EPSG/0/4326> {?swktcoordinates}"^^geosparql:wktLiteral ;
+    ] ;
+    geo:alt ?salt ;
+    prov:startedAtTime "{?sstarted}"^^xsd:date ;
+    prov:endedAtTime "{?sfinish}"^^xsd:date ;
+    dct:modified "{?smodified}"^^xsd:dateTime ;
+    dcterms:issued "{?sissued}"^^xsd:dateTime .
+    # links site to sensor (ef:EnvironmentalMonitoringFacility)
+    ?identifier ef:narrower ?sensor .
+    
+    # link sensor to site
+    GENERATE {
+      ?sensor sosa:isHostedBy ?sInSiteUri .
+    }
+    ITERATOR ite:JSONPath(?sensorapi, "$.attributes.general.relatedSite[*].id.[?(@.suffix != null)].suffix", "$") AS ?sInSiteSuffix
+    WHERE {
+      BIND(URI(CONCAT('https://deims.org/', ?sInSiteSuffix)) AS ?sInSiteUri)
+  	}
+    .
+    
+    # keywords
+    GENERATE {
+      ?sensor dcat:keyword "{?skeyword}"@en .
+    }
+    ITERATOR ite:JSONPath(?sensorapi, "$.attributes.general.keywords[*].label", "$") AS ?skeyword
+    .
+    
+  }
+  ITERATOR ite:JSONPath(?source, "$.attributes.relatedResources[*].[?(@.id.prefix=='https://deims.org/sensors/')].id[?(@.suffix != null)].suffix", "$") AS ?sensorsuffix
+  SOURCE <https://deims.org/api/sensors/{ ?sensorsuffix }> AS ?sensorapi
+  WHERE {
+    BIND(URI(CONCAT('https://deims.org/sensors/', ?sensorsuffix))  AS ?sensor)
+    BIND(URI(CONCAT('http://vocabs.lter-europe.net/entities/sensors/', ?sensorsuffix))  AS ?sensor_getit)
+    BIND(fun:JSONPath(?sensorapi, "$.type") AS ?stype)
+    BIND(fun:JSONPath(?sensorapi, "$.title") AS ?stitle)
+    BIND(fun:JSONPath(?sensorapi, "$.attributes.general.abstract") AS ?sdescription)
+    BIND(fun:JSONPath(?sensorapi, "$.attributes.geographic.coordinates") AS ?swktcoordinates)
+    BIND(fun:JSONPath(?sensorapi, "$.attributes.geographic.elevation.value") AS ?salt)
+    BIND(fun:JSONPath(?sensorapi, "$.attributes.general.dateRange.from") AS ?sstarted)
+    BIND(fun:JSONPath(?sensorapi, "$.attributes.general.dateRange.to") AS ?sfinish)
+    BIND(fun:JSONPath(?sensorapi, "$.changed") AS ?smodified)
+    BIND(fun:JSONPath(?sensorapi, "$.created") AS ?sissued)
+  }
+  .
+  
+  # Location
+  GENERATE {
+    ?locationUri a ef:EnvironmentalMonitoringFacility, prov:Entity ;
+    owl:sameAs ?location_getit ;
+    ef:specialisedEMFType ?ltype ;
+    ef:name "{?ltitle}"@en ;
+    dct:description "{?ldescription}"@en ;
+    dct:modified "{?lmodified}"^^xsd:dateTime ;
+    dcterms:issued "{?lissued}"^^xsd:dateTime .
+    # link site to loction
+    ?identifier ef:contains ?locationUri .
+    
+    # link location to site
+    GENERATE {
+      ?locationUri ef:belongsTo ?lInSiteUri .
+    }
+    ITERATOR ite:JSONPath(?locationapi, "$.properties.relatedSite.id.[?(@.suffix != null)].suffix", "$") AS ?lInSiteSuffix
+    WHERE {
+      BIND(URI(CONCAT('https://deims.org/', ?lInSiteSuffix)) AS ?lInSiteUri)
+  	}
+    .
+  }
+  ITERATOR ite:JSONPath(?source, "$.attributes.geographic.relatedLocations[*].id[?(@.suffix != null)].suffix", "$") AS ?locationSuffix
+  SOURCE <https://deims.org/api/locations/{ ?locationSuffix }> AS ?locationapi
+  WHERE {
+    BIND(URI(CONCAT('https://deims.org/locations/', ?locationSuffix)) AS ?locationUri)
+    BIND(URI(CONCAT('http://vocabs.lter-europe.net/entities/location/', ?locationSuffix))  AS ?location_getit)
+    BIND(URI(fun:JSONPath(?locationapi, "$.properties.locationType.uri")) AS ?ltype)
+    BIND(fun:JSONPath(?locationapi, "$.properties.title") AS ?ltitle)
+    BIND(fun:JSONPath(?locationapi, "$.properties.abstract") AS ?ldescription)
+    BIND(fun:JSONPath(?locationapi, "$.properties.changed") AS ?lmodified)
+    BIND(fun:JSONPath(?locationapi, "$.properties.created") AS ?lissued)
+  }
+  .
+  
+  # Dataset
+  GENERATE {
+    ?dataset a dcat:Dataset .
+    # link site to dataset
+    ?identifier ef:hasObservation ?dataset .
+  }
+  ITERATOR ite:JSONPath(?source, "$.attributes[?(@.relatedResources != null)].relatedResources[?(@.id.prefix=='https://deims.org/dataset/')].id[?(@.suffix != null)].suffix", "$") AS ?datasetsuffix
+  WHERE {
+    BIND(URI(CONCAT('https://deims.org/dataset/', ?datasetsuffix))  AS ?dataset)
+  }
+  .
+  
+}
+
+SOURCE <https://deims.org/api/sites> AS ?list
+
+ITERATOR ite:JSONPath(?list, "$[626]", "$.id.suffix") AS ?item ?suffix
+
+SOURCE <https://deims.org/api/sites/{ ?suffix }> AS ?source
+
+WHERE {
+  BIND(URI(CONCAT('https://deims.org/', ?suffix)) AS ?identifier)
+  BIND(URI(CONCAT('http://vocabs.lter-europe.net/entities/', ?suffix)) AS ?identifier_getit)
+  BIND(fun:JSONPath(?source, "$.type") AS ?type)
+  BIND(fun:JSONPath(?source, "$.title") AS ?title)
+  BIND(fun:JSONPath(?source, "$.attributes.general.abstract") AS ?description)
+  BIND(fun:JSONPath(?source, "$.attributes.geographic.boundaries") AS ?wktmultipolygon)
+  BIND(fun:JSONPath(?source, "$.attributes.geographic.coordinates") AS ?wktcoordinates)
+  BIND(REPLACE(?wktcoordinates, "POINT \\((.*)\\)", "$1", "i") AS ?wktstring)
+  BIND(STRBEFORE(?wktstring, " ") AS ?lon)
+  BIND(STRAFTER(?wktstring, " ") AS ?lat)
+  BIND(fun:JSONPath(?source, "$.attributes.general.yearEstablished") AS ?from)
+  BIND(fun:JSONPath(?source, "$.attributes.general.yearClosed") AS ?to)
+  BIND(fun:JSONPath(?source, "$.created") AS ?created)
+  BIND(fun:JSONPath(?source, "$.changed") AS ?changed)

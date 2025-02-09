@@ -1,0 +1,20 @@
+@base          <http://example.org/> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ef:      <http://www.w3.org/2015/03/inspire/ef#> .
+@prefix fun:     <http://w3id.org/sparql-generate/fn/> .
+@prefix ite:     <http://w3id.org/sparql-generate/iter/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<https://deims.org/networks/4742ffca-65ac-4aae-815f-83738500a1fc>
+        rdf:type               ef:EnvironmentalMonitoringNetwork;
+        dcterms:description    "Long-Term Ecosystem Research (LTER) is an essential component of world-wide efforts to better understand ecosystems and the environment we depend on. Through research and long-term observation of representative sites around the globe, LTER enhances our understanding of the structure and functions of ecosystems, which provide essential services to people. LTER contributes to the knowledge base informing policy and to the development of management options in response to the Grand Challenges under Global Change.\r\nLTER capitalizes on research infrastructures such as the in-situ network of sites and information technology. Thousands of research projects have been carried out taking advantage of this infrastructure. The increasing complexity of ecosystem research led to the networking and global organization of LTER.\r\n\r\nLTER in Europe (or LTER-Europe) comprises three components, well embedded in the European Research Area:\r\n- Networking\r\n- Research and Development\r\n- Infrastructure";
+        dcterms:issued         "2020-03-02T13:11:00+0100"^^xsd:dateTime;
+        dcterms:modified       "2023-02-17T12:48:37+0100"^^xsd:dateTime;
+        ef:contains            <https://deims.org/networks/7fef6b73-e5cb-4cd2-b438-ed32eb1504b3> , <https://deims.org/networks/e0f680c2-22b1-4424-bf54-58aa9b7476a0> , <https://deims.org/networks/e3911e8a-ce9b-46ce-8265-c2dc9676ad03> , <https://deims.org/networks/fda2984f-9aea-4abf-9f6c-c3eca0f82eb8> , <https://deims.org/networks/cedf695c-c6dc-4660-b944-3c22f12ad0d9> , <https://deims.org/networks/8312c2c4-a787-4986-9a3d-3f1364bab3ba> , <https://deims.org/networks/a197664f-569e-4df6-933a-86de676dbfc5> , <https://deims.org/networks/0615a89f-2883-47ab-8cd0-2508f413cab7> , <https://deims.org/networks/bc7c517b-3648-40cc-a04c-8c98d009c4a9> , <https://deims.org/networks/83453a6c-792d-4549-9dbb-c17ced2e0cc3> , <https://deims.org/networks/098f69df-3a84-4917-8590-377726f98cd8> , <https://deims.org/networks/0a5cf43b-2e31-4348-803c-e45f2ff7d27a> , <https://deims.org/networks/735946e0-4e9e-484a-acee-85e31f4e2a2e> , <https://deims.org/networks/3d6a8d72-9f86-4082-ad56-a361b4cdc8a0> , <https://deims.org/networks/d8eb4823-b707-4590-94d8-d90c1d07d6f8> , <https://deims.org/networks/67763729-45a7-4248-a70d-622b1d0a3d41> , <https://deims.org/networks/9b50de5e-a879-470a-97cb-46262ad76ec9> , <https://deims.org/networks/a50d9e39-d4b6-4d30-bba2-43580ac8c0b2> , <https://deims.org/networks/20ad4fa2-cc07-4848-b9ed-8952c55f1a3f> , <https://deims.org/networks/d45c2690-dbef-4dbc-a742-26ea846edf28> , <https://deims.org/networks/2b70f1fb-f7d9-4615-a1a3-33fc6fa44600> , <https://deims.org/networks/aaae2a46-f355-41d0-8067-c2f0cd52e814> , <https://deims.org/networks/4260f964-0ac4-4406-8adc-5afc06e31779> , <https://deims.org/networks/639d54fa-8f80-4090-919e-93fa7e9241f8> , <https://deims.org/networks/d8d9206f-b1bd-4f90-84b7-8c662d4235a2> , <https://deims.org/networks/e904354a-f3a0-40ce-a9b5-61741f66c824>;
+        ef:name                "LTER Europe";
+        ef:narrower            <https://deims.org/networks/1aa7ccb2-a14b-43d6-90ac-5e0a6bc1d65b> , <https://deims.org/networks/c3abdc60-49f1-49db-81fe-863b7dbb21d3>;
+        ef:specialisedEMFType  "network"@en

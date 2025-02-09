@@ -1,0 +1,53 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX fun: <http://w3id.org/sparql-generate/fn/>
+PREFIX ite: <http://w3id.org/sparql-generate/iter/>
+PREFIX ef: <http://www.w3.org/2015/03/inspire/ef#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+GENERATE {
+  ?netId a ef:EnvironmentalMonitoringNetwork ;
+  ef:specialisedEMFType "{?netType}"@en ;
+  ef:name ?netName ;
+  dct:description ?netDescr ;
+  dcterms:issued "{?netCreated}"^^xsd:dateTime ;
+  dct:modified "{?netChanged}"^^xsd:dateTime ;
+
+  GENERATE{
+  	?netId ef:narrower ?netBelongsToURI ;
+  }
+  ITERATOR ite:JSONPath(?netApi, "$..belongsTo[*]", "$.id") AS ?itemBelongs ?netBelongsTo
+  WHERE {
+    BIND(fun:JSONPath(?netBelongsTo, "$.prefix") AS ?netBelongsToPrefix)
+    BIND(fun:JSONPath(?netBelongsTo, "$.suffix") AS ?netBelongsToSuffix)
+    BIND(URI(CONCAT(?netBelongsToPrefix, ?netBelongsToSuffix)) AS ?netBelongsToURI)
+  }
+  .
+  
+  GENERATE{
+  	?netId ef:contains ?netConsistsOfURI ;
+  }
+  ITERATOR ite:JSONPath(?netApi, "$..consistsOf[*]", "$.id") AS ?itemConsists ?netConsistsOf
+  WHERE {
+    BIND(fun:JSONPath(?netConsistsOf, "$.prefix") AS ?netConsistsOfPrefix)
+    BIND(fun:JSONPath(?netConsistsOf, "$.suffix") AS ?netConsistsOfSuffix)
+    BIND(URI(CONCAT(?netConsistsOfPrefix, ?netConsistsOfSuffix)) AS ?netConsistsOfURI)
+  }
+  .
+}
+
+ITERATOR ite:JSONPath(<https://deims.org/api/networks>, "$[55]", "$.id.suffix") AS ?itemNet ?netSuffix
+
+SOURCE <https://deims.org/api/networks/{ ?netSuffix }> AS ?netApi
+
+WHERE {
+  BIND(fun:JSONPath(?netApi, "$.id.prefix") AS ?netPrefix)
+  BIND(URI(CONCAT(?netPrefix, ?netSuffix)) AS ?netId)
+  BIND(fun:JSONPath(?netApi, "$.type") AS ?netType)
+  BIND(fun:JSONPath(?netApi, "$.title") AS ?netName)
+  BIND(fun:JSONPath(?netApi, "$.attributes.abstract") AS ?netDescr)
+  BIND(fun:JSONPath(?netApi, "$.created") AS ?netCreated)
+  BIND(fun:JSONPath(?netApi, "$.changed") AS ?netChanged)
