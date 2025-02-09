@@ -3,6 +3,7 @@ The idea is to produce a copy of the shared entities through DEIMS-SDR (Dynamic 
 
 ## Approach
 In this work, the SPARQL GENERATE query language is used to generate RDF data from the DEIMS-SDR API. The SPARQL GENERATE query language allows the generation of RDF data from a SPARQL query. The SPARQL GENERATE query language is supported by the SPARQL-generate engine[^1], which is available as a web service at [http://sparql-generate.org/](http://sparql-generate.org/).
+[^1] Maxime Lefrançois, Antoine Zimmermann, Noorani Bakerally A SPARQL extension for generating RDF from heterogeneous formats, In Proc. Extended Semantic Web Conference, ESWC, May 2017, Portoroz, Slovenia. [PDF](https://hal.archives-ouvertes.fr/hal-01518617/file/sparql-generate-eswc2017.pdf)
 
 SPARQL-Generate is an expressive template-based language to generate RDF streams or text streams from RDF datasets and document streams in arbitrary formats (e.g. JSON, CSV, txt). It is based on SPARQL and extends it with capabilities for template-based query, transformation, and serialization. 
 
@@ -51,9 +52,6 @@ In this repository, the JSON files related to the DEIMS-SDR APIs for the various
 - [`location.json`](location.json) for location;
 
 - [`sensor.json`](sensor.json) for sensor.
-
-## Bibliography
-[^1] Maxime Lefrançois, Antoine Zimmermann, Noorani Bakerally A SPARQL extension for generating RDF from heterogeneous formats, In Proc. Extended Semantic Web Conference, ESWC, May 2017, Portoroz, Slovenia. [PDF](https://hal.archives-ouvertes.fr/hal-01518617/file/sparql-generate-eswc2017.pdf)
 
 ## Acknowledgements
 This work has been partially funded from the European Union's Horizon 2020 and Horizon Europe research and innovation programmes under the [H2020 eLTER-Plus Project](https://elter-ri.eu/elter-plus) grant agreement Nr. 871128 and [eLTER EnRich Project](https://elter-ri.eu/elter-enrich) grant agreement Nr. 101131751.
