@@ -3,7 +3,7 @@ The idea is to produce a copy of the shared entities through DEIMS-SDR (Dynamic 
 
 ## Approach
 In this work, the SPARQL GENERATE query language is used to generate RDF data from the DEIMS-SDR API. The SPARQL GENERATE query language allows the generation of RDF data from a SPARQL query. The SPARQL GENERATE query language is supported by the SPARQL-generate engine[^1], which is available as a web service at [http://sparql-generate.org/](http://sparql-generate.org/).
-[^1]: Maxime Lefrançois, Antoine Zimmermann, Noorani Bakerally A SPARQL extension for generating RDF from heterogeneous formats, In Proc. Extended Semantic Web Conference, ESWC, May 2017, Portoroz, Slovenia. [PDF](https://hal.archives-ouvertes.fr/hal-01518617/file/sparql-generate-eswc2017.pdf)
+[^1]: Maxime Lefrançois, Antoine Zimmermann, Noorani Bakerally A SPARQL extension for generating RDF from heterogeneous formats, In Proc. Extended Semantic Web Conference, ESWC, May 2017, Portoroz, Slovenia. [PDF](http://www.maxime-lefrancois.info/docs/LefrancoisZimmermannBakerally-ESWC2017-Generate.pdf)
 
 SPARQL-Generate is an expressive template-based language to generate RDF streams or text streams from RDF datasets and document streams in arbitrary formats (e.g. JSON, CSV, txt). It is based on SPARQL and extends it with capabilities for template-based query, transformation, and serialization. 
 
