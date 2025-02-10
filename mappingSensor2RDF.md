@@ -28,7 +28,8 @@ Namespaces and prefixes used in this documentation:
 | 4	| created	| $.created	| `"2017-02-14T21:40:40+0100"` | `dcterms:issued "2017-02-14T21:40:40+0100"^^xsd:dateTime` | | | 
 | 5	| changed	| $.changed	| `"2019-11-29T11:33:23+0100"` | `dcterms:modified "2019-11-29T11:33:23+0100"^^xsd:dateTime` | | | 
 | 6.1.1	| attributes.general.relatedSite | $.attributes.general.relatedSite[*].id.[?(@.suffix != null)].suffix	| `[ "8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6" ]`	| `sosa:isHostedBy <https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6>` | | | 	
-| 6.1.2	| attributes.general.contact | $.attributes.general.contact	| `[{ "type": "organisation", "name": "Environment Agency Austria (EAA)", "url": "http://www.umweltbundesamt.at/", "ror": "https://ror.org/013vyke20" }, … ]`	| -	| not included | 
+| 6.1.2 | attributes.general.contact | $.attributes.general.contact[*].[?(@.type == 'person')].[?(@.orcid != null)] | `[{ "type": "person", "name": "Thomas Dirnboeck", "email": "thomas.dirnboeck@umweltbundesamt.at", "orcid": "https://orcid.org/0000-0002-8294-0690" }]`	| `dcat:contactPoint <https://orcid.org/0000-0002-8294-0690>`	| iterating over each of the obtained site manager |
+| | | | | `<https://orcid.org/0000-0002-8294-0690> rdf:type prov:Agent , foaf:Person; foaf:fullName "Thomas Dirnboeck"; foaf:hasEmail  <mailto:thomas.dirnboeck@umweltbundesamt.at >` | with the aim of creating a new node for the site manager graph. Iterating over each of the obtained site manager. | 
 | 6.1.3	| attributes.general.abstract	| $.attributes.general.abstract	| `"Precipitation measurement at LTER Zöbelboden …"` | `dcterms:description "Precipitation measurement at LTER Zöbelboden …"`	| | 
 | 6.1.4	| attributes.general.dataRange | $.attributes.general.dateRange.from | `"1995-01-01"` | `prov:startedAtTime "1995-01-01"^^xsd:date`	| | 
 | | | $.attributes.general.dateRange.to	| `null` | `prov:startedAtTime ""^^xsd:date`	| | | 

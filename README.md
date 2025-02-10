@@ -18,7 +18,7 @@ In the case of a DEIMS-SDR site, the work can be reproduced following this two f
 - [`siteSparqlGenerate.txt`](siteSparqlGenerate.txt) contains the SPARQL-Generate code to generate RDF for a site, dataset(s), sensor(s), activities, locations, people, organizations, and projects, including the relationships between these resources;
 - [`siteRDF.ttl`](siteRDF.ttl) contains the result of the SPARQL-Generate query for the site "LTER Zöbelboden" (DEIMS.ID - [https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6](https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6)).
 Currently, the query is designed to collect information from the “LTER Zöbelboden” site (DEIMS.ID - [https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6](https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6)), which, as of 30.01.2025, is record 676 in the list of sites here: [https://deims.org/api/sites](https://deims.org/api/sites).
-Change line 416 of the [`siteSparqlGenerate.txt`](siteSparqlGenerate.txt) file for execute this query for other site. Change the value in "$[:10]" to execute the query only for the first ten items in the list of sites (https://deims.org/api/sites).
+Change line 465 of the [`siteSparqlGenerate.txt`](siteSparqlGenerate.txt) file for execute this query for other site. Change the value in "$[:10]" to execute the query only for the first ten items in the list of sites (https://deims.org/api/sites).
 
 In the case of a DEIMS-SDR network, the work can be reproduced following this two files:
 - [`networkSparqlGenerate.txt`](networkSparqlGenerate.txt) contains the SPARQL-Generate code to generate RDF for a network, including its relationships with other networks;

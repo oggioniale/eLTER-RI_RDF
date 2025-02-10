@@ -2,12 +2,16 @@ PREFIX fun: <http://w3id.org/sparql-generate/fn/>
 PREFIX ite: <http://w3id.org/sparql-generate/iter/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <http://schema.org/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX ef: <http://www.w3.org/2015/03/inspire/ef#>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
 PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX sf: <http://www.opengis.net/ont/sf#>
+PREFIX it: <http://www.influencetracker.com/ontology#>
 PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
@@ -142,25 +146,45 @@ GENERATE {
     BIND(URI(?eunisUrl) AS ?eunisUri)
   }
   .
-
+  
+  # Persons
   # contact siteManager
   GENERATE {
-    ?identifier dcat:contactPoint [
-          a foaf:Person, prov:Agent ;
-            foaf:fullName ?contactName ;
-            foaf:hasEmail ?contactEmailUri ;
-            rdfs:seeAlso ?contactUrlUri ;
-            rdfs:seeAlso ?contactOrcidUri ;
-    ] .
+    # for generate contact node
+    ?siteManOrcidUri a foaf:Person, prov:Agent ;
+    foaf:fullName ?siteManName ;
+    foaf:hasEmail ?siteManEmailUri ;
+    rdfs:seeAlso ?siteManUrlUri .
+    # link the contact into site
+    ?identifier dcat:contactPoint ?siteManOrcidUri.
   }
-  ITERATOR ite:JSONPath(?source, "$.attributes.contact.siteManager[*].[?(@.type == 'person')]", "$.type", "$.name", "$.email", "$.url", "$.orcid") AS ?item2 ?contactType ?contactName ?contactEmail ?contactUrl ?contactOrcid
+  ITERATOR ite:JSONPath(?source, "$.attributes.contact.siteManager[*].[?(@.type == 'person')].[?(@.orcid != null)]", "$.type", "$.name", "$.email", "$.url", "$.orcid") AS ?siteMan ?siteManType ?siteManName ?siteManEmail ?siteManUrl ?siteManOrcid
   WHERE {
-    BIND(URI(?contactUrl) AS ?contactUrlUri)
-    BIND(URI(?contactOrcid) AS ?contactOrcidUri)
-    BIND(URI(CONCAT('mailto:', ?contactEmail)) AS ?contactEmailUri)
+    BIND(URI(?siteManUrl) AS ?siteManUrlUri)
+    BIND(URI(?siteManOrcid) AS ?siteManOrcidUri)
+    BIND(URI(CONCAT('mailto:', ?siteManEmail)) AS ?siteManEmailUri)
   }
   .
-
+  
+  # contact metadataProvider
+  GENERATE {
+    # for generate metadata provider node
+    ?metaProvOrcidUri a foaf:Person, prov:Agent ;
+    foaf:fullName ?metaProvName ;
+    foaf:hasEmail ?metaProvEmailUri ;
+    rdfs:seeAlso ?metaProvUrlUri .
+    # link the metadata provider into site
+    # TODO!
+  }
+  ITERATOR ite:JSONPath(?source, "$.attributes.contact.metadataProvider[*].[?(@.type == 'person')].[?(@.orcid != null)]", "$.type", "$.name", "$.email", "$.url", "$.orcid") AS ?metaProv ?metaProvType ?metaProvName ?metaProvEmail ?metaProvUrl ?metaProvOrcid
+  WHERE {
+    BIND(URI(?metaProvUrl) AS ?metaProvUrlUri)
+    BIND(URI(?metaProvOrcid) AS ?metaProvOrcidUri)
+    BIND(URI(CONCAT('mailto:', ?metaProvEmail)) AS ?metaProvEmailUri)
+  }
+  .
+  
+  # Organizations
   # contact operatingOrganisation
   GENERATE {
    # for generate organization node
@@ -174,6 +198,22 @@ GENERATE {
   WHERE {
     BIND(URI(?opOrgRor) AS ?opOrgRorUri)
     BIND(URI(?opOrgUrl) AS ?opOrgUrlUri)
+  }
+  .
+  
+  # contact fundingAgency
+  GENERATE {
+   # for generate funding agency node
+    ?funAgenRorUri a foaf:Organization, prov:Agent ;
+    foaf:name "{?funAgenName}"@en ;
+    foaf:homepage ?funAgenUrlUri .
+    # link the funding agency into site
+    # TODO!
+  }
+  ITERATOR ite:JSONPath(?source, "$.attributes.contact.fundingAgency[?(@.type == 'organisation')].[?(@.ror != null)]", "$.type", "$.name", "$.url", "$.ror") AS ?funAgen ?funAgenType ?funAgenName ?funAgenUrl ?funAgenRor
+  WHERE {
+    BIND(URI(?funAgenRor) AS ?funAgenRorUri)
+    BIND(URI(?funAgenUrl) AS ?funAgenUrlUri)
   }
   .
   
@@ -243,6 +283,43 @@ GENERATE {
   	}
     .
     
+    # Persons
+    # contact Corresponding
+    GENERATE {
+      # for generate Corresponding node
+      ?aCorrespOrcidUri a foaf:Person, prov:Agent ;
+      foaf:fullName ?aCorrespManName ;
+      foaf:hasEmail ?aCorrespEmailUri ;
+      rdfs:seeAlso ?aCorrespUrlUri .
+      # link the Corresponding into site
+      ?activity dcat:contactPoint ?aCorrespOrcidUri.
+    }
+    ITERATOR ite:JSONPath(?activityapi, "$.attributes.contact.corresponding[*].[?(@.type == 'person')].[?(@.orcid != null)]", "$.type", "$.name", "$.email", "$.url", "$.orcid") AS ?aCorresp ?aCorrespType ?aCorrespName ?aCorrespEmail ?aCorrespUrl ?aCorrespOrcid
+    WHERE {
+      BIND(URI(?aCorrespUrl) AS ?aCorrespUrlUri)
+      BIND(URI(?aCorrespOrcid) AS ?aCorrespOrcidUri)
+      BIND(URI(CONCAT('mailto:', ?aCorrespEmail)) AS ?aCorrespEmailUri)
+    }
+    .
+
+    # contact metadataProvider
+    GENERATE {
+      # for generate metadata provider node
+      ?aMetaProvOrcidUri a foaf:Person, prov:Agent ;
+      foaf:fullName ?aMetaProvName ;
+      foaf:hasEmail ?aMetaProvEmailUri ;
+      rdfs:seeAlso ?aMetaProvUrlUri .
+      # link the metadata provider into site
+      # TODO!
+    }
+    ITERATOR ite:JSONPath(?activityapi, "$.attributes.contact.metadataProvider[*].[?(@.type == 'person')].[?(@.orcid != null)]", "$.type", "$.name", "$.email", "$.url", "$.orcid") AS ?aMetaProv ?aMetaProvType ?aMetaProvName ?aMetaProvEmail ?aMetaProvUrl ?aMetaProvOrcid
+    WHERE {
+      BIND(URI(?aMetaProvUrl) AS ?aMetaProvUrlUri)
+      BIND(URI(?aMetaProvOrcid) AS ?aMetaProvOrcidUri)
+      BIND(URI(CONCAT('mailto:', ?aMetaProvEmail)) AS ?aMetaProvEmailUri)
+    }
+    .
+    
   }
   ITERATOR ite:JSONPath(?source, "$.attributes.relatedResources[*].[?(@.id.prefix == 'https://deims.org/activity/')].id[?(@.suffix != null)].suffix", "$") AS ?activitysuffix
   SOURCE <https://deims.org/api/activities/{ ?activitysuffix }> AS ?activityapi
@@ -295,6 +372,25 @@ GENERATE {
       ?sensor dcat:keyword "{?skeyword}"@en .
     }
     ITERATOR ite:JSONPath(?sensorapi, "$.attributes.general.keywords[*].label", "$") AS ?skeyword
+    .
+    
+    # Persons
+    # contact
+    GENERATE {
+      # for generate contact node
+      ?sCorrespOrcidUri a foaf:Person, prov:Agent ;
+      foaf:fullName ?sCorrespManName ;
+      foaf:hasEmail ?sCorrespEmailUri ;
+      rdfs:seeAlso ?sCorrespUrlUri .
+      # link the contact into site
+      ?sensor dcat:contactPoint ?sCorrespOrcidUri.
+    }
+    ITERATOR ite:JSONPath(?sensorapi, "$.attributes.general.contact[*].[?(@.type == 'person')].[?(@.orcid != null)]", "$.type", "$.name", "$.email", "$.url", "$.orcid") AS ?sCorresp ?sCorrespType ?sCorrespName ?sCorrespEmail ?sCorrespUrl ?sCorrespOrcid
+    WHERE {
+      BIND(URI(?sCorrespUrl) AS ?sCorrespUrlUri)
+      BIND(URI(?sCorrespOrcid) AS ?sCorrespOrcidUri)
+      BIND(URI(CONCAT('mailto:', ?sCorrespEmail)) AS ?sCorrespEmailUri)
+    }
     .
     
   }

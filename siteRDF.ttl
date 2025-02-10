@@ -1,3 +1,4 @@
+
 @base          <http://example.org/> .
 @prefix dc:        <http://purl.org/dc/elements/1.1/> .
 @prefix dcat:      <http://www.w3.org/ns/dcat#> .
@@ -47,6 +48,7 @@
         geo:alt                893;
         ef:name                "LTER Zöbelboden Austria precipitation WW"@en;
         ef:specialisedEMFType  "sensor"@en;
+        dcat:contactPoint      <https://orcid.org/0000-0002-8294-0690>;
         dcat:keyword           "precipitation"@en;
         prov:startedAtTime     "1995-01-01"^^xsd:date;
         sosa:isHostedBy        <https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6> .
@@ -87,6 +89,7 @@
         ef:name                "LTER Zöbelboden Austria aerial data"@en;
         ef:observedProperty    <http://vocabs.lter-europe.net/EnvThes/22143> , <http://vocabs.lter-europe.net/EnvThes/20943> , <http://vocabs.lter-europe.net/EnvThes/22142>;
         ef:specialisedEMFType  "activity"@en;
+        dcat:contactPoint      <https://orcid.org/0000-0002-8294-0690> , <https://orcid.org/0000-0003-0052-4245>;
         dcat:keyword           "aerial imagery"@en , "LiDAR data"@en;
         prov:endedAtTime       "2016-07-15"^^xsd:dateTime;
         prov:startedAtTime     "1995-07-15"^^xsd:dateTime .
@@ -107,6 +110,7 @@
         ef:name                "LTER Zöbelboden - Austria - biological parameter, canopy cover rate, canopy height, tree age, tree diameter, tree height, ecosystem parameter, deadwood decaying rate, ecosystem structure, forest structure, species turnover, tree diameter at breast height,"@en;
         ef:observedProperty    <http://vocabs.lter-europe.net/EnvThes/22305> , <http://vocabs.lter-europe.net/EnvThes/21477> , <http://vocabs.lter-europe.net/EnvThes/22079> , <http://vocabs.lter-europe.net/EnvThes/22101> , <http://vocabs.lter-europe.net/EnvThes/22300> , <http://vocabs.lter-europe.net/EnvThes/20940> , <http://vocabs.lter-europe.net/EnvThes/21475> , <http://vocabs.lter-europe.net/EnvThes/22288> , <http://vocabs.lter-europe.net/EnvThes/22303> , <http://vocabs.lter-europe.net/EnvThes/20939> , <http://vocabs.lter-europe.net/EnvThes/22076> , <http://vocabs.lter-europe.net/EnvThes/21587> , <http://vocabs.lter-europe.net/EnvThes/22304>;
         ef:specialisedEMFType  "activity"@en;
+        dcat:contactPoint      <https://orcid.org/0000-0003-0052-4245> , <https://orcid.org/0000-0002-8294-0690>;
         dcat:keyword           "forest inventory"@en;
         prov:endedAtTime       "2019-07-15"^^xsd:dateTime;
         prov:startedAtTime     "1992-07-15"^^xsd:dateTime .
@@ -121,9 +125,6 @@
         rdf:type   foaf:Project;
         foaf:name  "eLTER PLUS (H2020) - VA"@en , "eLTER PLUS (H2020) - TA"@en , "eLTER PLUS (H2020) - RA"@en .
 
-<https://deims.org/dataset/85c5261a-e2cf-4c0e-8830-3687ea0e7a8e>
-        rdf:type  dcat:Dataset .
-
 <http://www.enveurope.eu/>
         rdf:type   foaf:Project;
         foaf:name  "EnvEurope"@en .
@@ -132,6 +133,9 @@
         rdf:type  dcat:Dataset .
 
 <https://deims.org/dataset/a03bf600-2634-4116-a1eb-691b6dcafcec>
+        rdf:type  dcat:Dataset .
+
+<https://deims.org/dataset/85c5261a-e2cf-4c0e-8830-3687ea0e7a8e>
         rdf:type  dcat:Dataset .
 
 <https://deims.org/dataset/cfc1a860-840a-41f2-a208-cf66ab25dfa4>
@@ -149,6 +153,7 @@
         ef:name                "LTER Zöbelboden Austria catchment runoff"@en;
         ef:observedProperty    <http://vocabs.lter-europe.net/EnvThes/10303> , <http://vocabs.lter-europe.net/EnvThes/10310> , <http://vocabs.lter-europe.net/EnvThes/22297> , <http://vocabs.lter-europe.net/EnvThes/22089> , <http://vocabs.lter-europe.net/EnvThes/22030> , <http://vocabs.lter-europe.net/EnvThes/10307> , <http://vocabs.lter-europe.net/EnvThes/22312> , <http://vocabs.lter-europe.net/EnvThes/22181> , <http://vocabs.lter-europe.net/EnvThes/30032> , <http://vocabs.lter-europe.net/EnvThes/22313> , <http://vocabs.lter-europe.net/EnvThes/20945>;
         ef:specialisedEMFType  "activity"@en;
+        dcat:contactPoint      <https://orcid.org/0000-0003-0052-4245> , <https://orcid.org/0000-0002-8294-0690>;
         dcat:keyword           "catchment runoff chemistry"@en , "karst catchment"@en;
         prov:endedAtTime       "2015-12-31"^^xsd:dateTime;
         prov:startedAtTime     "1995-01-01"^^xsd:dateTime .
@@ -174,6 +179,7 @@ ef:observedProperty  rdf:type  rdf:Property;
         ef:name                "LTER Zöbelboden Austria land cover and habitats"@en;
         ef:observedProperty    <http://vocabs.lter-europe.net/EnvThes/22142> , <http://vocabs.lter-europe.net/EnvThes/20939> , <http://vocabs.lter-europe.net/EnvThes/20943>;
         ef:specialisedEMFType  "activity"@en;
+        dcat:contactPoint      <https://orcid.org/0000-0002-8294-0690> , <https://orcid.org/0000-0003-0052-4245>;
         dcat:keyword           "Habitat mapping"@en;
         prov:endedAtTime       "2016-07-15"^^xsd:dateTime;
         prov:startedAtTime     "1995-07-15"^^xsd:dateTime .
@@ -280,6 +286,11 @@ ef:narrower  rdf:type  rdf:Property;
         foaf:homepage  <http://www.umweltbundesamt.at/>;
         foaf:name      "Environment Agency Austria (EAA)"@en .
 
+<https://orcid.org/0000-0003-0631-8231>
+        rdf:type       prov:Agent , foaf:Person;
+        foaf:fullName  "Johannes Peterseil";
+        foaf:hasEmail  <mailto:johannes.peterseil@umweltbundesamt.at> .
+
 <https://deims.org/dataset/e62a731f-753c-4226-a2a1-8fc8616f24a4>
         rdf:type  dcat:Dataset .
 
@@ -297,8 +308,9 @@ ef:narrower  rdf:type  rdf:Property;
                                ];
         owl:sameAs             <http://vocabs.lter-europe.net/entities/activity/a6dcdb32-c654-40d9-b8c7-10ecd057bfc4>;
         ef:name                "LTER Zöbelboden Austria forest disturbance map"@en;
-        ef:observedProperty    <http://vocabs.lter-europe.net/EnvThes/20939> , <http://vocabs.lter-europe.net/EnvThes/21473>;
+        ef:observedProperty    <http://vocabs.lter-europe.net/EnvThes/21473> , <http://vocabs.lter-europe.net/EnvThes/20939>;
         ef:specialisedEMFType  "activity"@en;
+        dcat:contactPoint      <https://orcid.org/0000-0002-8294-0690>;
         dcat:keyword           "wind throw"@en , "insect outburst"@en;
         prov:endedAtTime       "2014-07-15"^^xsd:dateTime;
         prov:startedAtTime     "1993-07-15"^^xsd:dateTime .
@@ -385,15 +397,7 @@ ef:hasObservation  rdf:type  rdf:Property;
         ef:narrower            <https://deims.org/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3>;
         ef:observedProperty    <http://vocabs.lter-europe.net/EnvThes/22194> , <http://vocabs.lter-europe.net/EnvThes/22142> , <http://vocabs.lter-europe.net/EnvThes/21350> , <http://vocabs.lter-europe.net/EnvThes/22301> , <http://vocabs.lter-europe.net/EnvThes/21482> , <http://vocabs.lter-europe.net/EnvThes/22247> , <http://vocabs.lter-europe.net/EnvThes/22169> , <http://vocabs.lter-europe.net/EnvThes/21477> , <http://vocabs.lter-europe.net/EnvThes/10076> , <http://vocabs.lter-europe.net/EnvThes/22289> , <http://vocabs.lter-europe.net/EnvThes/22240> , <http://vocabs.lter-europe.net/EnvThes/21457> , <http://vocabs.lter-europe.net/EnvThes/10071> , <http://vocabs.lter-europe.net/EnvThes/30036> , <http://vocabs.lter-europe.net/EnvThes/22195> , <http://vocabs.lter-europe.net/EnvThes/22131> , <http://vocabs.lter-europe.net/EnvThes/21531> , <http://vocabs.lter-europe.net/EnvThes/21443> , <http://vocabs.lter-europe.net/EnvThes/22302> , <http://vocabs.lter-europe.net/EnvThes/22244> , <http://vocabs.lter-europe.net/EnvThes/20937> , <http://vocabs.lter-europe.net/EnvThes/22077> , <http://vocabs.lter-europe.net/EnvThes/22286> , <http://vocabs.lter-europe.net/EnvThes/10018> , <http://vocabs.lter-europe.net/EnvThes/22161> , <http://vocabs.lter-europe.net/EnvThes/22279> , <http://vocabs.lter-europe.net/EnvThes/10020> , <http://vocabs.lter-europe.net/EnvThes/22060> , <http://vocabs.lter-europe.net/EnvThes/22281> , <http://vocabs.lter-europe.net/EnvThes/22192> , <http://vocabs.lter-europe.net/EnvThes/22214> , <http://vocabs.lter-europe.net/EnvThes/22330> , <http://vocabs.lter-europe.net/EnvThes/22047> , <http://vocabs.lter-europe.net/EnvThes/10043> , <http://vocabs.lter-europe.net/EnvThes/22179> , <http://vocabs.lter-europe.net/EnvThes/22035> , <http://vocabs.lter-europe.net/EnvThes/10303> , <http://vocabs.lter-europe.net/EnvThes/21476> , <http://vocabs.lter-europe.net/EnvThes/22167> , <http://vocabs.lter-europe.net/EnvThes/22028> , <http://vocabs.lter-europe.net/EnvThes/21208> , <http://vocabs.lter-europe.net/EnvThes/22287> , <http://vocabs.lter-europe.net/EnvThes/22122> , <http://vocabs.lter-europe.net/EnvThes/22044> , <http://vocabs.lter-europe.net/EnvThes/22176> , <http://vocabs.lter-europe.net/EnvThes/22037> , <http://vocabs.lter-europe.net/EnvThes/22296> , <http://vocabs.lter-europe.net/EnvThes/20940> , <http://vocabs.lter-europe.net/EnvThes/22307> , <http://vocabs.lter-europe.net/EnvThes/10053> , <http://vocabs.lter-europe.net/EnvThes/21354> , <http://vocabs.lter-europe.net/EnvThes/22215> , <http://vocabs.lter-europe.net/EnvThes/22045> , <http://vocabs.lter-europe.net/EnvThes/20970> , <http://vocabs.lter-europe.net/EnvThes/22177> , <http://vocabs.lter-europe.net/EnvThes/22038> , <http://vocabs.lter-europe.net/EnvThes/22106> , <http://vocabs.lter-europe.net/EnvThes/21080> , <http://vocabs.lter-europe.net/EnvThes/21420> , <http://vocabs.lter-europe.net/EnvThes/21552> , <http://vocabs.lter-europe.net/EnvThes/22093> , <http://vocabs.lter-europe.net/EnvThes/22283> , <http://vocabs.lter-europe.net/EnvThes/22221> , <http://vocabs.lter-europe.net/EnvThes/22143> , <http://vocabs.lter-europe.net/EnvThes/22186> , <http://vocabs.lter-europe.net/EnvThes/22116> , <http://vocabs.lter-europe.net/EnvThes/22248> , <http://vocabs.lter-europe.net/EnvThes/10336> , <http://vocabs.lter-europe.net/EnvThes/21478> , <http://vocabs.lter-europe.net/EnvThes/21480> , <http://vocabs.lter-europe.net/EnvThes/22139> , <http://vocabs.lter-europe.net/EnvThes/10072> , <http://vocabs.lter-europe.net/EnvThes/22196> , <http://vocabs.lter-europe.net/EnvThes/22144> , <http://vocabs.lter-europe.net/EnvThes/22264> , <http://vocabs.lter-europe.net/EnvThes/22125> , <http://vocabs.lter-europe.net/EnvThes/21352> , <http://vocabs.lter-europe.net/EnvThes/10125> , <http://vocabs.lter-europe.net/EnvThes/22257> , <http://vocabs.lter-europe.net/EnvThes/22303> , <http://vocabs.lter-europe.net/EnvThes/10396> , <http://vocabs.lter-europe.net/EnvThes/20938> , <http://vocabs.lter-europe.net/EnvThes/10021> , <http://vocabs.lter-europe.net/EnvThes/22282> , <http://vocabs.lter-europe.net/EnvThes/22133> , <http://vocabs.lter-europe.net/EnvThes/22146> , <http://vocabs.lter-europe.net/EnvThes/22265> , <http://vocabs.lter-europe.net/EnvThes/21577> , <http://vocabs.lter-europe.net/EnvThes/20939> , <http://vocabs.lter-europe.net/EnvThes/22079> , <http://vocabs.lter-europe.net/EnvThes/20944> , <http://vocabs.lter-europe.net/EnvThes/22288> , <http://vocabs.lter-europe.net/EnvThes/22251> , <http://vocabs.lter-europe.net/EnvThes/10082> , <http://vocabs.lter-europe.net/EnvThes/22074> , <http://vocabs.lter-europe.net/EnvThes/10015> , <http://vocabs.lter-europe.net/EnvThes/22135> , <http://vocabs.lter-europe.net/EnvThes/22123> , <http://vocabs.lter-europe.net/EnvThes/22255> , <http://vocabs.lter-europe.net/EnvThes/22260> , <http://vocabs.lter-europe.net/EnvThes/22297> , <http://vocabs.lter-europe.net/EnvThes/22040> , <http://vocabs.lter-europe.net/EnvThes/20941> , <http://vocabs.lter-europe.net/EnvThes/22172> , <http://vocabs.lter-europe.net/EnvThes/10392> , <http://vocabs.lter-europe.net/EnvThes/22319> , <http://vocabs.lter-europe.net/EnvThes/22280> , <http://vocabs.lter-europe.net/EnvThes/21355> , <http://vocabs.lter-europe.net/EnvThes/21587> , <http://vocabs.lter-europe.net/EnvThes/22046> , <http://vocabs.lter-europe.net/EnvThes/22178> , <http://vocabs.lter-europe.net/EnvThes/22089> , <http://vocabs.lter-europe.net/EnvThes/10307> , <http://vocabs.lter-europe.net/EnvThes/22261> , <http://vocabs.lter-europe.net/EnvThes/22298> , <http://vocabs.lter-europe.net/EnvThes/21207> , <http://vocabs.lter-europe.net/EnvThes/22107> , <http://vocabs.lter-europe.net/EnvThes/22173> , <http://vocabs.lter-europe.net/EnvThes/22316> , <http://vocabs.lter-europe.net/EnvThes/22102> , <http://vocabs.lter-europe.net/EnvThes/22234> , <http://vocabs.lter-europe.net/EnvThes/21421> , <http://vocabs.lter-europe.net/EnvThes/22284> , <http://vocabs.lter-europe.net/EnvThes/22222> , <http://vocabs.lter-europe.net/EnvThes/30037> , <http://vocabs.lter-europe.net/EnvThes/20969> , <http://vocabs.lter-europe.net/EnvThes/22187> , <http://vocabs.lter-europe.net/EnvThes/21513> , <http://vocabs.lter-europe.net/EnvThes/21488> , <http://vocabs.lter-europe.net/EnvThes/22209> , <http://vocabs.lter-europe.net/EnvThes/22182> , <http://vocabs.lter-europe.net/EnvThes/22081> , <http://vocabs.lter-europe.net/EnvThes/22317> , <http://vocabs.lter-europe.net/EnvThes/22157> , <http://vocabs.lter-europe.net/EnvThes/22145> , <http://vocabs.lter-europe.net/EnvThes/21353> , <http://vocabs.lter-europe.net/EnvThes/22188> , <http://vocabs.lter-europe.net/EnvThes/22206> , <http://vocabs.lter-europe.net/EnvThes/10310> , <http://vocabs.lter-europe.net/EnvThes/22174> , <http://vocabs.lter-europe.net/EnvThes/22100> , <http://vocabs.lter-europe.net/EnvThes/21551> , <http://vocabs.lter-europe.net/EnvThes/22154> , <http://vocabs.lter-europe.net/EnvThes/22312> , <http://vocabs.lter-europe.net/EnvThes/22065> , <http://vocabs.lter-europe.net/EnvThes/22147> , <http://vocabs.lter-europe.net/EnvThes/22274> , <http://vocabs.lter-europe.net/EnvThes/22259> , <http://vocabs.lter-europe.net/EnvThes/21489> , <http://vocabs.lter-europe.net/EnvThes/22180> , <http://vocabs.lter-europe.net/EnvThes/20945> , <http://vocabs.lter-europe.net/EnvThes/10031> , <http://vocabs.lter-europe.net/EnvThes/10333> , <http://vocabs.lter-europe.net/EnvThes/22313> , <http://vocabs.lter-europe.net/EnvThes/22136> , <http://vocabs.lter-europe.net/EnvThes/22268> , <http://vocabs.lter-europe.net/EnvThes/22216> , <http://vocabs.lter-europe.net/EnvThes/21218> , <http://vocabs.lter-europe.net/EnvThes/21419> , <http://vocabs.lter-europe.net/EnvThes/21481> , <http://vocabs.lter-europe.net/EnvThes/22084> , <http://vocabs.lter-europe.net/EnvThes/22032> , <http://vocabs.lter-europe.net/EnvThes/22293> , <http://vocabs.lter-europe.net/EnvThes/22164> , <http://vocabs.lter-europe.net/EnvThes/22025> , <http://vocabs.lter-europe.net/EnvThes/21544> , <http://vocabs.lter-europe.net/EnvThes/22137> , <http://vocabs.lter-europe.net/EnvThes/22269> , <http://vocabs.lter-europe.net/EnvThes/22059> , <http://vocabs.lter-europe.net/EnvThes/22130> , <http://vocabs.lter-europe.net/EnvThes/22262> , <http://vocabs.lter-europe.net/EnvThes/22299> , <http://vocabs.lter-europe.net/EnvThes/21391> , <http://vocabs.lter-europe.net/EnvThes/21479> , <http://vocabs.lter-europe.net/EnvThes/20943> , <http://vocabs.lter-europe.net/EnvThes/22085> , <http://vocabs.lter-europe.net/EnvThes/10081> , <http://vocabs.lter-europe.net/EnvThes/22242> , <http://vocabs.lter-europe.net/EnvThes/22103> , <http://vocabs.lter-europe.net/EnvThes/10026> , <http://vocabs.lter-europe.net/EnvThes/21939> , <http://vocabs.lter-europe.net/EnvThes/22235> , <http://vocabs.lter-europe.net/EnvThes/22197> , <http://vocabs.lter-europe.net/EnvThes/22134> , <http://vocabs.lter-europe.net/EnvThes/22304> , <http://vocabs.lter-europe.net/EnvThes/10117> , <http://vocabs.lter-europe.net/EnvThes/22183> , <http://vocabs.lter-europe.net/EnvThes/21569> , <http://vocabs.lter-europe.net/EnvThes/22109> , <http://vocabs.lter-europe.net/EnvThes/22082> , <http://vocabs.lter-europe.net/EnvThes/22318> , <http://vocabs.lter-europe.net/EnvThes/21560> , <http://vocabs.lter-europe.net/EnvThes/22278> , <http://vocabs.lter-europe.net/EnvThes/21933> , <http://vocabs.lter-europe.net/EnvThes/22184> , <http://vocabs.lter-europe.net/EnvThes/21559> , <http://vocabs.lter-europe.net/EnvThes/22245> , <http://vocabs.lter-europe.net/EnvThes/10241> , <http://vocabs.lter-europe.net/EnvThes/22101> , <http://vocabs.lter-europe.net/EnvThes/22295> , <http://vocabs.lter-europe.net/EnvThes/22066> , <http://vocabs.lter-europe.net/EnvThes/30029> , <http://vocabs.lter-europe.net/EnvThes/22061> , <http://vocabs.lter-europe.net/EnvThes/30034> , <http://vocabs.lter-europe.net/EnvThes/22193> , <http://vocabs.lter-europe.net/EnvThes/22208> , <http://vocabs.lter-europe.net/EnvThes/22119> , <http://vocabs.lter-europe.net/EnvThes/10039> , <http://vocabs.lter-europe.net/EnvThes/22181> , <http://vocabs.lter-europe.net/EnvThes/22300> , <http://vocabs.lter-europe.net/EnvThes/22156> , <http://vocabs.lter-europe.net/EnvThes/22067> , <http://vocabs.lter-europe.net/EnvThes/22276> , <http://vocabs.lter-europe.net/EnvThes/21525> , <http://vocabs.lter-europe.net/EnvThes/22217> , <http://vocabs.lter-europe.net/EnvThes/30035> , <http://vocabs.lter-europe.net/EnvThes/21530> , <http://vocabs.lter-europe.net/EnvThes/22111> , <http://vocabs.lter-europe.net/EnvThes/22243> , <http://vocabs.lter-europe.net/EnvThes/22320> , <http://vocabs.lter-europe.net/EnvThes/10335> , <http://vocabs.lter-europe.net/EnvThes/22158> , <http://vocabs.lter-europe.net/EnvThes/20153> , <http://vocabs.lter-europe.net/EnvThes/22285> , <http://vocabs.lter-europe.net/EnvThes/22160> , <http://vocabs.lter-europe.net/EnvThes/30032> , <http://vocabs.lter-europe.net/EnvThes/22191> , <http://vocabs.lter-europe.net/EnvThes/22308> , <http://vocabs.lter-europe.net/EnvThes/10341> , <http://vocabs.lter-europe.net/EnvThes/22086> , <http://vocabs.lter-europe.net/EnvThes/22204> , <http://vocabs.lter-europe.net/EnvThes/22034> , <http://vocabs.lter-europe.net/EnvThes/21475> , <http://vocabs.lter-europe.net/EnvThes/22166> , <http://vocabs.lter-europe.net/EnvThes/22305> , <http://vocabs.lter-europe.net/EnvThes/22152> , <http://vocabs.lter-europe.net/EnvThes/22272> , <http://vocabs.lter-europe.net/EnvThes/22210> , <http://vocabs.lter-europe.net/EnvThes/22175> , <http://vocabs.lter-europe.net/EnvThes/21472> , <http://vocabs.lter-europe.net/EnvThes/22128> , <http://vocabs.lter-europe.net/EnvThes/22306> , <http://vocabs.lter-europe.net/EnvThes/21579> , <http://vocabs.lter-europe.net/EnvThes/22121> , <http://vocabs.lter-europe.net/EnvThes/22253> , <http://vocabs.lter-europe.net/EnvThes/22246> , <http://vocabs.lter-europe.net/EnvThes/21473> , <http://vocabs.lter-europe.net/EnvThes/22076> , <http://vocabs.lter-europe.net/EnvThes/10017> , <http://vocabs.lter-europe.net/EnvThes/22030> , <http://vocabs.lter-europe.net/EnvThes/21529>;
         ef:specialisedEMFType  "site"@en;
-        dcat:contactPoint      [ rdf:type       prov:Agent , foaf:Person;
-                                 rdfs:seeAlso   <https://orcid.org/0000-0002-8294-0690>;
-                                 foaf:fullName  "Thomas Dirnboeck";
-                                 foaf:hasEmail  <mailto:thomas.dirnboeck@umweltbundesamt.at>
-                               ];
-        dcat:contactPoint      [ rdf:type       prov:Agent , foaf:Person;
-                                 foaf:fullName  "Gisela Proell";
-                                 foaf:hasEmail  <mailto:gisela.proell@umweltbundesamt.at>
-                               ];
+        dcat:contactPoint      <https://orcid.org/0000-0002-8294-0690>;
         prov:wasGeneratedBy    <https://doi.org/10.3030/871128> , <https://unece.org/integrated-monitoring> , <https://www.lter-austria.at/cwn/> , <http://data.europa.eu/eli/dir/2016/2284/oj> , <https://cordis.europa.eu/project/id/654359> , <https://cordis.europa.eu/project/id/641762> , <https://cordis.europa.eu/project/id/856506> , <http://www.enveurope.eu/> , <https://cordis.europa.eu/project/id/820852> , <https://www.expeeronline.eu/> .
 
 <https://deims.org/activity/f63f4d99-785e-4071-83d8-e04fd2aecbba>
@@ -409,6 +413,7 @@ ef:hasObservation  rdf:type  rdf:Property;
         ef:name                "LTER Zöbelboden Austria soil, soil water, soil respiration data"@en;
         ef:observedProperty    <http://vocabs.lter-europe.net/EnvThes/22183> , <http://vocabs.lter-europe.net/EnvThes/22274> , <http://vocabs.lter-europe.net/EnvThes/22135> , <http://vocabs.lter-europe.net/EnvThes/22245> , <http://vocabs.lter-europe.net/EnvThes/22280> , <http://vocabs.lter-europe.net/EnvThes/22184> , <http://vocabs.lter-europe.net/EnvThes/30035> , <http://vocabs.lter-europe.net/EnvThes/22295> , <http://vocabs.lter-europe.net/EnvThes/30034> , <http://vocabs.lter-europe.net/EnvThes/30037> , <http://vocabs.lter-europe.net/EnvThes/22269> , <http://vocabs.lter-europe.net/EnvThes/22297> , <http://vocabs.lter-europe.net/EnvThes/22065> , <http://vocabs.lter-europe.net/EnvThes/22248> , <http://vocabs.lter-europe.net/EnvThes/22264> , <http://vocabs.lter-europe.net/EnvThes/22181> , <http://vocabs.lter-europe.net/EnvThes/10396> , <http://vocabs.lter-europe.net/EnvThes/10053> , <http://vocabs.lter-europe.net/EnvThes/22255> , <http://vocabs.lter-europe.net/EnvThes/10039> , <http://vocabs.lter-europe.net/EnvThes/22279> , <http://vocabs.lter-europe.net/EnvThes/20944> , <http://vocabs.lter-europe.net/EnvThes/22283> , <http://vocabs.lter-europe.net/EnvThes/22084> , <http://vocabs.lter-europe.net/EnvThes/21350> , <http://vocabs.lter-europe.net/EnvThes/22136> , <http://vocabs.lter-europe.net/EnvThes/22045> , <http://vocabs.lter-europe.net/EnvThes/22278> , <http://vocabs.lter-europe.net/EnvThes/22038> , <http://vocabs.lter-europe.net/EnvThes/30036> , <http://vocabs.lter-europe.net/EnvThes/22272> , <http://vocabs.lter-europe.net/EnvThes/22243> , <http://vocabs.lter-europe.net/EnvThes/22281>;
         ef:specialisedEMFType  "activity"@en;
+        dcat:contactPoint      <https://orcid.org/0000-0003-0052-4245> , <https://orcid.org/0000-0002-8294-0690>;
         prov:endedAtTime       "2015-12-31"^^xsd:dateTime;
         prov:startedAtTime     "1992-07-15"^^xsd:dateTime .
 
@@ -504,6 +509,11 @@ ef:hasObservation  rdf:type  rdf:Property;
 <https://deims.org/dataset/89fd62b1-1c02-4ce5-9141-b9cfa065c20e>
         rdf:type  dcat:Dataset .
 
+<https://orcid.org/0000-0002-8294-0690>
+        rdf:type       prov:Agent , foaf:Person;
+        foaf:fullName  "Thomas Dirnboeck";
+        foaf:hasEmail  <mailto:thomas.dirnboeck@umweltbundesamt.at> .
+
 <https://deims.org/dataset/dd26da08-a208-4492-8589-9ef2a106d1bc>
         rdf:type  dcat:Dataset .
 
@@ -523,6 +533,7 @@ ef:hasObservation  rdf:type  rdf:Property;
         ef:name                "LTER Zöbelboden Austria meteorology"@en;
         ef:observedProperty    <http://vocabs.lter-europe.net/EnvThes/20937> , <http://vocabs.lter-europe.net/EnvThes/22035> , <http://vocabs.lter-europe.net/EnvThes/22319> , <http://vocabs.lter-europe.net/EnvThes/22317> , <http://vocabs.lter-europe.net/EnvThes/22204> , <http://vocabs.lter-europe.net/EnvThes/22125>;
         ef:specialisedEMFType  "activity"@en;
+        dcat:contactPoint      <https://orcid.org/0000-0002-8294-0690> , <https://orcid.org/0000-0003-0052-4245>;
         dcat:keyword           "meteorology"@en;
         prov:endedAtTime       "2015-12-31"^^xsd:dateTime;
         prov:startedAtTime     "1993-01-01"^^xsd:dateTime .
@@ -549,6 +560,11 @@ ef:hasObservation  rdf:type  rdf:Property;
 <https://deims.org/dataset/bcd9ae12-b11b-4ba6-8941-6beb7e05a885>
         rdf:type  dcat:Dataset .
 
+<https://orcid.org/0000-0003-0052-4245>
+        rdf:type       prov:Agent , foaf:Person;
+        foaf:fullName  "Johannes Kobler";
+        foaf:hasEmail  <mailto:johannes.kobler@umweltbundesamt.at> .
+
 <https://deims.org/activity/4efaa2f2-6f4a-4f75-b95c-c3ffb13594a5>
         rdf:type               ef:EnvironmentalMonitoringActivity , prov:Activity;
         dcterms:description    "Deposition data from LTER Zöbelboden. The data comprises monthly wet only and bulk precipitation chemistry from an open area and canopy throughfall chemistry from 2-3 forest plots"@en;
@@ -562,6 +578,7 @@ ef:hasObservation  rdf:type  rdf:Property;
         ef:name                "LTER Zöbelboden Austria deposition"@en;
         ef:observedProperty    <http://vocabs.lter-europe.net/EnvThes/20937> , <http://vocabs.lter-europe.net/EnvThes/22204>;
         ef:specialisedEMFType  "activity"@en;
+        dcat:contactPoint      <https://orcid.org/0000-0003-0052-4245> , <https://orcid.org/0000-0002-8294-0690>;
         dcat:keyword           "Base cations deposition"@en , "Heavy metal deposition"@en , "nitrogen deposition"@en;
         prov:endedAtTime       "2015-12-31"^^xsd:dateTime;
         prov:startedAtTime     "1993-01-01"^^xsd:dateTime .
@@ -573,4 +590,4 @@ ef:broader  rdf:type  rdf:Property;
         rdfs:comment  "A link pointing to a broader AbstractMonitoringObject (a higher level in a hierarchical structure). The association has additional properties as defined in the association class Hierarchy."@en;
         rdfs:domain   ef:EnvironmentalMonitoringFacility;
         rdfs:range    ef:EnvironmentalMonitoringFacility;
-        rdfs:seeAlso  <https://inspire.ec.europa.eu/schemas/ef/4.0/EnvironmentalMonitoringFacilities.xsd> 
+        rdfs:seeAlso  <https://inspire.ec.europa.eu/schemas/ef/4.0/EnvironmentalMonitoringFacilities.xsd> .
