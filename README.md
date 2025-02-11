@@ -4,13 +4,16 @@
 The goal is to generate an RDF-formatted copy of the shared entities from DEIMS-SDR (Dynamic Ecological Information Management System – Site and Dataset Registry) to facilitate the creation of a knowledge graph. This work draws inspiration from and builds upon the efforts initially undertaken in [![](https://img.shields.io/badge/doi-10.5281/zenodo.7313046-yellow.svg)](https://doi.org/10.5281/zenodo.7313046).
 
 ## Approach
-In this work, the SPARQL GENERATE query language is employed to generate RDF data from the DEIMS-SDR API, thanks to the mapping among resources' metadata elements and ontology properties.
+In this work, actional mapping trougth the SPARQL GENERATE query language is employed to generate RDF data from the DEIMS-SDR API (figure 1), thanks to the mapping among resources' metadata elements and ontology properties.
 SPARQL GENERATE enables the creation of RDF data directly from SPARQL queries and is supported by the SPARQL-generate engine[^1], which is accessible as a web service at http://sparql-generate.org/.
 [^1]: Maxime Lefrançois, Antoine Zimmermann, Noorani Bakerally A SPARQL extension for generating RDF from heterogeneous formats, In Proc. Extended Semantic Web Conference, ESWC, May 2017, Portoroz, Slovenia. [PDF](http://www.maxime-lefrancois.info/docs/LefrancoisZimmermannBakerally-ESWC2017-Generate.pdf)
 
 SPARQL-Generate is a powerful template-based language designed for generating RDF or text streams from RDF datasets and documents in various formats (e.g., JSON, CSV, TXT). Built on SPARQL, it extends its functionality with advanced capabilities for template-based querying, transformation, and serialization.
 
 As a W3C member submission, SPARQL-Generate is currently under review by the W3C RDF Data Shapes Working Group.
+
+{% include ![diagramSteps](https://github.com/user-attachments/assets/35232ac2-8dbb-45cb-955b-9377328032f1) description="The main steps to obtain the corresponding RDF files are represented here. In the diagram at the bottom left, the various resources shared through DEIMS-SDR are shown, here the arrows represent the existing relationships as rendered in the resulting graphs, while the orange labels, near to the resource icons, indicate the ontology or vocabulary used." %}
+
 
 ## How is work organized?
 By leveraging the SPARQL-Generate engine, it was possible to generate graphs for both sites and networks. Specifically, for a site, the engine enables the creation of all related resources—including datasets, sensors, activities, locations, people, organizations, and projects—while also capturing the relationships between them.
