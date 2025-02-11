@@ -51,18 +51,18 @@ To explore the mapping of API metadata elements to various ontology and vocabula
 - [`mappingSensor2RDF.md`](mappingSensor2RDF.md) for sensors.
 
 
-This repository also includes JSON files from the DEIMS-SDR APIs for the various mapped resources:
-- [`site.json`](site.json) for site;
+This repository also includes JSON files, as examples, from the DEIMS-SDR APIs for the various mapped resources:
+- [`site.json`](site.json) for site, if you need to view the original version of this resource, please visit this [page](https://deims.org/api/sites/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6);
 
-- [`network.json`](network.json) for network;
+- [`network.json`](network.json) for network, if you need to view the original version of this resource, please visit this [page](https://deims.org/api/networks/4742ffca-65ac-4aae-815f-83738500a1fc);
 
-- [`activity.json`](activity.json) for activity;
+- [`activity.json`](activity.json) for activity, if you need to view the original version of this resource, please visit this [page](https://deims.org/api/activities/4efaa2f2-6f4a-4f75-b95c-c3ffb13594a5);
 
-- [`dataset.json`](dataset.json) for dataset;
+- [`dataset.json`](dataset.json) for dataset, if you need to view the original version of this resource, please visit this [page](https://deims.org/api/datasets/cd1fb6f8-5e57-11e3-aa73-005056ab003f);
 
-- [`location.json`](location.json) for location;
+- [`location.json`](location.json) for location, if you need to view the original version of this resource, please visit this [page](https://deims.org/api/locations/12b38f3f-7e72-425a-80c7-7cad35ce4c7b);
 
-- [`sensor.json`](sensor.json) for sensor.
+- [`sensor.json`](sensor.json) for sensor, if you need to view the original version of this resource, please visit this [page](https://deims.org/api/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3).
 
 ## Acknowledgements
 This work has been partially funded from the European Union's Horizon 2020 and Horizon Europe research and innovation programmes under the [H2020 eLTER-Plus Project](https://elter-ri.eu/elter-plus) grant agreement Nr. 871128 and [eLTER EnRich Project](https://elter-ri.eu/elter-enrich) grant agreement Nr. 101131751.
