@@ -12,7 +12,7 @@ SPARQL-Generate is a powerful template-based language designed for generating RD
 
 As a W3C member submission, SPARQL-Generate is currently under review by the W3C RDF Data Shapes Working Group.
 
-![diagramSteps](https://github.com/user-attachments/assets/35232ac2-8dbb-45cb-955b-9377328032f1 "The main steps to obtain the corresponding RDF files are represented here. In the diagram at the bottom left, the various resources shared through DEIMS-SDR are shown, here the arrows represent the existing relationships as rendered in the resulting graphs, while the orange labels, near to the resource icons, indicate the ontology or vocabulary used.")
+![diagramSteps](https://github.com/user-attachments/assets/9dafd85f-7c18-4062-82e0-5b9aad788c17 "The main steps to obtain the corresponding RDF files are represented here. In the diagram at the bottom left, the various resources shared through DEIMS-SDR are shown, here the arrows represent the existing relationships as rendered in the resulting graphs, while the orange labels, near to the resource icons, indicate the ontology or vocabulary used.")
 Figure 1 - The main steps to obtain the corresponding RDF files are represented here. In the diagram at the bottom left, the various resources shared through DEIMS-SDR are shown, here the arrows represent the existing relationships as rendered in the resulting graphs, while the orange labels, near to the resource icons, indicate the ontology or vocabulary used.
 
 
