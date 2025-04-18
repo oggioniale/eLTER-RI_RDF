@@ -82,7 +82,7 @@ GENERATE {
     ?projectUri a foaf:Project ;
       foaf:name "{?projectLabel}"@en
   }
-  ITERATOR ite:JSONPath(?source, "$.attributes.affiliation.projects[?(@.uri != null)]", "$.label", "$.uri") AS ?project ?projectLabel ?projectUrl
+  ITERATOR ite:JSONPath(?source, "$.attributes.affiliation.projects[*]", "$.label", "$.uri") AS ?project ?projectLabel ?projectUrl
   WHERE {
     BIND(URI(?projectUrl) AS ?projectUri)
   }
@@ -92,7 +92,7 @@ GENERATE {
   GENERATE {
     ?identifier ef:broader ?parentUri .
   }
-  ITERATOR ite:JSONPath(?source, "$.attributes.general.relatedSites[?(@.typeOfRelationship.label == 'belongs to')].listOfSites[*].id[?(@.suffix != null)].suffix", "$") AS ?parentSuffix
+  ITERATOR ite:JSONPath(?source, "$.attributes.general.relatedSites[*].[?(@.typeOfRelationship.label == 'belongs to')].listOfSites[*].id[?(@.suffix != null)].suffix", "$") AS ?parentSuffix
   WHERE {
     BIND(URI(CONCAT('https://deims.org/', ?parentSuffix)) AS ?parentUri)
   }
@@ -102,7 +102,7 @@ GENERATE {
   GENERATE {
     ?identifier ef:narrower ?childrenUri .
   }
-  ITERATOR ite:JSONPath(?source, "$.attributes.general.relatedSites[?(@.typeOfRelationship.label == 'contains')].listOfSites[*].id[?(@.suffix != null)].suffix", "$") AS ?childrenSuffix
+  ITERATOR ite:JSONPath(?source, "$.attributes.general.relatedSites[*].[?(@.typeOfRelationship.label == 'contains')].listOfSites[*].id[?(@.suffix != null)].suffix", "$") AS ?childrenSuffix
   WHERE {
     BIND(URI(CONCAT('https://deims.org/', ?childrenSuffix)) AS ?childrenUri)
   }
@@ -194,7 +194,7 @@ GENERATE {
     # link the organization into site
     ?identifier dcterm:publisher ?opOrgRorUri .
   }
-  ITERATOR ite:JSONPath(?source, "$.attributes.contact.operatingOrganisation[?(@.type == 'organisation')].[?(@.ror != null)]", "$.type", "$.name", "$.url", "$.ror") AS ?opOrg ?opOrgType ?opOrgName ?opOrgUrl ?opOrgRor
+  ITERATOR ite:JSONPath(?source, "$.attributes.contact.operatingOrganisation[*].[?(@.type == 'organisation')].[?(@.ror != null)]", "$.type", "$.name", "$.url", "$.ror") AS ?opOrg ?opOrgType ?opOrgName ?opOrgUrl ?opOrgRor
   WHERE {
     BIND(URI(?opOrgRor) AS ?opOrgRorUri)
     BIND(URI(?opOrgUrl) AS ?opOrgUrlUri)
@@ -210,7 +210,7 @@ GENERATE {
     # link the funding agency into site
     # TODO!
   }
-  ITERATOR ite:JSONPath(?source, "$.attributes.contact.fundingAgency[?(@.type == 'organisation')].[?(@.ror != null)]", "$.type", "$.name", "$.url", "$.ror") AS ?funAgen ?funAgenType ?funAgenName ?funAgenUrl ?funAgenRor
+  ITERATOR ite:JSONPath(?source, "$.attributes.contact.fundingAgency[*].[?(@.type == 'organisation')].[?(@.ror != null)]", "$.type", "$.name", "$.url", "$.ror") AS ?funAgen ?funAgenType ?funAgenName ?funAgenUrl ?funAgenRor
   WHERE {
     BIND(URI(?funAgenRor) AS ?funAgenRorUri)
     BIND(URI(?funAgenUrl) AS ?funAgenUrlUri)
@@ -465,7 +465,7 @@ GENERATE {
 # For example, this is the list of sites for the LTER-Italy network.
 SOURCE <https://deims.org/api/sites?network=7fef6b73-e5cb-4cd2-b438-ed32eb1504b3> AS ?list
 
-ITERATOR ite:JSONPath(?list, "$[626]", "$.id.suffix") AS ?item ?suffix
+ITERATOR ite:JSONPath(?list, "$[*]", "$.id.suffix") AS ?item ?suffix
 
 SOURCE <https://deims.org/api/sites/{ ?suffix }> AS ?source
 
