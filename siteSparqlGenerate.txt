@@ -460,7 +460,10 @@ GENERATE {
   
 }
 
-SOURCE <https://deims.org/api/sites> AS ?list
+# This is the page where all the sites are listed.
+# SOURCE <https://deims.org/api/sites> AS ?list
+# For example, this is the list of sites for the LTER-Italy network.
+SOURCE <https://deims.org/api/sites?network=7fef6b73-e5cb-4cd2-b438-ed32eb1504b3> AS ?list
 
 ITERATOR ite:JSONPath(?list, "$[626]", "$.id.suffix") AS ?item ?suffix
 

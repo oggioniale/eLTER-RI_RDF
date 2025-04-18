@@ -39,7 +39,12 @@ GENERATE {
   .
 }
 
-ITERATOR ite:JSONPath(<https://deims.org/api/networks>, "$[55]", "$.id.suffix") AS ?itemNet ?netSuffix
+# for LTER-Italy network
+# ITERATOR ite:JSONPath(<https://deims.org/api/networks>, "$[18]", "$.id.suffix") AS ?itemNet ?netSuffix
+# for LTER Europe
+# ITERATOR ite:JSONPath(<https://deims.org/api/networks>, "$[55]", "$.id.suffix") AS ?itemNet ?netSuffix
+# for all networks
+ITERATOR ite:JSONPath(<https://deims.org/api/networks>, "$[*]", "$.id.suffix") AS ?itemNet ?netSuffix
 
 SOURCE <https://deims.org/api/networks/{ ?netSuffix }> AS ?netApi
 
