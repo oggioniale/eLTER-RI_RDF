@@ -223,7 +223,7 @@ GENERATE {
   }
   ITERATOR ite:JSONPath(?source, "$.attributes.affiliation.networks[*].[?(@.network.id.prefix=='https://deims.org/networks/')].network.id[?(@.suffix != null)].suffix", "$") AS ?networksuffix
   WHERE {
-    BIND(URI(CONCAT('https://deims.org/network/', ?networksuffix))  AS ?network)
+    BIND(URI(CONCAT('https://deims.org/networks/', ?networksuffix))  AS ?network)
   }
   .
   
@@ -460,12 +460,13 @@ GENERATE {
   
 }
 
-# This is the page where all the sites are listed.
-# SOURCE <https://deims.org/api/sites> AS ?list
-# For example, this is the list of sites for the LTER-Italy network.
-SOURCE <https://deims.org/api/sites?network=7fef6b73-e5cb-4cd2-b438-ed32eb1504b3> AS ?list
+# Iteration for JSON
+# SOURCE <https://deims.org/api/sites> AS ?list # This is the page where all the sites are listed.
+# ITERATOR ite:JSONPath(?list, "$[*]", "$.id.suffix") AS ?item ?suffix
 
-ITERATOR ite:JSONPath(?list, "$[*]", "$.id.suffix") AS ?item ?suffix
+# Iteration for CSV
+SOURCE <sites_list.csv> AS ?list
+ITERATOR ite:CSV(?list, false, '"', ';', '\n') AS ?title ?suffix
 
 SOURCE <https://deims.org/api/sites/{ ?suffix }> AS ?source
 
