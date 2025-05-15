@@ -86,21 +86,44 @@ This repository also includes JSON files, as examples, from the DEIMS-SDR APIs f
 
 - [`sensor.json`](./examples/sensor.json) for sensor, if you need to view the original version of this resource, please visit this [page](https://deims.org/api/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3).
 
+--------------------
 
-## Script
-In this repository, you can find the script used to generate the RDF files [`pipeline.sh`](./pipeline.sh). The script is written in Bash scripting language (sh) and is located in the pipeline.sh file.
+## Pipeline Script for RDF Turtle Generation and Publishing: pipeline.sh
 
-This Bash script (.sh) automates the generation and publication of RDF Turtle (.ttl) files based on SPARQL-Generate queries. It performs the following steps:
+### Description:
+This script automates the generation and publication of RDF Turtle (.ttl) files based on SPARQL-Generate queries. It retrieves data from the DEIMS-SDR (deims.org), processes monitoring sites and networks, and loads the resulting TTL files into a Fuseki triple store. The script performs the following steps:
 
-1. Runs SPARQL-Generate to produce RDF data for a list of monitoring sites and networks retrieved from the DEIMS-SDR API;
+1. **Fetches a list of sites from the DEIMS API** and processes them based on the date of changes.
+2. **Generates RDF data for sites and networks** using SPARQL-Generate.
+3. **Compares new data with previously processed data** using SHA256 checksums.
+4. If changes are detected, **it updates the corresponding files on the web server** and loads them into a Fuseki triple store.
+5. **Extracts relevant URIs from the generated TTL files** and deletes outdated triples in the triple store.
 
-2. Checks if the generated sites and networks data have changed by comparing SHA256 checksums;
+### Usage:
+```bash
+./pipeline.sh -c CREDENTIALS -e ENDPOINT -w WEB_BASE_URL [-d DATASET]
+```
 
-3. If changes are detected, it updates the data in a Fuseki triple store;
+### Options:
+-c CREDENTIALS: Fuseki credentials (e.g., 'username:password')
+-e ENDPOINT: Fuseki endpoint URL (e.g., 'http://your-fuseki-server-url'). Please remember to provide the URL without the trailing slash.
+-d DATASET: Dataset name where the data will be loaded (default: 'elter')
+-w WEB_BASE_URL: Base URL of the published TTL files for Fuseki LOAD (e.g., 'http://example.com/elter')
+-h: Show this help message and exit
 
-4. All operations are logged, and unnecessary updates are avoided to optimize efficiency.
+### Example:
+```
+./pipeline.sh -c 'admin:password' -e 'http://localhost:3030' -w 'http://example.com/elter'
+```
 
-The goal is to ensure that only fresh and updated RDF data is published and uploaded to the triple store, minimizing redundancy.
+### Dependencies:
+- [SPARQL-Generate](https://github.com/sparql-generate)
+- [jq](https://jqlang.org)
+
+### Additional Notes:
+Ensure the necessary credentials for Fuseki and web server access are provided.
+The dataset will be loaded into Fuseki only if new data is detected, avoiding redundant uploads.
+
 
 ## Acknowledgements
 This work has been partially funded from the European Union's Horizon 2020 and Horizon Europe research and innovation programmes under the [H2020 eLTER-Plus Project](https://elter-ri.eu/elter-plus) grant agreement Nr. 871128 and [eLTER EnRich Project](https://elter-ri.eu/elter-enrich) grant agreement Nr. 101131751.
