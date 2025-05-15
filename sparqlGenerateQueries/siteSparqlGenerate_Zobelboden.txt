@@ -269,7 +269,7 @@ GENERATE {
   	}
   	ITERATOR ite:JSONPath(?activityapi, "$.attributes[?(@.relatedResources != null)].relatedResources[?(@.id.prefix=='https://deims.org/sensors/')].id[?(@.suffix != null)].suffix", "$") AS ?aRelSensorSuffix
   	WHERE {
-   	  BIND(URI(CONCAT('https://deims.org/', ?aRelSensorSuffix))  AS ?aRelSensor)
+   	  BIND(URI(CONCAT('https://deims.org/sensors/', ?aRelSensorSuffix))  AS ?aRelSensor)
   	}
   	.
     
@@ -446,7 +446,7 @@ GENERATE {
   }
   .
   
-  # Dataset
+  # dataset
   GENERATE {
     ?dataset a dcat:Dataset .
     # link site to dataset

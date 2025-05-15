@@ -24,33 +24,6 @@ PREFIX ssn: <http://www.w3.org/ns/ssn/>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 
 GENERATE { 
-  # CUSTOM PROPERTIES
-  # We define here properties not found in other ontologies yet.
-  # Properties of EMF, defined in XML EMF Schema, not already mapped in to SmOD Ontology https://www.w3.org/2015/03/inspire/ef
-  ef:hasObservation a rdf:Property ;
-    rdfs:domain ef:EnvironmentalMonitoringFacility ;
-    rdfs:range ef:EnvironmentalMonitoringFacility ;
-    rdfs:comment "Observation of emissions, of the state of environmental media and of other ecosystem parameters (biodiversity, ecological conditions of vegetation, etc.) by or on behalf of public authorities at this AbstractMonitoringFeature."@en ;
-    rdfs:seeAlso <https://inspire.ec.europa.eu/schemas/ef/4.0/EnvironmentalMonitoringFacilities.xsd> .
-      
-  ef:observedProperty a rdf:Property ;
-    rdfs:domain ef:EnvironmentalMonitoringFacility ;
-    rdfs:range ef:EnvironmentalMonitoringFacility ;
-    rdfs:comment "The property being observed or measured at this AMO"@en ;
-    rdfs:seeAlso <https://inspire.ec.europa.eu/schemas/ef/4.0/EnvironmentalMonitoringFacilities.xsd> .
-  
-  ef:narrower a rdf:Property ;
-    rdfs:domain ef:EnvironmentalMonitoringFacility ;
-    rdfs:range ef:EnvironmentalMonitoringFacility ;
-    rdfs:comment "A link pointing to narrower AbstractMonitoringObject(s) (a lower level in a hierarchical structure). The association has additional properties as defined in the association class Hierarchy."@en ;
-    rdfs:seeAlso <https://inspire.ec.europa.eu/schemas/ef/4.0/EnvironmentalMonitoringFacilities.xsd> .
-
-  ef:broader a rdf:Property ;
-    rdfs:domain ef:EnvironmentalMonitoringFacility ;
-    rdfs:range ef:EnvironmentalMonitoringFacility  ;
-    rdfs:comment "A link pointing to a broader AbstractMonitoringObject (a higher level in a hierarchical structure). The association has additional properties as defined in the association class Hierarchy."@en ;
-    rdfs:seeAlso <https://inspire.ec.europa.eu/schemas/ef/4.0/EnvironmentalMonitoringFacilities.xsd> .
-  
   ?identifier a ef:EnvironmentalMonitoringFacility , prov:Entity;
   owl:sameAs ?identifier_getit ;
   ef:specialisedEMFType "{?type}"@en ;
@@ -269,7 +242,7 @@ GENERATE {
   	}
   	ITERATOR ite:JSONPath(?activityapi, "$.attributes[?(@.relatedResources != null)].relatedResources[?(@.id.prefix=='https://deims.org/sensors/')].id[?(@.suffix != null)].suffix", "$") AS ?aRelSensorSuffix
   	WHERE {
-   	  BIND(URI(CONCAT('https://deims.org/', ?aRelSensorSuffix))  AS ?aRelSensor)
+   	  BIND(URI(CONCAT('https://deims.org/sensors/', ?aRelSensorSuffix))  AS ?aRelSensor)
   	}
   	.
     
@@ -446,7 +419,7 @@ GENERATE {
   }
   .
   
-  # Dataset
+  # dataset
   GENERATE {
     ?dataset a dcat:Dataset .
     # link site to dataset
@@ -465,8 +438,8 @@ GENERATE {
 # ITERATOR ite:JSONPath(?list, "$[*]", "$.id.suffix") AS ?item ?suffix
 
 # Iteration for CSV
-SOURCE <sites_list.csv> AS ?list
-ITERATOR ite:CSV(?list, false, '"', ';', '\n') AS ?title ?suffix
+SOURCE <sites_changed.csv> AS ?list
+ITERATOR ite:CSV(?list, false, '"', ';', '\n') AS ?title ?suffix ?time_ch
 
 SOURCE <https://deims.org/api/sites/{ ?suffix }> AS ?source
 
