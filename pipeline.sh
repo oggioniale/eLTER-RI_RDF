@@ -10,14 +10,13 @@
 #   from the DEIMS-SDR (deims.org), processes monitoring sites and networks, 
 #   and loads the resulting TTL files into a Fuseki triple store. 
 #   The script performs the following steps:
-#   1. Fetches a list of sites from the DEIMS API and processes them based on 
-#      the date of changes.
-#   2. Generates RDF data for sites and networks using SPARQL-Generate.
-#   3. Compares new data with previously processed data using SHA256 checksums.
-#   4. If changes are detected, it updates the corresponding files on the web 
-#      server and loads them into a Fuseki triple store.
-#   5. Extracts relevant URIs from the generated TTL files and deletes outdated 
-#      triples in the triple store.
+#   1. Generates RDF data for sites and networks using SPARQL-Generate.
+#   2. Daily, it fetches a list of sites from the DEIMS API, processes them
+#      based on their modification date, removes outdated content, and 
+#      reloads the updated RDF versions.
+#   3. Daily, it compares the newly generated RDF data for networks with
+#      the previously processed data using SHA256 checksums, and reloads 
+#      only the modified content if changes are detected.
 #
 # License: Apache License 2.0
 # 

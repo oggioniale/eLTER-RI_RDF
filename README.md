@@ -91,13 +91,15 @@ This repository also includes JSON files, as examples, from the DEIMS-SDR APIs f
 ## Pipeline Script for RDF Turtle Generation and Publishing: pipeline.sh
 
 ### Description:
-This script automates the generation and publication of RDF Turtle (.ttl) files based on SPARQL-Generate queries. It retrieves data from the DEIMS-SDR (deims.org), processes monitoring sites and networks, and loads the resulting TTL files into a Fuseki triple store. The script performs the following steps:
+This script automates the generation and publication of RDF Turtle (.ttl) files based on SPARQL-Generate queries. It retrieves data from the DEIMS-SDR 
+([deims.org](https://deims.org)), processes monitoring sites and networks, and loads the resulting TTL files into a Fuseki triple store. 
+The script performs the following steps:
 
-1. **Fetches a list of sites from the DEIMS API** and processes them based on the date of changes.
-2. **Generates RDF data for sites and networks** using SPARQL-Generate.
-3. **Compares new data with previously processed data** using SHA256 checksums.
-4. If changes are detected, **it updates the corresponding files on the web server** and loads them into a Fuseki triple store.
-5. **Extracts relevant URIs from the generated TTL files** and deletes outdated triples in the triple store.
+1. Generates RDF data for sites and networks using SPARQL-Generate.
+2. Daily, it fetches a list of sites from the DEIMS API, processes them based on their modification date, removes outdated content, and 
+reloads the updated RDF versions.
+3. Daily, it compares the newly generated RDF data for networks with the previously processed data using SHA256 checksums, and reloads 
+only the modified content if changes are detected.
 
 ### Usage:
 ```bash
@@ -106,9 +108,13 @@ This script automates the generation and publication of RDF Turtle (.ttl) files 
 
 ### Options:
 -c CREDENTIALS: Fuseki credentials (e.g., 'username:password')
+
 -e ENDPOINT: Fuseki endpoint URL (e.g., 'http://your-fuseki-server-url'). Please remember to provide the URL without the trailing slash.
+
 -d DATASET: Dataset name where the data will be loaded (default: 'elter')
+
 -w WEB_BASE_URL: Base URL of the published TTL files for Fuseki LOAD (e.g., 'http://example.com/elter')
+
 -h: Show this help message and exit
 
 ### Example:
