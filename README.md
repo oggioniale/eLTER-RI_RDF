@@ -59,7 +59,7 @@ The output will be an RDF file in Turtle format, which can be saved with a `.ttl
 ### Mapping of API metadata elements to ontology and vocabulary properties
 To explore the mapping of API metadata elements to various ontology and vocabulary properties across different DEIMS-SDR resources, refer to the following files:
 
-- [`mappingSite2RDF.md`](mappingSite2RDF.md) for sites;
+- [`mappingSite2RDF.md`](./mapping/mappingSite2RDF.md) for sites;
 
 - [`mappingNetwork2RDF.md`](./mapping/mappingNetwork2RDF.md) for networks;
 
@@ -70,6 +70,13 @@ To explore the mapping of API metadata elements to various ontology and vocabula
 - [`mappingLocation2RDF.md`](./mapping/mappingLocation2RDF.md) for locations;
 
 - [`mappingSensor2RDF.md`](./mapping/mappingSensor2RDF.md) for sensors.
+
+These mappings have been carried out using a range of ontologies and vocabularies, including the Environmental Monitoring Facility Vocabulary [(SmOD)](https://www.w3.org/2015/03/inspire/ef),
+Dublin Core terms [(DC)](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/), the Semantic Sensor Network ontology [(SSN)](https://w3c.github.io/sdw-sosa-ssn/ssn/),
+the Sensor, Observation, Sample, and Actuator ontology [(SOSA)](https://w3c.github.io/sdw-sosa-ssn/ssn/), the Friend of a Friend
+vocabulary [(FOAF)](http://xmlns.com/foaf/spec/), the Data Catalog Vocabulary [(DCAT)](https://semiceu.github.io/DCAT-AP/releases/3.0.0/), and the Provenance Ontology [(PROV-O)](https://www.w3.org/TR/prov-o/).
+These standards support semantic interoperability and
+machine-actionability of metadata across the different resources described in DEIMS-SDR.
 
 ### Examples of JSON files from the DEIMS-SDR APIs
 This repository also includes JSON files, as examples, from the DEIMS-SDR APIs for the various mapped resources:
