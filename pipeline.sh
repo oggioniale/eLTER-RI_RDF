@@ -115,7 +115,6 @@ fi
 deims_queries_outputs="./deims_queries_outputs"  # o il percorso completo
 web_dir="/var/www/html/elter"
 query_dir="sparqlGenerateQueries"
-uuid_list_file="sites_list.csv"
 template_file="$query_dir/siteSparqlGenerate.txt"
 
 # Create site list
