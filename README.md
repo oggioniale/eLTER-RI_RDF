@@ -53,7 +53,7 @@ Currently, the query is designed to collect information from the â€œLTER Europeâ
 Change line 42 of the [`networkSparqlGenerate.txt`](./sparqlGenerateQueries/networkSparqlGenerate.txt) file for execute this query for other network. Change the value in "$[:10]" to execute the query only for the first ten items in the list of sites (https://deims.org/api/networks).
 
 ### Reproduce the result
-To reproduce the results Simply copy the content of the [`siteSparqlGenerate.txt`](./sparqlGenerateQueries/siteSparqlGenerate.txt) or [`networkSparqlGenerate.txt`](./sparqlGenerateQueries/networkSparqlGenerate.txt) file into the playground on the http://sparql-generate.org/ website and click "Run".
+To reproduce the results Simply copy the content of the [`siteSparqlGenerate.txt`](./sparqlGenerateQueries/siteSparqlGenerate.txt) or [`networkSparqlGenerate.txt`](./sparqlGenerateQueries/networkSparqlGenerate.txt) file into the playground on the [sparql-generate playground](https://ci.mines-stetienne.fr/sparql-generate/playground.html) website and click "Run".
 The output will be an RDF file in Turtle format, which can be saved with a `.ttl` extension.
 
 ### Mapping of API metadata elements to ontology and vocabulary properties
