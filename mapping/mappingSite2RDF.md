@@ -1,5 +1,3 @@
-<div style="width: 100%;">
-
 # Mapping of DEIMS-SDR's site entity provided in JSON moreover using Environmental Monitoring Facility Vocabulary [(SmOD)](https://www.w3.org/2015/03/inspire/ef), Dublin core terms [(DC)](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/), Semantic Sensor Network ontology [(SSN)](https://w3c.github.io/sdw-sosa-ssn/ssn/) and Sensor, Observation, Sample, and Actuator [(SOSA)](https://w3c.github.io/sdw-sosa-ssn/ssn/), Friends Of A Friends vocabulary [(FOAF)](http://xmlns.com/foaf/spec/), Data Catalog Vocabulary [(DCAT)](https://semiceu.github.io/DCAT-AP/releases/3.0.0/) and Provenance ontology [(PROV-O)](https://www.w3.org/TR/prov-o/).
 
 Authors: Alessandro Oggioni [^1]
@@ -98,4 +96,3 @@ Namespaces and prefixes used in this documentation:
 | | | $.attributes.relatedResources[*].[?(@.id.prefix=='https://deims.org/sensors/')].id[?(@.suffix != null)].suffix | `[ "fb583610-fe71-4793-b1a9-43097ed5c3e3" ]`	| `ef:narrow <https://deims.org/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3>` | [Sensor - see mapping](mapping_Sensor2RDF.md) |
 | | | $.attributes[?(@.relatedResources != null)].relatedResources[?(@.id.prefix=='https://deims.org/dataset/')].id[?(@.suffix != null)].suffix	| `[ "cd1fb6f8-5e57-11e3-aa73-005056ab003f", "75a7f938-7c77-11e3-8832-005056ab003f", … ]`	| `ef:hasObservation <https://deims.org/dataset/cd1fb6f8-5e57-11e3-aa73-005056ab003f > , <https://deims.org/dataset/75a7f938-7c77-11e3-8832-005056ab003f > , …` | [Dataset - see mapping](mapping_Dataset2RDF.md) |
 | 6.9	| attributes.projectRelated	| $.attributes.projectRelated	| `{ "lter": { "lterSiteClassification": "Master Site" } }`	| -	| not included |
-</div>
