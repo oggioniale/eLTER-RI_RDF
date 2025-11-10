@@ -35,7 +35,7 @@ The work can be reproduced following this two files:
 
 Currently, the query is designed to generate RDF data for all the sites listed in the DEIMS-API sites list (https://deims.org/api/sites) as of 30.04.2025.
 
-To reproduce the example for Zöbelboden, you can use the file [`siteSparqlGenerate_Zobelboden.txt`](./sparqlGenerateQueries/siteSparqlgenerate_Zobelboden.txt) and execute the following command:
+To reproduce the example for Zöbelboden, you can use the file [`siteSparqlGenerate_Zobelboden.txt`](sparqlGenerateQueries/siteSparqlGenerate_Zobelboden.txt) and execute the following command:
 
 `java -jar sparql-generate-2.0-SNAPSHOT.jar -d sparqlGenerateQueries -q ./sparqlGenerateQueries/siteSparqlGenerate_Zobelboden.txt -f sites.log -l DEBUG`
 
