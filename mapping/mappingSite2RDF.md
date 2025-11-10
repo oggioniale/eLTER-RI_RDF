@@ -31,8 +31,8 @@ Namespaces and prefixes used in this documentation:
 
 | **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
 | --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |
-| 1	| title	| \$.title	| `"LTER Zöbelboden - Austria"`	| `ef:name "LTER Zöbelboden - Austria"@en` | 
-| 2	| id	| concat( $.id.prefix, $.id.suffix) | `"https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6"` | `<https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6> rdf:type ef:EnvironmentalMonitoringFacility , prov:Entity` |
+| 1	| title	| $.title	| `"LTER Zöbelboden - Austria"`	| `ef:name "LTER Zöbelboden - Austria"@en` | 
+| 2	| id	| concat($.id.prefix, $.id.suffix) | `"https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6"` | `<https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6> rdf:type ef:EnvironmentalMonitoringFacility , prov:Entity` |
 | 3	| type | $.type	| `"site"` | `ef:specialisedEMFType ‘site’@en` |
 | 4	| created	| $.created	| `"2012-12-25T18:53:54+0100"` | `dcterms:issued "2012-12-25T18:53:54+0100"^^xsd:dateTime` |
 | 5	| changed	| $.changed	| `"2025-01-07T11:14:56+0100"` | `dct:modified "2025-01-07T11:14:56+0100"^^xsd:dateTime` |
