@@ -28,6 +28,7 @@ Namespaces and prefixes used in this documentation:
 | owl | http://www.w3.org/2002/07/owl# |
 
 ## Sites metadata elements mapping, based on the “LTER Zöbelboden” site (DEIMS.ID - https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6). See also [JSON file for this site](../examples/site.json)
+<div style="width: 100%;">
 
 | **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
 | --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |
@@ -96,3 +97,4 @@ Namespaces and prefixes used in this documentation:
 | | | $.attributes.relatedResources[*].[?(@.id.prefix=='https://deims.org/sensors/')].id[?(@.suffix != null)].suffix | `[ "fb583610-fe71-4793-b1a9-43097ed5c3e3" ]`	| `ef:narrow <https://deims.org/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3>` | [Sensor - see mapping](mapping_Sensor2RDF.md) |
 | | | $.attributes[?(@.relatedResources != null)].relatedResources[?(@.id.prefix=='https://deims.org/dataset/')].id[?(@.suffix != null)].suffix	| `[ "cd1fb6f8-5e57-11e3-aa73-005056ab003f", "75a7f938-7c77-11e3-8832-005056ab003f", … ]`	| `ef:hasObservation <https://deims.org/dataset/cd1fb6f8-5e57-11e3-aa73-005056ab003f > , <https://deims.org/dataset/75a7f938-7c77-11e3-8832-005056ab003f > , …` | [Dataset - see mapping](mapping_Dataset2RDF.md) |
 | 6.9	| attributes.projectRelated	| $.attributes.projectRelated	| `{ "lter": { "lterSiteClassification": "Master Site" } }`	| -	| not included |
+</div>
