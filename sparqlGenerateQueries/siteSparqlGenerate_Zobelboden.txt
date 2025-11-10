@@ -462,7 +462,7 @@ GENERATE {
 
 # Iteration for JSON
 SOURCE <https://deims.org/api/sites> AS ?list # This is the page where all the sites are listed.
-ITERATOR ite:JSONPath(?list, "$[465]", "$.id.suffix") AS ?item ?suffix
+ITERATOR ite:JSONPath(?list, "$[625]", "$.id.suffix") AS ?item ?suffix
 
 # Iteration for CSV
 # SOURCE <sites_list.csv> AS ?list
