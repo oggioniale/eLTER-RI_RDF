@@ -17,7 +17,7 @@ Namespaces and prefixes used in this documentation:
 | locn | http://www.w3.org/ns/locn# |
 | xsd | http://www.w3.org/2001/XMLSchema# |
 
-## Activity metadata elements mapping, based on the “LTER Zöbelboden Austria deposition” activity (DEIMS.ID - https://deims.org/activity/4efaa2f2-6f4a-4f75-b95c-c3ffb13594a5). See also [JSON file for this activity](activity.json)
+## Activity metadata elements mapping, based on the “LTER Zöbelboden Austria deposition” activity (DEIMS.ID - https://deims.org/activity/4efaa2f2-6f4a-4f75-b95c-c3ffb13594a5). See also [JSON file for this activity](../examples/activity.json)
 
 | **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
 | --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |
