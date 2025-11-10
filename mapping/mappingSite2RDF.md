@@ -27,7 +27,7 @@ Namespaces and prefixes used in this documentation:
 | fun | http://w3id.org/sparql-generate/fn/ |
 | owl | http://www.w3.org/2002/07/owl# |
 
-## Sites metadata elements mapping, based on the “LTER Zöbelboden” site (DEIMS.ID - https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6). See also [JSON file for this site](site.json)
+## Sites metadata elements mapping, based on the “LTER Zöbelboden” site (DEIMS.ID - https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6). See also [JSON file for this site](../examples/site.json)
 
 | **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
 | --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |
