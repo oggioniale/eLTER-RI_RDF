@@ -18,7 +18,7 @@ Namespaces and prefixes used in this documentation:
 | geo | http://www.opengis.net/ont/geosparql# |
 | xsd | http://www.w3.org/2001/XMLSchema# |
 
-# Sensor metadata elements mapping, based on “LTER Zöbelboden Austria precipitation WW” sensor (DEIMS.ID - https://deims.org/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3). See also [JSON file for this sensor](sensor.json)
+# Sensor metadata elements mapping, based on “LTER Zöbelboden Austria precipitation WW” sensor (DEIMS.ID - https://deims.org/sensors/fb583610-fe71-4793-b1a9-43097ed5c3e3). See also [JSON file for this sensor](../examples/sensor.json)
 
 | **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
 | --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |
