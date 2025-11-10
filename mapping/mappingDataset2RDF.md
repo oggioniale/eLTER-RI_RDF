@@ -14,4 +14,4 @@ Namespaces and prefixes used in this documentation:
 
 | **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
 | --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |
-| 2	| id | concat( \$.id.prefix, \$.id.suffix) | `https://deims.org/dataset/cd1fb6f8-5e57-11e3-aa73-005056ab003f` | `<https://deims.org/dataset/cd1fb6f8-5e57-11e3-aa73-005056ab003f> rdf:type dcat:Dataset`	| Only the ID is used, as the RDF correspondence of the dataset is provided by DAR or B2Share |
+| 2	| id | `concat($.id.prefix, $.id.suffix)` | `https://deims.org/dataset/cd1fb6f8-5e57-11e3-aa73-005056ab003f` | `<https://deims.org/dataset/cd1fb6f8-5e57-11e3-aa73-005056ab003f> rdf:type dcat:Dataset`	| Only the ID is used, as the RDF correspondence of the dataset is provided by DAR or B2Share |
