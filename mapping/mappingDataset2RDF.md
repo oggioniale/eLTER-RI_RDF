@@ -10,7 +10,7 @@ Namespaces and prefixes used in this documentation:
 | rdf | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
 | dcat | http://www.w3.org/ns/dcat# |
 
-## Dataset metadata elements mapping, based on "LTER Zöbelboden, Austria, Air chemistry, 2012" dataset (DEIMS.ID: https://deims.org/datasets/cd1fb6f8-5e57-11e3-aa73-005056ab003f). See also [JSON file for this dataset](dataset.json)
+## Dataset metadata elements mapping, based on "LTER Zöbelboden, Austria, Air chemistry, 2012" dataset (DEIMS.ID: https://deims.org/datasets/cd1fb6f8-5e57-11e3-aa73-005056ab003f). See also [JSON file for this dataset](../examples/dataset.json)
 
 | **level** | **DEIMS-SDR site metadata element** | **JSON path (evaluated with Jayway JsonPath - https://sumiya.page)** | **JSON data item example** | **RDF rendering** | **notes** |
 | --------- | ----------------------------------- | -------------------------------------------------------------------- | -------------------------- | ----------------- | --------- |
