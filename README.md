@@ -41,7 +41,7 @@ To reproduce the example for Zöbelboden, you can use the file [`siteSparqlGener
 
 This command will generate the RDF for the site "LTER Zöbelboden" (DEIMS.ID - https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6) and its associated resources.
 
-Please note that since the list of sites (https://deims.org/api/sites) varies in length, it is likely that the file [`siteSparqlGenerate_Zobelboden.txt`](sparqlGenerateQueries/siteSparqlGenerate_Zobelboden.txt) does not point to the Zöbelboden site. For this reason, it is necessary to edit the .txt file on line 465 and indicate the exact site number by changing ‘$[625]’.
+Please note that since the list of sites (https://deims.org/api/sites) varies in length, it is likely that the file [`siteSparqlGenerate_Zobelboden.txt`](sparqlGenerateQueries/siteSparqlGenerate_Zobelboden.txt) does not point to the Zöbelboden site. For this reason, it is necessary to edit the .txt file on line 465 and and indicate the exact number of sites before Zobelboden and replace the number "$[625]".
 
 ### In the case of a **DEIMS-SDR network**
 The work can be reproduced following this two files:
